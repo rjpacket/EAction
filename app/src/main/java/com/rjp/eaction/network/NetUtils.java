@@ -7,13 +7,27 @@ package com.rjp.eaction.network;
  * email  : jimbo922@163.com
  */
 public class NetUtils {
-    private static final NetUtils ourInstance = new NetUtils();
+    private static NetUtils ourInstance = null;
 
     public static NetUtils getInstance() {
+        if(ourInstance == null){
+            synchronized (NetUtils.class){
+                if(ourInstance == null){
+                    ourInstance = new NetUtils();
+                }
+            }
+        }
         return ourInstance;
     }
 
     private NetUtils() {
+
+    }
+
+    /**
+     * get 请求方法
+     */
+    public void get(){
 
     }
 }

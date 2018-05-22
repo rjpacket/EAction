@@ -5,5 +5,5 @@ package com.rjp.eaction.network.callback;
  * email  : jimbo922@163.com
  */
 public interface FailureCallback {
-    void failure(int code, String msg);
+
 }

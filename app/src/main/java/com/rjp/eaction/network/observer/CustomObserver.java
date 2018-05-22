@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.rjp.eaction.network.cancel.RxApiManager;
 import com.rjp.eaction.network.exception.ExceptionHandle;
 import com.rjp.eaction.network.loading.LoadingDialog;
 import com.rjp.eaction.network.util.NetworkUtil;
@@ -23,9 +24,13 @@ public abstract class CustomObserver<T> implements Observer<T> {
     private Context mContext;
     private boolean isShowLoading;
 
-    public CustomObserver(Context context, boolean isShowLoading){
+    //缓存请求的tag
+    private String tag;
+
+    public CustomObserver(Context context, boolean isShowLoading, String tag){
         this.mContext = context;
         this.isShowLoading = isShowLoading;
+        this.tag = tag;
         if(isShowLoading){
             loadingDialog = new LoadingDialog();
             loadingDialog.initDialog(mContext, "");
@@ -34,18 +39,25 @@ public abstract class CustomObserver<T> implements Observer<T> {
 
     @Override
     public void onSubscribe(Disposable d) {
+        //将请求记录
+        RxApiManager.get().add(tag, d);
+
         if (!NetworkUtil.isNetworkAvailable(mContext)) {
             Toast.makeText(mContext, "无网络，读取缓存数据", Toast.LENGTH_SHORT).show();
             onComplete();
         }
         //上游开始
-        loadingDialog.show();
+        if(loadingDialog != null && isShowLoading) {
+            loadingDialog.show();
+        }
     }
 
     @Override
     public void onComplete() {
         //接收完成
-        loadingDialog.close();
+        if(loadingDialog != null && isShowLoading) {
+            loadingDialog.close();
+        }
     }
 
     //以下两个方法需要暴漏出去

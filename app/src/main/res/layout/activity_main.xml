@@ -19,4 +19,11 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
+    <com.rjp.eaction.baseAF.NetworkView
+        android:id="@+id/nv_network_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </com.rjp.eaction.baseAF.NetworkView>
 </android.support.constraint.ConstraintLayout>

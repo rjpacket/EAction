@@ -2,12 +2,10 @@ package com.rjp.eaction.network.observer;
 
 import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.rjp.eaction.network.cancel.RxApiManager;
 import com.rjp.eaction.network.exception.ExceptionHandle;
 import com.rjp.eaction.network.loading.LoadingDialog;
-import com.rjp.eaction.network.util.NetworkUtil;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -42,14 +40,15 @@ public abstract class CustomObserver<T> implements Observer<T> {
         //将请求记录
         RxApiManager.get().add(tag, d);
 
-        if (!NetworkUtil.isNetworkAvailable(mContext)) {
-            Toast.makeText(mContext, "无网络，读取缓存数据", Toast.LENGTH_SHORT).show();
-            onComplete();
-        }
         //上游开始
         if(loadingDialog != null && isShowLoading) {
             loadingDialog.show();
         }
+
+//        if (!NetworkUtil.isNetworkAvailable(mContext)) {
+//            Toast.makeText(mContext, "无网络，读取缓存数据", Toast.LENGTH_SHORT).show();
+//            onComplete();
+//        }
     }
 
     @Override
@@ -64,12 +63,11 @@ public abstract class CustomObserver<T> implements Observer<T> {
 
     @Override
     public void onError(Throwable e) {
-        Log.e("RJP", e.getMessage());
-
-        if(e instanceof ExceptionHandle.ResponeThrowable){
-            onError((ExceptionHandle.ResponeThrowable)e);
-        } else {
-            onError(new ExceptionHandle.ResponeThrowable(e, ExceptionHandle.ERROR.UNKNOWN));
+        Log.e("RJP-onError", e.getMessage());
+        onError(ExceptionHandle.handleException(e));
+        //异常 下游接收不到数据
+        if(loadingDialog != null && isShowLoading) {
+            loadingDialog.close();
         }
     }
 

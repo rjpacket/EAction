@@ -8,7 +8,6 @@ import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.network.callback.ResponseListCallback;
 import com.rjp.eaction.network.exception.ExceptionHandle;
 import com.rjp.eaction.network.model.BaseModel;
-import com.rjp.eaction.network.model.Code;
 import com.rjp.eaction.network.observer.CustomObserver;
 import com.rjp.eaction.network.retrofit.RetrofitClient;
 
@@ -105,7 +104,7 @@ public class NetUtils {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
                 if (responseCallback != null) {
-                    responseCallback.failure(Code.NET_ERROR, Code.getErrorMsg(Code.NET_ERROR));
+                    responseCallback.failure(e.code, e.message);
                 }
             }
 
@@ -127,7 +126,10 @@ public class NetUtils {
                         }
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
+                    if (responseCallback != null) {
+                        responseCallback.failure(exception.code, exception.message);
+                    }
                 }
             }
         });
@@ -138,7 +140,7 @@ public class NetUtils {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
                 if (responseCallback != null) {
-                    responseCallback.failure(Code.NET_ERROR, Code.getErrorMsg(Code.NET_ERROR));
+                    responseCallback.failure(e.code, e.message);
                 }
             }
 
@@ -160,7 +162,10 @@ public class NetUtils {
                         }
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
+                    if (responseCallback != null) {
+                        responseCallback.failure(exception.code, exception.message);
+                    }
                 }
             }
         });

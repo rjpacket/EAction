@@ -8,6 +8,7 @@ import org.apache.http.conn.ConnectTimeoutException;
 import org.json.JSONException;
 
 import java.net.ConnectException;
+import java.net.UnknownHostException;
 
 import retrofit2.HttpException;
 
@@ -41,7 +42,7 @@ public class ExceptionHandle {
                 case BAD_GATEWAY:
                 case SERVICE_UNAVAILABLE:
                 default:
-                    ex.message = "网络错误";
+                    ex.message = getErrorMsg(ex.code);
                     break;
             }
             return ex;
@@ -54,35 +55,63 @@ public class ExceptionHandle {
                 || e instanceof JSONException
                 || e instanceof ParseException) {
             ex = new ResponeThrowable(e, ERROR.PARSE_ERROR);
-            ex.message = "解析错误";
+            ex.message = getErrorMsg(ex.code);
             return ex;
         } else if (e instanceof ConnectException) {
             ex = new ResponeThrowable(e, ERROR.NETWORD_ERROR);
-            ex.message = "连接失败";
+            ex.message = getErrorMsg(ex.code);
             return ex;
         } else if (e instanceof javax.net.ssl.SSLHandshakeException) {
             ex = new ResponeThrowable(e, ERROR.SSL_ERROR);
-            ex.message = "证书验证失败";
+            ex.message = getErrorMsg(ex.code);
             return ex;
-        } else if (e instanceof ConnectTimeoutException){
+        } else if (e instanceof ConnectTimeoutException) {
             ex = new ResponeThrowable(e, ERROR.TIMEOUT_ERROR);
-            ex.message = "连接超时";
+            ex.message = getErrorMsg(ex.code);
             return ex;
         } else if (e instanceof java.net.SocketTimeoutException) {
             ex = new ResponeThrowable(e, ERROR.TIMEOUT_ERROR);
-            ex.message = "连接超时";
+            ex.message = getErrorMsg(ex.code);
             return ex;
-        }
-        else {
+        } else if (e instanceof UnknownHostException) {
+            ex = new ResponeThrowable(e, ERROR.UNKNOW_HOST);
+            ex.message = getErrorMsg(ex.code);
+            return ex;
+        } else {
             ex = new ResponeThrowable(e, ERROR.UNKNOWN);
-            ex.message = "未知错误";
+            ex.message = getErrorMsg(ex.code);
             return ex;
         }
     }
 
+    /**
+     * 获取错误码的描述
+     * @param code
+     * @return
+     */
+    public static String getErrorMsg(int code) {
+        switch (code){
+            case ERROR.UNKNOWN:
+                return "未知错误";
+            case ERROR.PARSE_ERROR:
+                return "解析错误";
+            case ERROR.NETWORD_ERROR:
+                return "网络错误";
+            case ERROR.HTTP_ERROR:
+                return "协议出错";
+            case ERROR.TIMEOUT_ERROR:
+                return "连接超时";
+            case ERROR.UNKNOW_HOST:
+                return "未知的主机异常";
+            case ERROR.SSL_ERROR:
+                return "证书出错";
+        }
+        return "未知错误";
+    }
+
 
     /**
-     * 约定异常
+     * 约定错误码
      */
     public class ERROR {
         /**
@@ -111,8 +140,16 @@ public class ExceptionHandle {
          * 连接超时
          */
         public static final int TIMEOUT_ERROR = 1006;
+
+        /**
+         * 未知的主机异常
+         */
+        public static final int UNKNOW_HOST = 1007;
     }
 
+    /**
+     * 自定义错误类型
+     */
     public static class ResponeThrowable extends Exception {
         public int code;
         public String message;
@@ -120,7 +157,6 @@ public class ExceptionHandle {
         public ResponeThrowable(Throwable throwable, int code) {
             super(throwable);
             this.code = code;
-
         }
     }
 

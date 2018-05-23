@@ -8,4 +8,7 @@
     <color name="main_color_press">#ea3d5c</color>
     <color name="white">#ffffffff</color>
     <color name="line">#ffdddddd</color>
+    <color name="text_dark">#2f2f2f</color>
+    <color name="text_middle">#575757</color>
+    <color name="text_light">#ffb0b0b0</color>
 </resources>

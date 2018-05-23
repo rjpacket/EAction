@@ -19,7 +19,7 @@ import java.util.Map;
 import okhttp3.ResponseBody;
 
 /**
- * 网络请求封装库
+ * 构建者 封装 网络请求封装库
  * author : Gimpo create on 2018/5/11 19:12
  * email  : jimbo922@163.com
  */
@@ -30,18 +30,18 @@ public class NetUtils {
     private boolean isShowLoading;
     private String tag;
 
-//    private static NetUtils ourInstance = null;
-//
-//    public static NetUtils getInstance() {
-//        if (ourInstance == null) {
-//            synchronized (NetUtils.class) {
-//                if (ourInstance == null) {
-//                    ourInstance = new NetUtils();
-//                }
-//            }
-//        }
-//        return ourInstance;
-//    }
+    private static NetUtils ourInstance = null;
+
+    public static NetUtils getInstance() {
+        if (ourInstance == null) {
+            synchronized (NetUtils.class) {
+                if (ourInstance == null) {
+                    ourInstance = new NetUtils();
+                }
+            }
+        }
+        return ourInstance;
+    }
 
     private NetUtils() {
 
@@ -51,8 +51,8 @@ public class NetUtils {
         private Context context;
         private String url;
         private Map<String, String> params = new HashMap<>();
-        private boolean isShowLoading;
-        private String tag;
+        private boolean isShowLoading = true;  //默认显示加载框
+        private String tag = "net";  //默认存一个net
 
         public Builder(){
 
@@ -84,8 +84,14 @@ public class NetUtils {
         }
 
         public NetUtils Build(){
-            NetUtils netUtils = new NetUtils();
+            NetUtils netUtils = NetUtils.getInstance();
+            if(this.context == null){
+                throw new IllegalArgumentException("context must be not null");
+            }
             netUtils.context = this.context;
+            if(this.url == null){
+                throw new IllegalArgumentException("url must be not null");
+            }
             netUtils.url = this.url;
             netUtils.params = this.params;
             netUtils.isShowLoading = this.isShowLoading;

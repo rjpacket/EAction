@@ -1,23 +1,47 @@
 package com.rjp.eaction;
 
-import android.app.Dialog;
-import android.view.View;
+import android.support.v4.app.Fragment;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.fragments.HomeFragment;
+import com.rjp.eaction.fragments.MineFragment;
+import com.rjp.eaction.fragments.SocialFragment;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.navigationview.NavigationView;
+import com.rjp.navigationview.TabModel;
+
+import java.util.ArrayList;
+
+import butterknife.BindView;
 
 public class MainActivity extends BaseActivity {
+    @BindView(R.id.navigation_view)
+    NavigationView navigationView;
+    @BindView(R.id.main_container)
+    FrameLayout frameLayout;
+
+    @Override
+    protected boolean showTopBar() {
+        return false;
+    }
 
     @Override
     protected void handle() {
-        findViewById(R.id.tv_hello).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                net();
-            }
-        });
+        navigationView.setContainerId(R.id.main_container);
+        navigationView.setFragmentManager(getSupportFragmentManager());
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments.add(new HomeFragment());
+        fragments.add(new SocialFragment());
+        fragments.add(new MineFragment());
+        navigationView.setFragments(fragments);
+        ArrayList<TabModel> tabModels = new ArrayList<>();
+        tabModels.add(new TabModel("首页", R.mipmap.ic_launcher));
+        tabModels.add(new TabModel("社区", R.mipmap.ic_launcher));
+        tabModels.add(new TabModel("我的", R.mipmap.ic_launcher));
+        navigationView.setTabs(tabModels);
     }
 
     @Override

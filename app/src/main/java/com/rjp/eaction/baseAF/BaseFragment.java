@@ -1,10 +1,12 @@
 package com.rjp.eaction.baseAF;
 
+
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.rjp.eaction.R;
@@ -12,41 +14,40 @@ import com.rjp.eaction.R;
 import butterknife.ButterKnife;
 
 /**
- * activity基类
+ * fragment基类
  */
-public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
+public abstract class BaseFragment extends Fragment implements View.OnClickListener{
 
     private Context mContext;
-    private TopBar topBar;
-    private NetworkView networkView;
     private FrameLayout layoutContainer;
+    private NetworkView networkView;
+    private TopBar topBar;
+
+    public BaseFragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
-        mContext = this;
-        topBar = (TopBar) findViewById(R.id.top_bar);
-        layoutContainer = (FrameLayout) findViewById(R.id.layout_container);
-        networkView = (NetworkView) findViewById(R.id.network_view);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        mContext = getContext();
+        View baseRootView = inflater.inflate(R.layout.fragment_base, container, false);
+        topBar = (TopBar) baseRootView.findViewById(R.id.top_bar);
+        layoutContainer = (FrameLayout) baseRootView.findViewById(R.id.base_container);
+        networkView = (NetworkView) baseRootView.findViewById(R.id.network_view);
 
         topBar.setVisibility(showTopBar() ? View.VISIBLE : View.GONE);
         topBar.setTitle(getPageTitle());
-        topBar.setOnBackClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //执行onBackPressed 防止子类需要特殊操作
-                onBackPressed();
-            }
-        });
+        topBar.setBackHidden(true);
 
-        View childRootView = LayoutInflater.from(mContext).inflate(getLayoutId(), null);
-        layoutContainer.addView(childRootView);
-        ButterKnife.bind(this);
+        View childView = LayoutInflater.from(mContext).inflate(getLayoutId(), null);
+        layoutContainer.addView(childView);
+        ButterKnife.bind(baseRootView);
         handle();
+        return baseRootView;
     }
-
-    protected abstract void handle();
 
     /**
      * 网络请求失败，页面隐藏，显示重新加载布局
@@ -72,12 +73,31 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     /**
-     * 网络重新加载
+     * 点击重新加载的按钮
      */
     protected abstract void networkReload();
 
     /**
-     * 获取子类布局
+     * 主要操作
+     */
+    protected abstract void handle();
+
+    /**
+     * 碎片标题
+     * @return
+     */
+    protected abstract String getPageTitle();
+
+    /**
+     * 碎片是否显示标题栏
+     * @return
+     */
+    private boolean showTopBar() {
+        return true;
+    }
+
+    /**
+     * 碎片布局
      * @return
      */
     protected abstract int getLayoutId();
@@ -122,22 +142,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      */
     protected void clickOnIcon0() {
 
-    }
-
-    /**
-     * 页面的标题
-     * @return
-     */
-    protected String getPageTitle() {
-        return getString(R.string.app_name);
-    }
-
-    /**
-     * 默认每一个activity需要标题栏
-     * @return
-     */
-    protected boolean showTopBar() {
-        return true;
     }
 
     @Override

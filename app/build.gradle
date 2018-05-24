@@ -38,3 +38,7 @@ android {
         annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     }
 }
+
+dependencies {
+    implementation 'com.android.support:support-v4:27.+'
+}

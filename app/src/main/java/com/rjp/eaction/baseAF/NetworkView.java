@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.rjp.eaction.R;
-import com.rjp.eaction.network.exception.ExceptionHandle;
 
 /**
  * author : Gimpo create on 2018/5/23 18:41
@@ -45,8 +44,8 @@ public class NetworkView extends FrameLayout{
         setVisibility(GONE);
     }
 
-    public void setNetworkCode(int code){
-        tvErrorMsg.setText(ExceptionHandle.getErrorMsg(code));
+    public void setNetworkFail(String msg){
+        tvErrorMsg.setText(msg);
         setVisibility(VISIBLE);
     }
 

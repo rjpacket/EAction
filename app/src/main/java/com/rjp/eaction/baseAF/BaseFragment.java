@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends Fragment implements View.OnClickListener{
 
-    private Context mContext;
+    public Context mContext;
     private FrameLayout layoutContainer;
     private NetworkView networkView;
     private TopBar topBar;
@@ -44,7 +44,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
         View childView = LayoutInflater.from(mContext).inflate(getLayoutId(), null);
         layoutContainer.addView(childView);
-        ButterKnife.bind(baseRootView);
+        ButterKnife.bind(this, childView);
         handle();
         return baseRootView;
     }

@@ -2,6 +2,7 @@ package com.rjp.eaction.fragments;
 
 
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;

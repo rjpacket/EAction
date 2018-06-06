@@ -82,7 +82,7 @@ public class NetUtils {
             return this;
         }
 
-        public NetUtils Build(){
+        public NetUtils build(){
             NetUtils netUtils = NetUtils.getInstance();
             if(this.context == null){
                 throw new IllegalArgumentException("context must be not null");

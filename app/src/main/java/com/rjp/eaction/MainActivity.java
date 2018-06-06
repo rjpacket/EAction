@@ -67,7 +67,7 @@ public class MainActivity extends BaseActivity {
                 .param("count", "10")
                 .showLoading(true)
                 .tag("main")
-                .Build()
+                .build()
                 .model(new ResponseCallback<String>() {
                     @Override
                     public void success(String model) {

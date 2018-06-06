@@ -8,6 +8,7 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+        flavorDimensions "versionCode"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -16,6 +17,39 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        channel_A {
+            applicationId "com.rjp.eaction.A"
+        }
+
+        channel_B {
+            applicationId "com.rjp.eaction.B"
+        }
+
+        channel_C {
+            applicationId "com.rjp.eaction.C"
+        }
+    }
+
+    sourceSets {
+        channel_A {
+            manifest.srcFile 'channels/channel_A/AndroidManifest.xml'
+            res.srcDirs = ['channels/channel_A/res']
+            java.srcDirs = ['channels/channel_A/java']
+        }
+
+        channel_B {
+            res.srcDirs = ['channels/channel_B/res']
+            java.srcDirs = ['channels/channel_B/java']
+        }
+
+        channel_C {
+            res.srcDirs = ['channels/channel_C/res']
+            java.srcDirs = ['channels/channel_C/java']
+        }
+    }
+
     dependencies {
         implementation fileTree(dir: 'libs', include: ['*.jar'])
         implementation 'com.android.support.constraint:constraint-layout:1.1.0'
@@ -42,4 +76,5 @@ android {
 
 dependencies {
     implementation 'com.android.support:support-v4:27.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 }

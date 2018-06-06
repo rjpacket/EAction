@@ -1,6 +1,6 @@
 package com.rjp.eaction.util;
 
-import android.content.Context;
+import android.content.res.Resources;
 
 /**
  * 辅助工具
@@ -11,12 +11,19 @@ public class AppUtils {
 
     /**
      * dp 转化成 px
-     * @param context
-     * @param dpValue
+     * @param dp
      * @return
      */
-    public static int dp2px(Context context, float dpValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (dpValue * scale + 0.5f);
+    public static int dp2px(int dp) {
+        return (int) (dp * Resources.getSystem().getDisplayMetrics().density);
+    }
+
+    /**
+     * dp 转化成 px
+     * @param px
+     * @return
+     */
+    public static int px2dp(int px) {
+        return (int) (px / Resources.getSystem().getDisplayMetrics().density);
     }
 }

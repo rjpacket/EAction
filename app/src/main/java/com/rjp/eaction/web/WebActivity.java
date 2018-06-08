@@ -42,6 +42,7 @@ public class WebActivity extends BaseActivity {
             setTopTitle(title);
             addWebView(intent.getStringExtra(WEB_URL));
         }
+        AndroidBug5497Workaround.assistActivity(this);
     }
 
     /**

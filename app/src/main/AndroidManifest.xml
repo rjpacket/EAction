@@ -20,6 +20,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
+
+        <!-- 7.0权限适配方案 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.rjp.eaction.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                />
+        </provider>
+
         <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".EmptyActivity">
@@ -31,8 +45,12 @@
         </activity>
         <activity android:name=".DetailActivity">
         </activity>
-        <activity android:name=".permission.PermissionActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        <activity
+            android:name=".permission.PermissionActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            >
+        </activity>
+        <activity android:name=".web.WebActivity">
         </activity>
     </application>
 

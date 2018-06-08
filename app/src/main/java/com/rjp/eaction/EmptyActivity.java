@@ -1,16 +1,17 @@
 package com.rjp.eaction;
 
-import android.Manifest;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.rjp.eaction.permission.PermissionCallback;
-import com.rjp.eaction.permission.PermissionUtils;
+import com.rjp.eaction.function.SelectPhotoPoupWindow;
+import com.rjp.eaction.util.AppUtils;
 
 public class EmptyActivity extends Activity {
+
+    private SelectPhotoPoupWindow poupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,27 +24,18 @@ public class EmptyActivity extends Activity {
         TextView appName = (TextView) findViewById(R.id.tv_appname);
         appName.setText("AppName:" + getResources().getString(R.string.app_name));
 
+        poupWindow = new SelectPhotoPoupWindow(EmptyActivity.this, -1);
         findViewById(R.id.tv_detail).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new PermissionUtils.Builder()
-                        .context(EmptyActivity.this)
-                        .permission(Manifest.permission.CAMERA)
-                        .build()
-                        .request(new PermissionCallback() {
-                            @Override
-                            public void allow() {
-                                Toast.makeText(EmptyActivity.this, "允许", Toast.LENGTH_SHORT).show();
-                            }
-
-                            @Override
-                            public void deny() {
-                                Toast.makeText(EmptyActivity.this, "拒绝", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-
-
+                AppUtils.getMacAddress(EmptyActivity.this);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        poupWindow.onActivityResult(requestCode, resultCode, data);
     }
 }

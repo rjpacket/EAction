@@ -9,8 +9,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.Toast;
 
-import com.rjp.eaction.R;
-
 import java.util.List;
 
 import static android.os.Build.VERSION_CODES.M;
@@ -26,7 +24,6 @@ public class PermissionActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_permission);
 
         if(Build.VERSION.SDK_INT >= M) {
             boolean b = checkPermissionAllGranted(PermissionUtils.permissions);
@@ -56,7 +53,6 @@ public class PermissionActivity extends Activity {
     private boolean checkPermissionAllGranted(List<String> permissions) {
         for (String permission : permissions) {
             if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
-                // 只要有一个权限没有被授予, 则直接返回 false
                 return false;
             }
         }
@@ -69,7 +65,6 @@ public class PermissionActivity extends Activity {
         if (requestCode == MY_PERMISSION_REQUEST_CODE) {
             boolean isAllGranted = true;
 
-            // 判断是否所有的权限都已经授予了
             for (int grant : grantResults) {
                 if (grant != PackageManager.PERMISSION_GRANTED) {
                     isAllGranted = false;
@@ -78,10 +73,8 @@ public class PermissionActivity extends Activity {
             }
 
             if (isAllGranted) {
-                // 如果所有的权限都授予了, 则执行备份代码
                 PermissionUtils.callback.allow();
             } else {
-                // 弹出对话框告诉用户需要权限的原因, 并引导用户去应用权限管理中手动打开权限按钮
                 Toast.makeText(this, PermissionUtils.getNotice(), Toast.LENGTH_SHORT).show();
                 PermissionUtils.callback.deny();
             }

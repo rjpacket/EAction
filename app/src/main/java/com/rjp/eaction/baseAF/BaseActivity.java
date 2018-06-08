@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Context mContext;
+    public Context mContext;
     private TopBar topBar;
     private NetworkView networkView;
     private FrameLayout layoutContainer;
@@ -45,8 +45,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         ButterKnife.bind(this);
         handle();
     }
-
-    protected abstract void handle();
 
     /**
      * 网络请求失败，页面隐藏，显示重新加载布局
@@ -133,6 +131,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     /**
+     * 修改页面的标题
+     * @param title
+     */
+    protected void setTopTitle(String title) {
+        topBar.setTitle(title);
+    }
+
+    /**
      * 默认每一个activity需要标题栏
      * @return
      */
@@ -144,4 +150,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
 
     }
+
+    protected abstract void handle();
 }

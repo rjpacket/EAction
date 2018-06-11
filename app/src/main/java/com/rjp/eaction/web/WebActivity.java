@@ -115,13 +115,11 @@ public class WebActivity extends BaseActivity {
     @Override
     public void onBackPressed() {
         int childCount = webContainer.getChildCount();
-        if (childCount > 1) {
-            WebView webView = (WebView) webContainer.getChildAt(childCount - 1);
-            webContainer.removeView(webView);
-            webView.clearCache(true);
-            webView.destroy();
-            webView = null;
-        } else {
+        WebView webView = (WebView) webContainer.getChildAt(childCount - 1);
+        webContainer.removeView(webView);
+        webView.clearCache(true);
+        webView.destroy();
+        if (childCount <= 1) {
             super.onBackPressed();
         }
     }

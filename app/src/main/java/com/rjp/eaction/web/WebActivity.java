@@ -1,5 +1,6 @@
 package com.rjp.eaction.web;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.FrameLayout;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.util.AppUtils;
 
 import butterknife.BindView;
 
@@ -23,6 +25,19 @@ public class WebActivity extends BaseActivity {
 
     @BindView(R.id.web_container)
     FrameLayout webContainer;
+
+    /**
+     * 意图跳转
+     * @param mContext
+     * @param title
+     * @param url
+     */
+    public static void trendTo(Context mContext, String title, String url){
+        Intent intent = new Intent(mContext, WebActivity.class);
+        intent.putExtra(WEB_TITLE, title);
+        intent.putExtra(WEB_URL, url);
+        mContext.startActivity(intent);
+    }
 
     @Override
     protected void networkReload() {
@@ -50,14 +65,14 @@ public class WebActivity extends BaseActivity {
      * @param url
      */
     private void addWebView(String url) {
-        WebView headerWebView = new WebView(mContext);
+        WebView webview = new WebView(mContext);
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        headerWebView.setLayoutParams(params);
-        initWebSetting(headerWebView.getSettings());
-        headerWebView.loadUrl(url);
-        headerWebView.setWebViewClient(new MyWebviewClient());
-        headerWebView.setWebChromeClient(new WebChromeClient());
-        webContainer.addView(headerWebView);
+        webview.setLayoutParams(params);
+        initWebSetting(webview.getSettings());
+        webview.loadUrl(url);
+        webview.setWebViewClient(new MyWebviewClient());
+        webview.setWebChromeClient(new WebChromeClient());
+        webContainer.addView(webview);
     }
 
     /**
@@ -88,8 +103,26 @@ public class WebActivity extends BaseActivity {
     public class MyWebviewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            if(!url.startsWith("http")){
+                AppUtils.browserCheck(mContext, url);
+                return true;
+            }
             addWebView(url);
             return true;
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        int childCount = webContainer.getChildCount();
+        if (childCount > 1) {
+            WebView webView = (WebView) webContainer.getChildAt(childCount - 1);
+            webContainer.removeView(webView);
+            webView.clearCache(true);
+            webView.destroy();
+            webView = null;
+        } else {
+            super.onBackPressed();
         }
     }
 }

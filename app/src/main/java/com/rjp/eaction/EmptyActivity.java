@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.rjp.eaction.function.SelectPhotoPoupWindow;
-import com.rjp.eaction.util.AppUtils;
+import com.rjp.eaction.web.WebActivity;
 
 public class EmptyActivity extends Activity {
 
@@ -28,7 +28,7 @@ public class EmptyActivity extends Activity {
         findViewById(R.id.tv_detail).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppUtils.getMacAddress(EmptyActivity.this);
+                WebActivity.trendTo(EmptyActivity.this, "百度", "http://www.baidu.com");
             }
         });
     }

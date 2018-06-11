@@ -2,9 +2,11 @@ package com.rjp.eaction.util;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -171,5 +173,21 @@ public class AppUtils {
             agent = "channel_test";
         }
         return agent;
+    }
+
+    /**
+     * 浏览器查看url
+     * @param context
+     * @param url
+     */
+    public static void browserCheck(Context context, String url){
+        try {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(url));
+            context.startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

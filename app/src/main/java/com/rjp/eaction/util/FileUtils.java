@@ -7,6 +7,7 @@ import android.os.Environment;
 import android.support.v4.content.FileProvider;
 
 import java.io.File;
+import java.io.InputStream;
 
 import static android.os.Build.VERSION_CODES.N;
 
@@ -136,5 +137,27 @@ public class FileUtils {
      */
     public static File getCacheImageFileByName(Context context, String fileName) {
         return createFile(getCacheImageDir(context), fileName);
+    }
+
+    /**
+     * 获取assets下的文件
+     * @param context
+     * @param name
+     * @return
+     */
+    public static String getAssetsFile(Context context, String name){
+        try {
+            InputStream is = context.getAssets().open(name);
+            int size = is.available();
+            // Read the entire asset into a local byte buffer.
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            String content = new String(buffer, "UTF-8");
+            return content;
+        }catch (Exception e){
+
+        }
+        return "";
     }
 }

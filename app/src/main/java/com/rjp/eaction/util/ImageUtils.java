@@ -3,9 +3,12 @@ package com.rjp.eaction.util;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -68,5 +71,42 @@ public class ImageUtils {
             e.printStackTrace();
         }
         return null;
+    }
+
+    /**
+     * Bitmap缩放，注意源Bitmap在缩放后将会被回收
+     *
+     * @param origin
+     * @param width
+     * @param height
+     * @return
+     */
+    public static Bitmap getScaleBitmap(Bitmap origin, int width, int height) {
+        float originWidth = origin.getWidth();
+        float originHeight = origin.getHeight();
+
+        Matrix matrix = new Matrix();
+        float scaleWidth = ((float) width) / originWidth;
+        float scaleHeight = ((float) height) / originHeight;
+
+        matrix.postScale(scaleWidth, scaleHeight);
+        Bitmap scale = Bitmap.createBitmap(origin, 0, 0, (int) originWidth, (int) originHeight, matrix, true);
+        origin.recycle();
+        return scale;
+    }
+
+    /**
+     * 从View获取Bitmap
+     *
+     * @param view View
+     * @return Bitmap
+     */
+    public static Bitmap getBitmapFromView(View view) {
+        Bitmap bitmap = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+
+        view.layout(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
+        view.draw(canvas);
+        return bitmap;
     }
 }

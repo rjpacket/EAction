@@ -134,7 +134,7 @@ public class SwiperView<T> extends FrameLayout {
     private Handler handler = new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(Message msg) {
-            //这个动画的执行是在主线程，所以资源紧张的时候会卡顿。你问我什么资源紧张？我也不知道啊。可能cpu(70%)，可能内存(30%)
+            //这个动画的执行是在主线程，所以资源紧张的时候会卡顿
             switch (msg.what){
                 case AUTO_START_ANIM:
                     startLeftValueAnim(0, -width, true);

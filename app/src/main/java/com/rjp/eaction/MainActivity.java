@@ -5,9 +5,9 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.rjp.eaction.baseAF.BaseActivity;
-import com.rjp.eaction.fragments.HomeFragment;
-import com.rjp.eaction.fragments.MineFragment;
-import com.rjp.eaction.fragments.SocialFragment;
+import com.rjp.eaction.ui.home.HomeFragment;
+import com.rjp.eaction.ui.mine.MineFragment;
+import com.rjp.eaction.ui.social.SocialFragment;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.navigationview.NavigationView;

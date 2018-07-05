@@ -1,5 +1,6 @@
 package com.rjp.eaction.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -108,5 +109,14 @@ public class ImageUtils {
         view.layout(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
         view.draw(canvas);
         return bitmap;
+    }
+
+    /**
+     * 选择照片
+     */
+    public static void pickPhoto(Activity activity, int requestCode) {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        activity.startActivityForResult(intent, requestCode);
     }
 }

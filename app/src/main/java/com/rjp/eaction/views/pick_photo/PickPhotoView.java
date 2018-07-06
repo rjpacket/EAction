@@ -4,7 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.media.ThumbnailUtils;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -56,7 +56,7 @@ public class PickPhotoView extends FrameLayout {
         LayoutInflater.from(mContext).inflate(R.layout.view_pick_photo_view, this);
         gridView = (GridView) findViewById(R.id.grid_view);
         models = new ArrayList<>();
-        models.add(0, new PhotoModel(""));
+        models.add(0, new PhotoModel(PhotoModel.TYPE_FILE, ""));
         gridView.setAdapter(photoAdapter = new CommonAdapter<PhotoModel>(mContext, R.layout.item_pick_photo_view, models) {
             @Override
             protected void convert(ViewHolder viewHolder, PhotoModel item, final int position) {
@@ -67,6 +67,7 @@ public class PickPhotoView extends FrameLayout {
                 if(position == models.size() - 1){
                     ivDelete.setVisibility(GONE);
                     ivImage.setImageResource(R.mipmap.add_more_photo);
+                    ivImage.setBackgroundColor(Color.TRANSPARENT);
                     ivImage.setOnClickListener(new OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -87,9 +88,11 @@ public class PickPhotoView extends FrameLayout {
                                     });
                         }
                     });
+                    ivDelete.setOnClickListener(null);
                 }else {
                     ivDelete.setVisibility(VISIBLE);
-                    Bitmap bitmap = BitmapFactory.decodeFile(item.getFilePath());
+                    ivImage.setBackgroundColor(Color.parseColor("#ff545454"));
+                    Bitmap bitmap = ImageUtils.decodeBitmapFromFile(item.getFilePath(), imageWidth, imageWidth);
                     ivImage.setImageBitmap(ThumbnailUtils.extractThumbnail(bitmap, imageWidth, imageWidth));
                     ivImage.setOnClickListener(new OnClickListener() {
                         @Override
@@ -97,6 +100,15 @@ public class PickPhotoView extends FrameLayout {
                             CheckPhotoView checkPhotoView = new CheckPhotoView(mContext);
                             checkPhotoView.setPhotoModels(models.subList(0, models.size() - 1), position);
                             checkPhotoView.display();
+                        }
+                    });
+                    ivDelete.setTag(position);
+                    ivDelete.setOnClickListener(new OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            int tag = (Integer) v.getTag();
+                            models.remove(tag);
+                            photoAdapter.notifyDataSetChanged();
                         }
                     });
                 }

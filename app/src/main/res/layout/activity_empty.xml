@@ -42,4 +42,12 @@
         >
 
     </com.rjp.eaction.views.pick_photo.PickPhotoView>
+
+    <com.rjp.eaction.views.pick_photo.ShowPhotoView
+        android:id="@+id/show_photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </com.rjp.eaction.views.pick_photo.ShowPhotoView>
 </LinearLayout>

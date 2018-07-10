@@ -18,7 +18,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.rjp.eaction.BuildConfig;
-import com.rjp.eaction.network.Const;
+import com.rjp.eaction.baseAF.Const;
 
 import java.io.File;
 import java.lang.reflect.Field;

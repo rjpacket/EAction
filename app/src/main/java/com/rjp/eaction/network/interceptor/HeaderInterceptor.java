@@ -2,7 +2,7 @@ package com.rjp.eaction.network.interceptor;
 
 import android.content.Context;
 
-import com.rjp.eaction.network.Const;
+import com.rjp.eaction.baseAF.Const;
 import com.rjp.eaction.util.AppUtils;
 
 import java.io.IOException;

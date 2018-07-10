@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.rjp.eaction.baseAF.Const;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.network.callback.ResponseListCallback;
 import com.rjp.eaction.network.exception.ExceptionHandle;

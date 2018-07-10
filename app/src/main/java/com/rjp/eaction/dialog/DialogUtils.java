@@ -17,6 +17,7 @@ import com.rjp.eaction.R;
 public class DialogUtils {
 
     public static DialogUtils instance;
+    private Dialog dialog;
 
     public static DialogUtils getInstance() {
         if (instance == null) {
@@ -40,7 +41,7 @@ public class DialogUtils {
         private String confirm = "确定";
         private String cancel = "取消";
         private boolean outsideCancel = false;
-        private View.OnClickListener onClickListener;
+        private OnDialogClickListener onClickListener;
 
         public Builder context(Context context) {
             this.context = context;
@@ -72,7 +73,7 @@ public class DialogUtils {
             return this;
         }
 
-        public Builder onClickListener(View.OnClickListener onClickListener) {
+        public Builder onClickListener(OnDialogClickListener onClickListener) {
             this.onClickListener = onClickListener;
             return this;
         }
@@ -141,12 +142,12 @@ public class DialogUtils {
     private String confirm;
     private String cancel;
     private boolean outsideCancel;
-    private View.OnClickListener onClickListener;
+    private OnDialogClickListener onClickListener;
     //是否使用默认的布局
     private boolean isUseDefaultLayout;
 
     public Dialog show() {
-        Dialog dialog = new Dialog(context, R.style.loading_dialog);
+        dialog = new Dialog(context, R.style.loading_dialog);
         dialog.setContentView(layout);
         dialog.setCanceledOnTouchOutside(outsideCancel);
         Window window = dialog.getWindow();
@@ -164,8 +165,24 @@ public class DialogUtils {
             tvNotice.setText(notice);
             tvCancel.setText(cancel);
             tvConfirm.setText(confirm);
-            tvConfirm.setOnClickListener(onClickListener);
-            tvCancel.setOnClickListener(onClickListener);
+            tvConfirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                    if(onClickListener != null){
+                        onClickListener.onConfirm();
+                    }
+                }
+            });
+            tvCancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                    if(onClickListener != null){
+                        onClickListener.onCancel();
+                    }
+                }
+            });
         }
         dialog.show();
         return dialog;

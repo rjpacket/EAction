@@ -17,7 +17,7 @@ import retrofit2.http.QueryMap;
 public interface ApiService {
 
     //地址
-    public static final String BASE_URL = "https://api.douban.com/";
+    public static final String BASE_URL = "http://47.96.127.217";
 
     /**
      * 通用get方法

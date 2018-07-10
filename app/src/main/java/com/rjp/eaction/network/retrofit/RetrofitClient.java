@@ -68,7 +68,7 @@ public class RetrofitClient {
                 .addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
 //                .cookieJar(new NovateCookieManger(context)) /*这里暂时用不到*/
                 .cache(cache)
-                .addInterceptor(new HeaderInterceptor())
+                .addInterceptor(new HeaderInterceptor(context))
 //                .addInterceptor(new CaheInterceptor(context)) /*缓存暂时用不到*/
 //                .addNetworkInterceptor(new CaheInterceptor(context)) /*缓存暂时用不到*/
                 .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)

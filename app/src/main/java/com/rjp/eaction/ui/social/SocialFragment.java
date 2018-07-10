@@ -23,12 +23,12 @@ public class SocialFragment extends BaseFragment {
 
     @Override
     protected void handle() {
-        setIcon0(R.mipmap.ic_launcher);
+        setIcon0(R.mipmap.icon_write);
     }
 
     @Override
     protected void clickOnIcon0() {
-
+        SendSocialActivity.trendTo(mContext);
     }
 
     @Override

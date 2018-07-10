@@ -97,5 +97,29 @@ public class SPUtils {
         return sp.getLong(key, defVal);
     }
 
+    /**
+     * 移除某个key值已经对应的值
+     */
+    public void remove(String key) {
+        editor.remove(key);
+        editor.commit();
+    }
+
+    /**
+     * 清除所有数据
+     */
+    public void clear() {
+        editor.clear();
+        editor.commit();
+    }
+
+    /**
+     * 查询某个key是否存在
+     */
+    public boolean contain(String key) {
+        return sp.contains(key);
+    }
+
+
     //--------------------------------------------------------------以下是扩展部分-----------------------------------------
 }

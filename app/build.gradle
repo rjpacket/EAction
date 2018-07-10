@@ -73,7 +73,9 @@ android {
         annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
         //七牛
         implementation 'com.qiniu:qiniu-android-sdk:7.3.0'
-        implementation 'com.zhy:base-adapter:3.0.3'
+        implementation 'com.rjp:CommonAdapter:1.0.0'
+        //查看大图
+        implementation 'com.github.chrisbanes:PhotoView:2.1.4'
     }
 }
 

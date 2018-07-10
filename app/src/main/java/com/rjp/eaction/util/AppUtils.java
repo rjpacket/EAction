@@ -259,7 +259,7 @@ public class AppUtils {
      * @param context
      * @return
      */
-    public static float getScreenWidth(Context context) {
+    public static int getScreenWidth(Context context) {
         DisplayMetrics dm = context.getResources().getDisplayMetrics();
         return dm.widthPixels;
     }
@@ -270,7 +270,7 @@ public class AppUtils {
      * @param context
      * @return
      */
-    public static float getScreenHeight(Context context) {
+    public static int getScreenHeight(Context context) {
         DisplayMetrics dm = context.getResources().getDisplayMetrics();
         return dm.heightPixels;
     }

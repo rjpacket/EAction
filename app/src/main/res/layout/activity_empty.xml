@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context="com.rjp.eaction.DetailActivity"
     >
     <TextView
@@ -35,4 +34,20 @@
         android:textSize="20dp"
         android:gravity="center"
         />
+
+    <com.rjp.eaction.views.pick_photo.PickPhotoView
+        android:id="@+id/pick_photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </com.rjp.eaction.views.pick_photo.PickPhotoView>
+
+    <com.rjp.eaction.views.pick_photo.ShowPhotoView
+        android:id="@+id/show_photo_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </com.rjp.eaction.views.pick_photo.ShowPhotoView>
 </LinearLayout>

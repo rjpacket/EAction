@@ -18,4 +18,9 @@
         <item name="android:windowEnterAnimation">@anim/dialog_default_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_default_out</item>
     </style>
+
+    <style name="dialog_fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>

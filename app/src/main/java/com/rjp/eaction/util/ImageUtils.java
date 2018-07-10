@@ -1,10 +1,13 @@
 package com.rjp.eaction.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
@@ -12,6 +15,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 
 import java.io.File;
 
@@ -30,6 +34,27 @@ public class ImageUtils {
      */
     public static void load(Context context, String url, ImageView imageView) {
         Glide.with(context).load(url).into(imageView);
+    }
+
+    /**
+     * 利用七牛api获取一张网络缩略图片bitmap
+     *
+     * @param context
+     * @param url       网络url
+     * @param imageView
+     * @param width     必须
+     * @param height    必须
+     *
+     * @return
+     */
+    public static void loadBitmap(Context context, String url, final ImageView imageView, final int width, final int height) {
+        Glide.with(context).load(url).asBitmap().centerCrop().into(new BitmapImageViewTarget(imageView) {
+            @Override
+            protected void setResource(Bitmap resource) {
+                Bitmap bitmap1 = ThumbnailUtils.extractThumbnail(resource, width, height);
+                imageView.setImageBitmap(bitmap1);
+            }
+        });
     }
 
     /**
@@ -108,5 +133,60 @@ public class ImageUtils {
         view.layout(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
         view.draw(canvas);
         return bitmap;
+    }
+
+    /**
+     * 选择照片
+     */
+    public static void pickPhoto(Activity activity, int requestCode) {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        intent.setType("image/*");
+        activity.startActivityForResult(intent, requestCode);
+    }
+
+    /**
+     * 从文件获取压缩大小的图片
+     *
+     * @param path
+     * @param reqWidth
+     * @param reqHeight
+     *
+     * @return
+     */
+    public static Bitmap decodeBitmapFromFile(String path, int reqWidth, int reqHeight) {
+        // 第一次解析将inJustDecodeBounds设置为true，来获取图片大小
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(path, options);
+        // 调用上面定义的方法计算inSampleSize值
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+        // 使用获取到的inSampleSize值再次解析图片
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeFile(path, options);
+    }
+
+    /**
+     * 计算图片的Ratio
+     *
+     * @param options
+     * @param reqWidth
+     * @param reqHeight
+     *
+     * @return
+     */
+    public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // 源图片的高度和宽度
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
+        if (height > reqHeight || width > reqWidth) {
+            // 计算出实际宽高和目标宽高的比率
+            final int heightRatio = Math.round((float) height / (float) reqHeight);
+            final int widthRatio = Math.round((float) width / (float) reqWidth);
+            // 选择宽和高中最小的比率作为inSampleSize的值，这样可以保证最终图片的宽和高
+            // 一定都会大于等于目标的宽和高。
+            inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
+        }
+        return inSampleSize;
     }
 }

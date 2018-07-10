@@ -6,6 +6,7 @@
 
     <color name="main_color">#ffeb1c42</color>
     <color name="main_bg">#fff4f5f6</color>
+    <color name="enable_false">#fff4f5f6</color>
     <color name="main_color_press">#ea3d5c</color>
     <color name="white">#ffffffff</color>
     <color name="line">#ffdddddd</color>

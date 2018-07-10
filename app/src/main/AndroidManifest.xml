@@ -59,6 +59,8 @@
         </activity>
         <activity android:name=".ui.social.SendSocialActivity">
         </activity>
+        <activity android:name=".ui.login.LoginActivity">
+        </activity>
     </application>
 
 </manifest>

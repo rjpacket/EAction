@@ -63,7 +63,7 @@ public abstract class CustomObserver<T> implements Observer<T> {
 
     @Override
     public void onError(Throwable e) {
-        Log.e("RJP-onError", e.getMessage());
+        Log.e("请求异常——下游接收不到数据", e.getMessage());
         onError(ExceptionHandle.handleException(e));
         //异常 下游接收不到数据
         if(loadingDialog != null && isShowLoading) {

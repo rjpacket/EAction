@@ -22,5 +22,5 @@ public class Const {
 
     public static final String ACCESS_USER_TOKEN = "access_user_token";
 
-    public static final String URL_SEND_TALK = "/api/v1/sendTalk";
+    public static final String URL_SEND_TALK = "api/v1/sendTalk";
 }

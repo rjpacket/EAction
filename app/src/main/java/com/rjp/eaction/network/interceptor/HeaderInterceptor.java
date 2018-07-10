@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.rjp.eaction.baseAF.Const;
 import com.rjp.eaction.util.AppUtils;
+import com.rjp.eaction.util.LogUtils;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -37,6 +38,7 @@ public class HeaderInterceptor implements Interceptor {
         headers.put(Const.HEADER_TIME_STAMP,            AppUtils.getTimeStamp());
         headers.put(Const.HEADER_OSVERSION,             AppUtils.getOSVersion());
         headers.put(Const.HEADER_ACCESS_USER_TOKEN,     AppUtils.getAccessUserToken());
+        LogUtils.e(headers.toString());
     }
 
     public HeaderInterceptor(Map<String, String> headers) {

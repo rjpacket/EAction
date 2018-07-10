@@ -15,6 +15,7 @@ import com.rjp.eaction.dialog.OnDialogClickListener;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.util.FileUtils;
+import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.views.pick_photo.PhotoModel;
 import com.rjp.eaction.views.pick_photo.PickPhotoView;
 
@@ -89,7 +90,7 @@ public class SendSocialActivity extends BaseActivity {
                 .model(new ResponseCallback<String>() {
                     @Override
                     public void success(String model) {
-
+                        LogUtils.e(model);
                     }
 
                     @Override

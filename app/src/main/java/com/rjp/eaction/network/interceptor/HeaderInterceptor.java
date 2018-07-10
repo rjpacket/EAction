@@ -1,5 +1,10 @@
 package com.rjp.eaction.network.interceptor;
 
+import android.content.Context;
+
+import com.rjp.eaction.network.Const;
+import com.rjp.eaction.util.AppUtils;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,9 +21,22 @@ public class HeaderInterceptor implements Interceptor {
 
     private Map<String, String> headers;
 
-    public HeaderInterceptor() {
+    public HeaderInterceptor(Context mContext) {
         this.headers = new HashMap<>();
-        headers.put("test", "123");
+        headers.put(Const.HEADER_VERSION,               AppUtils.getVersionName());
+        headers.put(Const.HEADER_APP_TYPE,              AppUtils.getAppType());
+        headers.put(Const.HEADER_VERSION_CODE,          AppUtils.getVersionCode());
+        headers.put(Const.HEADER_DEVICE_ID,             AppUtils.getDeviceId(mContext));
+        headers.put(Const.HEADER_MODEL,                 AppUtils.getModel());
+        headers.put(Const.HEADER_SIGN,                  "");
+        headers.put(Const.HEADER_IMEI,                  AppUtils.getIMEI(mContext));
+        headers.put(Const.HEADER_APPLICATION_ID,        AppUtils.getAppId());
+        headers.put(Const.HEADER_MAC_ADDRESS,           AppUtils.getMacAddress(mContext));
+        headers.put(Const.HEADER_CHANNEL,               AppUtils.getChannel(mContext));
+        headers.put(Const.HEADER_BRAND,                 AppUtils.getBrand());
+        headers.put(Const.HEADER_TIME_STAMP,            AppUtils.getTimeStamp());
+        headers.put(Const.HEADER_OSVERSION,             AppUtils.getOSVersion());
+        headers.put(Const.HEADER_ACCESS_USER_TOKEN,     AppUtils.getAccessUserToken(mContext));
     }
 
     public HeaderInterceptor(Map<String, String> headers) {

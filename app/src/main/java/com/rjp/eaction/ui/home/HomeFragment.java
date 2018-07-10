@@ -4,12 +4,12 @@ package com.rjp.eaction.ui.home;
 import android.support.v4.app.Fragment;
 import android.widget.ListView;
 
+import com.rjp.commonadapter.CommonAdapter;
+import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
 import com.rjp.eaction.swiper.ImageSwiper;
 import com.rjp.eaction.swiper.SwiperView;
-import com.zhy.adapter.abslistview.CommonAdapter;
-import com.zhy.adapter.abslistview.ViewHolder;
 
 import java.util.ArrayList;
 

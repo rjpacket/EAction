@@ -330,4 +330,28 @@ public class AppUtils {
     public static int getSDKVersion() {
         return android.os.Build.VERSION.SDK_INT;
     }
+
+    public static String getVersionName() {
+        return BuildConfig.VERSION_NAME;
+    }
+
+    public static String getVersionCode() {
+        return String.valueOf(BuildConfig.VERSION_CODE);
+    }
+
+    public static String getAppType() {
+        return "android";
+    }
+
+    public static String getTimeStamp() {
+        return String.valueOf(System.currentTimeMillis());
+    }
+
+    public static String getAccessUserToken(Context mContext) {
+        return "";
+    }
+
+    public static String getDeviceId(Context mContext) {
+        return "";
+    }
 }

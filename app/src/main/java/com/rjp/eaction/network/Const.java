@@ -19,4 +19,6 @@ public class Const {
     public static final String HEADER_TIME_STAMP = "time_stamp";
     public static final String HEADER_OSVERSION = "osversion";
     public static final String HEADER_ACCESS_USER_TOKEN = "access_user_token";
+
+    public static final String ACCESS_USER_TOKEN = "access_user_token";
 }

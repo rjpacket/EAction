@@ -58,6 +58,11 @@ public class HomeFragment extends BaseFragment {
     }
 
     @Override
+    protected boolean showTopBar() {
+        return false;
+    }
+
+    @Override
     protected String getPageTitle() {
         return "首页";
     }

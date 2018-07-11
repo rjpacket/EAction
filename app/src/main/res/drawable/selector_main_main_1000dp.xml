@@ -20,4 +20,11 @@
             <corners android:radius="1000dp" />
         </shape>
     </item>
+
+    <item>
+        <shape>
+            <solid android:color="@color/main_color" />
+            <corners android:radius="1000dp" />
+        </shape>
+    </item>
 </selector>

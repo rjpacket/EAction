@@ -1,11 +1,11 @@
 package com.rjp.eaction.network.observer;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.rjp.eaction.network.cancel.RxApiManager;
 import com.rjp.eaction.network.exception.ExceptionHandle;
 import com.rjp.eaction.network.loading.LoadingDialog;
+import com.rjp.eaction.util.LogUtils;
 
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -63,7 +63,7 @@ public abstract class CustomObserver<T> implements Observer<T> {
 
     @Override
     public void onError(Throwable e) {
-        Log.e("请求异常——下游接收不到数据", e.getMessage());
+        LogUtils.e("请求异常——下游接收不到数据", e.getMessage());
         onError(ExceptionHandle.handleException(e));
         //异常 下游接收不到数据
         if(loadingDialog != null && isShowLoading) {

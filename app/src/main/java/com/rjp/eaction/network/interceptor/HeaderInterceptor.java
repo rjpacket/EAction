@@ -27,10 +27,10 @@ public class HeaderInterceptor implements Interceptor {
         headers.put(Const.HEADER_VERSION,               AppUtils.getVersionName());
         headers.put(Const.HEADER_APP_TYPE,              AppUtils.getAppType());
         headers.put(Const.HEADER_VERSION_CODE,          AppUtils.getVersionCode());
-        headers.put(Const.HEADER_DEVICE_ID,             AppUtils.getDeviceId(mContext));
+        headers.put(Const.HEADER_DEVICE_ID,             AppUtils.getMacAddress(mContext));
         headers.put(Const.HEADER_MODEL,                 AppUtils.getModel());
         headers.put(Const.HEADER_SIGN,                  "");
-        headers.put(Const.HEADER_IMEI,                  AppUtils.getIMEI(mContext));
+        headers.put(Const.HEADER_IMEI,                  AppUtils.getMacAddress(mContext));
         headers.put(Const.HEADER_APPLICATION_ID,        AppUtils.getAppId());
         headers.put(Const.HEADER_MAC_ADDRESS,           AppUtils.getMacAddress(mContext));
         headers.put(Const.HEADER_CHANNEL,               AppUtils.getChannel(mContext));

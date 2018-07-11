@@ -23,4 +23,6 @@ public class Const {
     public static final String ACCESS_USER_TOKEN = "access_user_token";
 
     public static final String URL_SEND_TALK = "api/v1/sendTalk";
+    public static final String URL_GET_PHONE_CODE = "api/v1/getcode";
+    public static final String URL_LOGIN_BY_CODE = "api/v1/login";
 }

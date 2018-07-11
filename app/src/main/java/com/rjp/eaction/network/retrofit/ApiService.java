@@ -5,6 +5,7 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -31,5 +32,5 @@ public interface ApiService {
      * @return
      */
     @POST("{url}")
-    Observable<ResponseBody> post(@Path("url") String url, @QueryMap Map<String, String> map);
+    Observable<ResponseBody> post(@Path("url") String url, @Body Map<String, String> map);
 }

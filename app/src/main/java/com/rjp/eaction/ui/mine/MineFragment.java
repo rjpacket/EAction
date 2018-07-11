@@ -28,6 +28,11 @@ public class MineFragment extends BaseFragment {
     }
 
     @Override
+    protected boolean showTopBar() {
+        return false;
+    }
+
+    @Override
     protected String getPageTitle() {
         return "我的";
     }
@@ -36,6 +41,4 @@ public class MineFragment extends BaseFragment {
     protected int getLayoutId() {
         return R.layout.fragment_mine;
     }
-
-
 }

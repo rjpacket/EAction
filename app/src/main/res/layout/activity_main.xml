@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         app:tab_unSelectedColor="@color/text_dark"
         app:tab_selectedColor="@color/main_color"
+        app:tab_textSize="12dp"
         >
 
     </com.rjp.navigationview.NavigationView>

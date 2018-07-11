@@ -6,11 +6,11 @@ package com.rjp.eaction.network.model;
  * author : Gimpo create on 2018/5/14 10:32
  * email  : jimbo922@163.com
  */
-public class BaseModel {
+public class BaseModel<T> {
     private int code;
     private String msg;
     private String servertime;
-    private Object data;
+    private T data;
 
     public int getCode() {
         return code;
@@ -36,11 +36,11 @@ public class BaseModel {
         this.servertime = servertime;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 

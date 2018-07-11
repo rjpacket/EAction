@@ -38,9 +38,9 @@ public class MainActivity extends BaseActivity {
         fragments.add(new MineFragment());
         navigationView.setFragments(fragments);
         ArrayList<TabModel> tabModels = new ArrayList<>();
-        tabModels.add(new TabModel("首页", R.mipmap.ic_launcher));
-        tabModels.add(new TabModel("社区", R.mipmap.ic_launcher));
-        tabModels.add(new TabModel("我的", R.mipmap.ic_launcher));
+        tabModels.add(new TabModel("首页", R.drawable.selector_home_tab_1));
+        tabModels.add(new TabModel("社区", R.drawable.selector_home_tab_2));
+        tabModels.add(new TabModel("我的", R.drawable.selector_home_tab_3));
         navigationView.setTabs(tabModels);
     }
 

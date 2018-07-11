@@ -353,6 +353,6 @@ public class AppUtils {
     }
 
     public static String getDeviceId(Context mContext) {
-        return "";
+        return getIMEI(mContext);
     }
 }

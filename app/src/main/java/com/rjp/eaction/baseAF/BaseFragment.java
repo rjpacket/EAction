@@ -92,7 +92,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      * 碎片是否显示标题栏
      * @return
      */
-    private boolean showTopBar() {
+    protected boolean showTopBar() {
         return true;
     }
 

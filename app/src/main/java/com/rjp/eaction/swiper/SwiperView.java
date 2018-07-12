@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.FrameLayout;
 
 import java.util.List;
@@ -167,7 +168,7 @@ public class SwiperView<T> extends FrameLayout {
      */
     private void startLeftValueAnim(int start, int end, final boolean exchange) {
         ValueAnimator valueAnimator = ValueAnimator.ofInt(start, end);
-        valueAnimator.setDuration(500);
+        valueAnimator.setDuration(1000);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -176,6 +177,7 @@ public class SwiperView<T> extends FrameLayout {
                 rightSwiper.layout(midValue + width, 0,  midValue + 2 * width, height);
             }
         });
+        valueAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         valueAnimator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
@@ -216,7 +218,7 @@ public class SwiperView<T> extends FrameLayout {
      */
     private void startRightValueAnim(int start, int end, final boolean exchange) {
         ValueAnimator valueAnimator = ValueAnimator.ofInt(start, end);
-        valueAnimator.setDuration(500);
+        valueAnimator.setDuration(1000);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -225,6 +227,7 @@ public class SwiperView<T> extends FrameLayout {
                 leftSwiper.layout(midValue - width, 0,  midValue, height);
             }
         });
+        valueAnimator.setInterpolator(new AccelerateDecelerateInterpolator());
         valueAnimator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {

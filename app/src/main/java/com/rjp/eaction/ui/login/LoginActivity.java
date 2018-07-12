@@ -14,6 +14,8 @@ import com.rjp.eaction.baseAF.Const;
 import com.rjp.eaction.bean.LoginModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.network.retrofit.RetrofitClient;
+import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.util.SPUtils;
 import com.rjp.eaction.util.ToastUtils;
 
@@ -122,7 +124,9 @@ public class LoginActivity extends BaseActivity {
                     @Override
                     public void success(LoginModel model) {
                         ToastUtils.showToast(mContext, "登录成功");
-                        SPUtils.getInstance().save(Const.ACCESS_USER_TOKEN, model.getToken());
+                        String token = model.getToken();
+                        RetrofitClient.getInstance(mContext).headerInterceptor.refreshHeader(mContext);
+                        SPUtils.getInstance().save(Const.ACCESS_USER_TOKEN, token);
                     }
 
                     @Override

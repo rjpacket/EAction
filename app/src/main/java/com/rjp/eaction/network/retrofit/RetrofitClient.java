@@ -33,6 +33,7 @@ public class RetrofitClient {
 
     private Cache cache = null;
     private File httpCacheDirectory;
+    public final HeaderInterceptor headerInterceptor;
 
     public static RetrofitClient getInstance(Context context) {
         if(sNewInstance == null){
@@ -65,12 +66,13 @@ public class RetrofitClient {
             Log.e("OKHttp", "Could not create http cache", e);
         }
 
+        headerInterceptor = new HeaderInterceptor(context);
         okHttpClient = new OkHttpClient.Builder()
                 .addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
 //                .cookieJar(new NovateCookieManger(context)) /*这里暂时用不到*/
                 .cache(cache)
                 .addInterceptor(new UrlDecodeInterceptor())
-                .addInterceptor(new HeaderInterceptor(context))
+                .addInterceptor(headerInterceptor)
 //                .addInterceptor(new CaheInterceptor(context)) /*缓存暂时用不到*/
 //                .addNetworkInterceptor(new CaheInterceptor(context)) /*缓存暂时用不到*/
                 .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)

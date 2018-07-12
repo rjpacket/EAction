@@ -103,8 +103,10 @@ public class SendSocialActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Uri uri = data.getData();
-        String filePath = FileUtils.getFilePathByUri(mContext, uri);
-        pickPhotoView.addPickPhotoModel(new PhotoModel(PhotoModel.TYPE_FILE, filePath));
+        if(data != null) {
+            Uri uri = data.getData();
+            String filePath = FileUtils.getFilePathByUri(mContext, uri);
+            pickPhotoView.addPickPhotoModel(new PhotoModel(PhotoModel.TYPE_FILE, filePath));
+        }
     }
 }

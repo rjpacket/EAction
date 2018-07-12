@@ -3,9 +3,7 @@ package com.rjp.eaction.network;
 import android.content.Context;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.rjp.eaction.network.callback.ResponseCallback;
-import com.rjp.eaction.network.callback.ResponseListCallback;
 import com.rjp.eaction.network.exception.ExceptionHandle;
 import com.rjp.eaction.network.model.BaseModel;
 import com.rjp.eaction.network.observer.CustomObserver;
@@ -13,8 +11,8 @@ import com.rjp.eaction.network.retrofit.RetrofitClient;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import okhttp3.ResponseBody;
@@ -102,6 +100,11 @@ public class NetUtils {
         }
     }
 
+    /**
+     * 核心请求类
+     * @param responseCallback
+     * @param <T>
+     */
     public <T> void model(final ResponseCallback<T> responseCallback) {
         RetrofitClient.getInstance(context).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
@@ -116,8 +119,6 @@ public class NetUtils {
                     Gson gson = new Gson();
                     Type resultType = wrapType(BaseModel.class, responseCallback.getGenericityType());
                     BaseModel<T> baseModel = gson.fromJson(response, resultType);
-
-                    T t1 = gson.fromJson(response, responseCallback.getGenericityType());
                     if (baseModel.isOk()) {
                         responseCallback.success(baseModel.getData());
                     } else {
@@ -150,31 +151,22 @@ public class NetUtils {
         };
     }
 
-    public <T> void models(final ResponseListCallback<T> responseCallback) {
-        RetrofitClient.getInstance(context).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
-            @Override
-            public void onError(ExceptionHandle.ResponeThrowable e) {
-                responseCallback.failure(e.code, e.message);
-            }
-
-            @Override
-            public void onNext(ResponseBody responseBody) {
-                try {
-                    String response = responseBody.string();
-                    Gson gson = new Gson();
-                    BaseModel baseModel = gson.fromJson(response, BaseModel.class);
-                    if (baseModel.isOk()) {
-                        List<T> t = gson.fromJson(baseModel.getData().toString(), new TypeToken<List<T>>() {
-                        }.getType());
-                        responseCallback.success(t);
-                    } else {
-                        responseCallback.failure(baseModel.getCode(), baseModel.getMsg());
-                    }
-                } catch (Exception e) {
-                    ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
-                    responseCallback.failure(exception.code, exception.message);
-                }
-            }
-        });
+    private static class ListParameterizedType implements ParameterizedType {
+        private Type type;
+        private ListParameterizedType(Type type) {
+            this.type = type;
+        }
+        @Override
+        public Type[] getActualTypeArguments() {
+            return new Type[] {type};
+        }
+        @Override
+        public Type getRawType() {
+            return ArrayList.class;
+        }
+        @Override
+        public Type getOwnerType() {
+            return null;
+        }
     }
 }

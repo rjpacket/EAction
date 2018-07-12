@@ -14,7 +14,6 @@ import com.rjp.eaction.baseAF.Const;
 import com.rjp.eaction.bean.LoginModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
-import com.rjp.eaction.network.callback.ResponseListCallback;
 import com.rjp.eaction.util.SPUtils;
 import com.rjp.eaction.util.ToastUtils;
 
@@ -144,7 +143,7 @@ public class LoginActivity extends BaseActivity {
                 .showLoading(true)
                 .param("phone", phone)
                 .build()
-                .models(new ResponseListCallback<String>() {
+                .model(new ResponseCallback<List<String>>() {
                     @Override
                     public void success(List<String> models) {
                         ToastUtils.showToast(mContext, "发送验证码成功");

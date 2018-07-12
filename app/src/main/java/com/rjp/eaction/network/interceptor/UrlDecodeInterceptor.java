@@ -11,7 +11,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * 添加头部拦截器  添加通用Header
+ * 添加url解码
  */
 public class UrlDecodeInterceptor implements Interceptor {
 

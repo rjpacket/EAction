@@ -25,4 +25,5 @@ public class Const {
     public static final String URL_SEND_TALK = "api/v1/sendTalk";
     public static final String URL_GET_PHONE_CODE = "api/v1/getcode";
     public static final String URL_LOGIN_BY_CODE = "api/v1/login";
+    public static final String URL_UPDATE_USER_INFO = "api/v1/user";
 }

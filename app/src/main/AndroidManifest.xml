@@ -61,6 +61,8 @@
         </activity>
         <activity android:name=".ui.login.LoginActivity">
         </activity>
+        <activity android:name=".ui.mine.PersonalInfoActivity">
+        </activity>
     </application>
 
 </manifest>

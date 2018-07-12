@@ -8,6 +8,8 @@ import java.io.Serializable;
  */
 public class LoginModel implements Serializable {
     private String token;
+    private String name;
+    private String sex;
 
     public String getToken() {
         return token;
@@ -15,5 +17,21 @@ public class LoginModel implements Serializable {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }

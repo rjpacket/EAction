@@ -1,0 +1,19 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [
+    {
+      "name": "rjp1",
+      "sex": "1"
+    },
+    {
+      "name": "rjp2",
+      "sex": "2"
+    },
+    {
+      "name": "rjp3",
+      "sex": "3"
+    }
+  ],
+  "server_time": 1531363972
+}

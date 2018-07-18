@@ -96,6 +96,10 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
         return true;
     }
 
+    protected TopBar getTopBar() {
+        return topBar;
+    }
+
     /**
      * 碎片布局
      * @return

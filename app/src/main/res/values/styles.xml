@@ -23,4 +23,15 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <declare-styleable name="SettingView">
+        <attr name="setting_icon" format="reference" />
+        <attr name="setting_icon_visible" format="boolean" />
+        <attr name="setting_name" format="string" />
+        <attr name="setting_name_size" format="integer" />
+        <attr name="setting_name_color" format="reference|color" />
+        <attr name="setting_desc" format="string" />
+        <attr name="setting_desc_size" format="integer" />
+        <attr name="setting_desc_color" format="reference|color" />
+    </declare-styleable>
 </resources>

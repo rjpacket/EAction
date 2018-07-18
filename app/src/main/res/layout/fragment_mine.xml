@@ -1,50 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.mine.MineFragment"
     >
 
-    <LinearLayout
+    <com.rjp.eaction.views.other.IScrollView
+        android:id="@+id/mine_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/line"
         >
         <LinearLayout
-            android:id="@+id/ll_personal_info"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/line"
             >
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/ll_mine_top"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="个人信息"
-                android:gravity="center"
-                />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp"
+                android:background="@mipmap/bg_mine_top"
+                >
+                <com.rjp.eaction.views.other.CircleImageView
+                    android:id="@+id/iv_user_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/ic_launcher"
+                    />
 
-        <LinearLayout
-            android:id="@+id/ll_system_setting"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:orientation="horizontal"
-            android:background="@color/white"
-            android:gravity="center_vertical"
-            android:layout_marginTop="1px"
-            >
-            <TextView
-                android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="名字"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_user_signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="签名"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:layout_marginTop="10dp"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_white_right_arrow"
+                    />
+            </LinearLayout>
+
+            <com.rjp.eaction.views.other.SettingView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="系统设置"
-                android:gravity="center"
-                />
-        </LinearLayout>
-    </LinearLayout>
+                app:setting_name="个人信息"
+                android:layout_marginTop="1000dp"
+                >
 
-</ScrollView>
+            </com.rjp.eaction.views.other.SettingView>
+
+            <com.rjp.eaction.views.other.SettingView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_name="系统设置"
+                android:layout_marginTop="1px"
+                >
+
+            </com.rjp.eaction.views.other.SettingView>
+        </LinearLayout>
+    </com.rjp.eaction.views.other.IScrollView>
+
+    <TextView
+        android:id="@+id/tv_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="我的"
+        android:textSize="18dp"
+        android:background="@color/main_color"
+        android:textColor="@color/white"
+        android:gravity="center"
+        />
+</RelativeLayout>

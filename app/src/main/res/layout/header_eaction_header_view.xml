@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        >
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下拉可以刷新"
+            android:minWidth="120dp"
+            android:textSize="14dp"
+            android:textColor="#333"
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上次刷新: 今天 16:43"
+            android:minWidth="120dp"
+            android:textSize="12dp"
+            android:textColor="#666"
+            android:layout_marginTop="4dp"
+            />
+    </LinearLayout>
+</LinearLayout>

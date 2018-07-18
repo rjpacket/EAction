@@ -23,6 +23,33 @@ public class HeaderInterceptor implements Interceptor {
     private Map<String, String> headers;
 
     public HeaderInterceptor(Context mContext) {
+        refreshHeader(mContext);
+    }
+
+    public HeaderInterceptor(Map<String, String> headers) {
+        this.headers = headers;
+    }
+
+    @Override
+    public Response intercept(Chain chain) throws IOException {
+        Request.Builder builder = chain.request()
+                .newBuilder();
+        if (headers != null && headers.size() > 0) {
+            Set<String> keys = headers.keySet();
+            for (String headerKey : keys) {
+                String value = headers.get(headerKey);
+                LogUtils.e("------header----->", value);
+                builder.addHeader(headerKey, value).build();
+            }
+        }
+        return chain.proceed(builder.build());
+
+    }
+
+    /**
+     * 刷新请求头
+     */
+    public void refreshHeader(Context mContext) {
         this.headers = new HashMap<>();
         headers.put(Const.HEADER_VERSION,               AppUtils.getVersionName());
         headers.put(Const.HEADER_APP_TYPE,              AppUtils.getAppType());
@@ -39,24 +66,5 @@ public class HeaderInterceptor implements Interceptor {
         headers.put(Const.HEADER_OSVERSION,             AppUtils.getOSVersion());
         headers.put(Const.HEADER_ACCESS_USER_TOKEN,     AppUtils.getAccessUserToken());
         LogUtils.e(headers.toString());
-    }
-
-    public HeaderInterceptor(Map<String, String> headers) {
-        this.headers = headers;
-    }
-
-    @Override
-    public Response intercept(Chain chain) throws IOException {
-
-        Request.Builder builder = chain.request()
-                .newBuilder();
-        if (headers != null && headers.size() > 0) {
-            Set<String> keys = headers.keySet();
-            for (String headerKey : keys) {
-                builder.addHeader(headerKey, headers.get(headerKey)).build();
-            }
-        }
-        return chain.proceed(builder.build());
-
     }
 }

@@ -349,7 +349,9 @@ public class AppUtils {
     }
 
     public static String getAccessUserToken() {
-        return SPUtils.getInstance().getString(Const.ACCESS_USER_TOKEN);
+        String token = SPUtils.getInstance().getString(Const.ACCESS_USER_TOKEN);
+        LogUtils.e("------getAccessUserToken----->", token);
+        return token;
     }
 
     public static String getDeviceId(Context mContext) {

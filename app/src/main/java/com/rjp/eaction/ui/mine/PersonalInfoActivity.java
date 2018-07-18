@@ -48,13 +48,10 @@ public class PersonalInfoActivity extends BaseActivity {
                 .param("signature", "android coder")
                 .param("password", "123456")
                 .build()
-                .model(new ResponseCallback<List<LoginModel>>() {
+                .model(new ResponseCallback<Object>() {
                     @Override
-                    public void success(List<LoginModel> models) {
+                    public void success(Object model) {
                         ToastUtils.showToast(mContext, "获取个人信息成功");
-                        for (LoginModel model : models) {
-                            LogUtils.e("--->", model.getName());
-                        }
                     }
 
                     @Override

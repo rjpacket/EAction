@@ -1,6 +1,8 @@
 package com.rjp.eaction.network.retrofit;
 
 
+import com.rjp.eaction.BuildConfig;
+
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -18,7 +20,7 @@ import retrofit2.http.QueryMap;
 public interface ApiService {
 
     //地址
-    public static final String BASE_URL = "http://47.96.127.217";
+    public static final String BASE_URL = BuildConfig.DEBUG ? "http://192.168.3.8:80" : "http://47.96.127.217";
 
     /**
      * 通用get方法

@@ -50,7 +50,7 @@ public class RetrofitClient {
      * 初始化client
      * @param url
      */
-    private RetrofitClient(Context context, String url) {
+    public RetrofitClient(Context context, String url) {
         if (TextUtils.isEmpty(url)) {
             url = baseUrl;
         }

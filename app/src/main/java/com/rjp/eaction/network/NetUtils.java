@@ -101,6 +101,39 @@ public class NetUtils {
     }
 
     /**
+     * baseurl 改变的请求
+     * @param baseUrl
+     * @param responseCallback
+     * @param <T>
+     */
+    public <T> void model(String baseUrl, final ResponseCallback<T> responseCallback) {
+        new RetrofitClient(context, baseUrl).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
+            @Override
+            public void onError(ExceptionHandle.ResponeThrowable e) {
+                responseCallback.failure(e.code, e.message);
+            }
+
+            @Override
+            public void onNext(ResponseBody responseBody) {
+                try {
+                    String response = responseBody.string();
+                    Gson gson = new Gson();
+                    Type resultType = wrapType(BaseModel.class, responseCallback.getGenericityType());
+                    BaseModel<T> baseModel = gson.fromJson(response, resultType);
+                    if (baseModel.isOk()) {
+                        responseCallback.success(baseModel.getData());
+                    } else {
+                        responseCallback.failure(baseModel.getCode(), baseModel.getMsg());
+                    }
+                } catch (Exception e) {
+                    ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
+                    responseCallback.failure(exception.code, exception.message);
+                }
+            }
+        });
+    }
+
+    /**
      * 核心请求类
      * @param responseCallback
      * @param <T>

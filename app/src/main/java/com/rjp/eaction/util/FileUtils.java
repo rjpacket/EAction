@@ -9,6 +9,8 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 
+import com.rjp.eaction.R;
+
 import java.io.File;
 import java.io.InputStream;
 
@@ -35,6 +37,11 @@ public class FileUtils {
         return file;
     }
 
+    private static File createDirPath(String dirPath, String dirName) {
+        File file = new File(dirPath, dirName);
+        return file;
+    }
+
     /**
      * 新建一个文件
      *
@@ -52,6 +59,11 @@ public class FileUtils {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return file;
+    }
+
+    public static File createFilePath(String dirPath, String fileName) {
+        File file = new File(dirPath, fileName);
         return file;
     }
 
@@ -95,6 +107,10 @@ public class FileUtils {
         return createDir(getExternalDir(context), "images").getAbsolutePath();
     }
 
+    public static String getApkDir(Context context) {
+        return createDirPath(getExternalDir(context), "apks").getAbsolutePath();
+    }
+
     /**
      * 获取 存储图片 的缓存文件路径
      *
@@ -114,7 +130,7 @@ public class FileUtils {
      */
     public static Uri getUriByFile(Context context, File file) {
         if (Build.VERSION.SDK_INT >= N) {
-            return FileProvider.getUriForFile(context.getApplicationContext(), "com.rjp.eaction.fileprovider", file);
+            return FileProvider.getUriForFile(context.getApplicationContext(), context.getString(R.string.file_provider), file);
         } else {
             return Uri.fromFile(file);
         }
@@ -160,6 +176,16 @@ public class FileUtils {
      */
     public static File getImageFileByName(Context context, String fileName) {
         return createFile(getImageDir(context), fileName);
+    }
+
+    /**
+     * 只获取路径，没有实际生成文件
+     * @param context
+     * @param fileName
+     * @return
+     */
+    public static String getApkFilePathByName(Context context, String fileName) {
+        return createFilePath(getApkDir(context), fileName).getAbsolutePath();
     }
 
     /**

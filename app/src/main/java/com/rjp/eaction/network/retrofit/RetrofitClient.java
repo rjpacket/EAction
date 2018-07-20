@@ -55,7 +55,7 @@ public class RetrofitClient {
             url = baseUrl;
         }
         if (httpCacheDirectory == null) {
-            httpCacheDirectory = new File(context.getCacheDir(), "tamic_cache");
+            httpCacheDirectory = new File(context.getCacheDir(), "eaction_cache");
         }
 
         try {

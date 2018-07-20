@@ -19,8 +19,10 @@ android {
     }
 
     productFlavors {
-        channel_A {
-            applicationId "com.rjp.eaction.A"
+        channel_caipiao {
+            applicationId "com.rjp.eaction.caipiao"
+            versionCode 2
+            versionName "1.0.2"
         }
 
         channel_B {
@@ -33,10 +35,10 @@ android {
     }
 
     sourceSets {
-        channel_A {
-            manifest.srcFile 'channels/channel_A/AndroidManifest.xml'
-            res.srcDirs = ['channels/channel_A/res']
-            java.srcDirs = ['channels/channel_A/java']
+        channel_caipiao {
+            manifest.srcFile 'channels/channel_caipiao/AndroidManifest.xml'
+            res.srcDirs = ['channels/channel_caipiao/res']
+            java.srcDirs = ['channels/channel_caipiao/java']
         }
 
         channel_B {
@@ -75,5 +77,7 @@ android {
         implementation 'com.rjp:CommonAdapter:1.0.0'
         //查看大图
         implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+        //文件下载
+        implementation 'com.liulishuo.filedownloader:library:1.7.4'
     }
 }

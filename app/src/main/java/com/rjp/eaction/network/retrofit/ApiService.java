@@ -22,7 +22,7 @@ public interface ApiService {
     //地址
     String BASE_URL = BuildConfig.DEBUG ? "http://192.168.3.8:80" : "http://47.96.127.217";
 
-    String WANGYI_URL = "http://api.caipiao.163.com";
+    String WANGYI_URL = "http://api.caipiao.163.com/";
 
     /**
      * 通用get方法

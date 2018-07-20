@@ -6,21 +6,29 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
+import android.widget.PopupWindow;
 
 import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadSampleListener;
 import com.liulishuo.filedownloader.FileDownloader;
-import com.rjp.eaction.dialog.DialogUtils;
-import com.rjp.eaction.dialog.OnDialogClickListener;
+import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.permission.PermissionCallback;
 import com.rjp.eaction.permission.PermissionUtils;
 import com.rjp.eaction.util.FileUtils;
+import com.rjp.eaction.util.dialog.DialogUtils;
+import com.rjp.eaction.util.dialog.OnDialogClickListener;
+import com.rjp.eaction.util.popup.OnPopupBindDataListener;
+import com.rjp.eaction.util.popup.PopUtils;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PayActivity extends Activity {
 
     private String filePathByName;
+    private PopupWindow popupWindow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +46,23 @@ public class PayActivity extends Activity {
             @Override
             public void deny() {
 
+            }
+        });
+
+        List<String> models = new ArrayList<>();
+        models.add("123");
+        popupWindow = new PopUtils.Builder<String>().context(this).width(100).models(models).bindData(new OnPopupBindDataListener<String>() {
+            @Override
+            public void convert(ViewHolder viewHolder, String item, int position) {
+                viewHolder.setText(R.id.tv_option, item);
+
+            }
+        }).build().show();
+
+        findViewById(R.id.tv_test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.showAsDropDown(v);
             }
         });
     }

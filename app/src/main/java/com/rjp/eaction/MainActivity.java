@@ -56,7 +56,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected String getPageTitle() {
-        return "详情页";
+        return "首页";
     }
 
     private void net() {

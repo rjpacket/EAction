@@ -1,4 +1,4 @@
-package com.rjp.eaction.dialog;
+package com.rjp.eaction.util.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -16,19 +16,7 @@ import com.rjp.eaction.R;
  */
 public class DialogUtils {
 
-    public static DialogUtils instance;
     private Dialog dialog;
-
-    public static DialogUtils getInstance() {
-        if (instance == null) {
-            synchronized (DialogUtils.class) {
-                if (instance == null) {
-                    instance = new DialogUtils();
-                }
-            }
-        }
-        return instance;
-    }
 
     public static class Builder {
         private Context context;
@@ -41,7 +29,7 @@ public class DialogUtils {
         private String confirm = "确定";
         private String cancel = "取消";
         private boolean outsideCancel = false;
-        private OnDialogClickListener onClickListener;
+        private OnDialogClickListener onDialogClickListener;
 
         public Builder context(Context context) {
             this.context = context;
@@ -74,7 +62,7 @@ public class DialogUtils {
         }
 
         public Builder onClickListener(OnDialogClickListener onClickListener) {
-            this.onClickListener = onClickListener;
+            this.onDialogClickListener = onClickListener;
             return this;
         }
 
@@ -99,7 +87,7 @@ public class DialogUtils {
         }
 
         public DialogUtils build() {
-            DialogUtils dialogUtils = DialogUtils.getInstance();
+            DialogUtils dialogUtils = new DialogUtils();
             if (context == null) {
                 throw new IllegalArgumentException("context must be not null");
             }
@@ -127,7 +115,7 @@ public class DialogUtils {
             dialogUtils.confirm = this.confirm;
             dialogUtils.cancel = this.cancel;
             dialogUtils.outsideCancel = this.outsideCancel;
-            dialogUtils.onClickListener = this.onClickListener;
+            dialogUtils.onClickListener = this.onDialogClickListener;
             return dialogUtils;
         }
     }

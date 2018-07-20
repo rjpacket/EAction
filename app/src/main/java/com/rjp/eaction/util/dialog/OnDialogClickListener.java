@@ -1,4 +1,4 @@
-package com.rjp.eaction.dialog;
+package com.rjp.eaction.util.dialog;
 
 /**
  * author : Gimpo create on 2018/7/10 18:09

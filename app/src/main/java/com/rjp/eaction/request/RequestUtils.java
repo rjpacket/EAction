@@ -104,7 +104,11 @@ public class RequestUtils {
                     @Override
                     public void run() {
                         if(successCallback != null){
-                            successCallback.onSuccess(result);
+                            try {
+                                successCallback.onSuccess(result);
+                            }catch (Exception e){
+                                e.printStackTrace();
+                            }
                         }
                     }
                 });

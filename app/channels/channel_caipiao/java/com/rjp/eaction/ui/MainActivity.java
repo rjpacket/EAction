@@ -55,11 +55,11 @@ public class MainActivity extends BaseActivity {
         fragments.add(new MineFragment());
         navigationView.setFragments(fragments);
         ArrayList<TabModel> tabModels = new ArrayList<>();
-        tabModels.add(new TabModel("1", R.drawable.selector_home_tab_1));
+        tabModels.add(new TabModel("首页", R.drawable.selector_home_tab_1));
         tabModels.add(new TabModel("推荐", R.drawable.selector_home_tab_2));
-        tabModels.add(new TabModel("3", R.drawable.selector_home_tab_3));
-        tabModels.add(new TabModel("4", R.drawable.selector_home_tab_2));
-        tabModels.add(new TabModel("5", R.drawable.selector_home_tab_1));
+        tabModels.add(new TabModel("直播", R.drawable.selector_home_tab_2));
+        tabModels.add(new TabModel("资料", R.drawable.selector_home_tab_2));
+        tabModels.add(new TabModel("圈子", R.drawable.selector_home_tab_3));
         navigationView.setTabs(tabModels);
     }
 }

@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginLeft="20dp"
+        android:gravity="center"
         >
         <TextView
             android:id="@+id/tv_msg"
@@ -25,6 +26,7 @@
             android:minWidth="120dp"
             android:textSize="14dp"
             android:textColor="#333"
+            android:gravity="center"
             />
 
         <TextView

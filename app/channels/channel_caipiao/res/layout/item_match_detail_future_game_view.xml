@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="28dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="瑞典超"
+        android:gravity="center"
+        android:textColor="#333"
+        android:textSize="12dp"
+        android:lines="1"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="18-07-31"
+        android:textColor="#333"
+        android:textSize="12dp"
+        android:lines="1"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="特雷勒堡"
+        android:gravity="right"
+        android:textColor="#333"
+        android:textSize="12dp"
+        android:lines="1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textColor="#999"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="哈马比"
+        android:textColor="#333"
+        android:textSize="12dp"
+        android:lines="1"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:text="7天"
+        android:textColor="#333"
+        android:textSize="12dp"
+        android:lines="1"
+        />
+</LinearLayout>

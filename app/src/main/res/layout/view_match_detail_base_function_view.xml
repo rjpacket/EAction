@@ -4,6 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <RelativeLayout
+        android:id="@+id/rl_function_label"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         >
@@ -11,16 +12,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="功能"
+            android:layout_centerInParent="true"
             />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/icon_gray_arrow_down"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
             />
     </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"
+        />
+
     <LinearLayout
+        android:id="@+id/ll_child_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

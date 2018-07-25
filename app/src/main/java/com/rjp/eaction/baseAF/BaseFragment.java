@@ -78,15 +78,21 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     protected abstract void networkReload();
 
     /**
-     * 主要操作
+     * 碎片布局
+     * @return
      */
-    protected abstract void handle();
+    protected abstract int getLayoutId();
 
     /**
      * 碎片标题
      * @return
      */
     protected abstract String getPageTitle();
+
+    /**
+     * 主要操作
+     */
+    protected abstract void handle();
 
     /**
      * 碎片是否显示标题栏
@@ -99,12 +105,6 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     protected TopBar getTopBar() {
         return topBar;
     }
-
-    /**
-     * 碎片布局
-     * @return
-     */
-    protected abstract int getLayoutId();
 
     /**
      * 右上角第二个操作图标的源图片

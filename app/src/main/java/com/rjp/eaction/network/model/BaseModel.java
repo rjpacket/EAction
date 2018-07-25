@@ -8,6 +8,7 @@ package com.rjp.eaction.network.model;
  */
 public class BaseModel<T> {
     private int code;
+    private int result;
     private String msg;
     private String servertime;
     private T data;
@@ -49,7 +50,7 @@ public class BaseModel<T> {
      * @return
      */
     public boolean isOk() {
-        return code == 1;
+        return code == 1 || result == 100;
     }
 
     /**
@@ -58,5 +59,13 @@ public class BaseModel<T> {
      */
     public boolean isRequestLogin(){
         return false;
+    }
+
+    public int getResult() {
+        return result;
+    }
+
+    public void setResult(int result) {
+        this.result = result;
     }
 }

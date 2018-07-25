@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/selector_white_line_0dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        >
+        <TextView
+            android:id="@+id/lottery_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="双色球"
+            android:textSize="14dp"
+            android:textColor="@color/text_dark"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_phase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第2018085期"
+            android:textSize="12dp"
+            android:textColor="@color/text_light"
+            android:layout_below="@id/lottery_name"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 9 9 9 9 9 9 9 9"
+            android:textSize="16dp"
+            android:layout_below="@id/tv_phase"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/main_color"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_gray_right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+</LinearLayout>

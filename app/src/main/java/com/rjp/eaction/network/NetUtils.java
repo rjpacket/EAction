@@ -101,7 +101,34 @@ public class NetUtils {
     }
 
     /**
+     * 原始的请求
+     *
+     * @param baseUrl
+     * @param responseCallback
+     */
+    public void originModel(String baseUrl, final ResponseCallback<String> responseCallback) {
+        new RetrofitClient(context, baseUrl).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
+            @Override
+            public void onError(ExceptionHandle.ResponeThrowable e) {
+                responseCallback.failure(e.code, e.message);
+            }
+
+            @Override
+            public void onNext(ResponseBody responseBody) {
+                try {
+                    String response = responseBody.string();
+                    responseCallback.success(response);
+                } catch (Exception e) {
+                    ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
+                    responseCallback.failure(exception.code, exception.message);
+                }
+            }
+        });
+    }
+
+    /**
      * baseurl 改变的请求
+     *
      * @param baseUrl
      * @param responseCallback
      * @param <T>
@@ -135,6 +162,7 @@ public class NetUtils {
 
     /**
      * 核心请求类
+     *
      * @param responseCallback
      * @param <T>
      */
@@ -165,7 +193,7 @@ public class NetUtils {
         });
     }
 
-    public static ParameterizedType wrapType(final Class raw,final Type... args){
+    public static ParameterizedType wrapType(final Class raw, final Type... args) {
         return new ParameterizedType() {
             @Override
             public Type[] getActualTypeArguments() {
@@ -186,17 +214,21 @@ public class NetUtils {
 
     private static class ListParameterizedType implements ParameterizedType {
         private Type type;
+
         private ListParameterizedType(Type type) {
             this.type = type;
         }
+
         @Override
         public Type[] getActualTypeArguments() {
-            return new Type[] {type};
+            return new Type[]{type};
         }
+
         @Override
         public Type getRawType() {
             return ArrayList.class;
         }
+
         @Override
         public Type getOwnerType() {
             return null;

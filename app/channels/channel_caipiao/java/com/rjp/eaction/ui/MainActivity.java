@@ -7,10 +7,9 @@ import android.widget.FrameLayout;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.ui.fragments.HomeFragment;
 import com.rjp.eaction.ui.fragments.OpenPrizeFragment;
 import com.rjp.eaction.ui.fragments.RecommendFragment;
-import com.rjp.eaction.ui.home.HomeFragment;
-import com.rjp.eaction.ui.mine.MineFragment;
 import com.rjp.eaction.ui.social.SocialFragment;
 import com.rjp.navigationview.NavigationView;
 import com.rjp.navigationview.TabModel;
@@ -56,7 +55,7 @@ public class MainActivity extends BaseActivity {
         fragments.add(new OpenPrizeFragment());
         navigationView.setFragments(fragments);
         ArrayList<TabModel> tabModels = new ArrayList<>();
-        tabModels.add(new TabModel("首页", R.drawable.selector_home_tab_1));
+        tabModels.add(new TabModel("彩讯", R.drawable.selector_home_tab_1));
         tabModels.add(new TabModel("推荐", R.drawable.selector_home_tab_2));
         tabModels.add(new TabModel("直播", R.drawable.selector_home_tab_2));
         tabModels.add(new TabModel("资料", R.drawable.selector_home_tab_2));

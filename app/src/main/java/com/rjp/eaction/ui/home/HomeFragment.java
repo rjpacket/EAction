@@ -69,6 +69,6 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_home;
+        return R.layout.fragment_home_caipiao;
     }
 }

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:id="@+id/tv_news_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:textSize="32dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_news_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="12dp"
+                        android:textColor="#333333"
+                        android:background="@drawable/shape_white_white_4dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_news_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toRightOf="@id/tv_news_tag"
+                        android:text=""
+                        android:textSize="14dp"
+                        android:textColor="#999999"
+                        android:layout_marginLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </WebView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -24,6 +24,8 @@ public interface ApiService {
 
     String WANGYI_URL = "http://api.caipiao.163.com/";
 
+    String WANGYI_NEWS_URL = "http://zxwap.caipiao.163.com/";
+
     /**
      * 通用get方法
      * @return

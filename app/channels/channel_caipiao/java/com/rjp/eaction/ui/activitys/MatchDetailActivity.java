@@ -1,7 +1,4 @@
-package com.rjp.eaction.ui.match_detail;
-
-import android.app.Activity;
-import android.os.Bundle;
+package com.rjp.eaction.ui.activitys;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseActivity;

@@ -12,15 +12,23 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon"
         >
-        <activity android:name=".PayActivity"></activity>
-        <activity android:name=".ui.MainActivity">
+        <activity android:name=".PayActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.match_detail.MatchDetailActivity"></activity>
+        <activity android:name=".ui.MainActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.MatchDetailActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.AnalyzeSSQActivity">
+
+        </activity>
     </application>
 
 </manifest>

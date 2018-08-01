@@ -15,7 +15,7 @@ public class DetailActivity extends Activity {
         findViewById(R.id.tv_detail).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DetailActivity.this, PayActivity.class));
+                startActivity(new Intent(DetailActivity.this, TestActivity.class));
             }
         });
     }

@@ -2,11 +2,16 @@ package com.rjp.eaction;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.PopupWindow;
 
 import com.liulishuo.filedownloader.BaseDownloadTask;
@@ -15,6 +20,7 @@ import com.liulishuo.filedownloader.FileDownloader;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.permission.PermissionCallback;
 import com.rjp.eaction.permission.PermissionUtils;
+import com.rjp.eaction.ui.views.CustomTextView;
 import com.rjp.eaction.util.FileUtils;
 import com.rjp.eaction.util.dialog.DialogUtils;
 import com.rjp.eaction.util.dialog.OnDialogClickListener;
@@ -25,15 +31,18 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PayActivity extends Activity {
+public class TestActivity extends Activity {
 
     private String filePathByName;
     private PopupWindow popupWindow;
+    private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
+
+        mContext = this;
 
         FileDownloader.setup(this);
 
@@ -59,10 +68,35 @@ public class PayActivity extends Activity {
             }
         }).build().show();
 
-        findViewById(R.id.tv_test).setOnClickListener(new View.OnClickListener() {
+        ListView listView = findViewById(R.id.list_view);
+        listView.setAdapter(new BaseAdapter() {
             @Override
-            public void onClick(View v) {
-                popupWindow.showAsDropDown(v);
+            public int getCount() {
+                return 20;
+            }
+
+            @Override
+            public Object getItem(int position) {
+                return null;
+            }
+
+            @Override
+            public long getItemId(int position) {
+                return 0;
+            }
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                if(convertView == null){
+                    convertView = LayoutInflater.from(mContext).inflate(R.layout.item_test_activity, null);
+                }
+                CustomTextView ctv1 = convertView.findViewById(R.id.ctv_text1);
+                if(position % 2 == 0){
+                    ctv1.setText("test  ctv");
+                }else {
+                    ctv1.setText("综合分布图双色球走势图-福彩双色球走势图-双色球图表-中彩网图表，从擂台赛数据看,本期彩评师看好的红球向一区和二区倾斜,回顾双色球往期数据,自074期一等奖井喷后,连续6期一等奖开出的注数在个位数,本期继续看好低迷,在近，网易双色球代购平台为您提供双色球机选,双色球复式投注,双色球网上投注等双色球购");
+                }
+                return convertView;
             }
         });
     }

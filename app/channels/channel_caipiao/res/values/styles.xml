@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="RatioView">
+        <attr name="ratio_max" format="integer" />
+        <attr name="ratio_color" format="reference|color" />
+    </declare-styleable>
+</resources>

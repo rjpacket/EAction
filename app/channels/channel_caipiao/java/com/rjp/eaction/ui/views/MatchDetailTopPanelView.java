@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
  * Created by small on 2018/7/22.
  */
 
-public class MatchDetailBiFenPanelView extends LinearLayout {
+public class MatchDetailTopPanelView extends LinearLayout {
     @BindView(R.id.iv_home_logo)
     ImageView ivHomeLogo;
     @BindView(R.id.tv_home_name)
@@ -35,11 +35,11 @@ public class MatchDetailBiFenPanelView extends LinearLayout {
     @BindView(R.id.tv_away_rank)
     TextView tvAwayRank;
 
-    public MatchDetailBiFenPanelView(Context context) {
+    public MatchDetailTopPanelView(Context context) {
         this(context, null);
     }
 
-    public MatchDetailBiFenPanelView(Context context, @Nullable AttributeSet attrs) {
+    public MatchDetailTopPanelView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView(context, attrs);
     }

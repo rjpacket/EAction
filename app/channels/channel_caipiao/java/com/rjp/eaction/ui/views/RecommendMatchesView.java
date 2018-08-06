@@ -64,7 +64,7 @@ public class RecommendMatchesView extends LinearLayout {
         sp = model.getSp();
         tvHomeTeam.setText(model.getHostName() + "\n" + sp.get(0));
         tvVs.setText("平\n" + model.getSp().get(1));
-        tvAwayTeam.setText(model.getHostName() + "\n" + sp.get(2));
+        tvAwayTeam.setText(model.getVisitName() + "\n" + sp.get(2));
         tvHomeTeam.setSelected(true);
         currentPay = "20";
         currentSp = sp.get(0);

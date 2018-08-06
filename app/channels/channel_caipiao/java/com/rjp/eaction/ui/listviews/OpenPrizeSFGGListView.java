@@ -67,10 +67,10 @@ public class OpenPrizeSFGGListView extends RefreshListView<OpenPrizeSFGGModel> {
 
     @Override
     public void requestData() {
-        String date = TimeUtils.parseTime(System.currentTimeMillis()  - 2 * 24 * 60 * 60 * 1000, T3);
+        String date = TimeUtils.parseTime(System.currentTimeMillis()  - 1 * 24 * 60 * 60 * 1000, T3);
         new NetUtils.Builder()
                 .context(mContext)
-                .url("football_showDcsfgg.html?mobileType=android&ver=4.31&channel=miui_cps&apiVer=1.1&period=8" + date + "&isAward=1")
+                .url("football_showDcsfgg.html?mobileType=android&ver=4.31&channel=miui_cps&apiVer=1.1&period=80801&isAward=1")
                 .build()
                 .originModel(WANGYI_URL, new ResponseCallback<String>() {
                     @Override

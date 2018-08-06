@@ -3,6 +3,8 @@ package com.rjp.eaction.ui.listviews;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 
 import com.alibaba.fastjson.JSONArray;
@@ -15,6 +17,7 @@ import com.rjp.eaction.R;
 import com.rjp.eaction.bean.JCZQOddsModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.ui.activitys.OddsOupeiActivity;
 import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.views.base_listview.RefreshListView;
 
@@ -104,5 +107,11 @@ public class JCZQOddsListView extends RefreshListView<JCZQOddsModel> {
 
                     }
                 });
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        JCZQOddsModel jczqOddsModel = mDatas.get(position);
+        OddsOupeiActivity.trendTo(mContext, jczqOddsModel.getMatchId(), jczqOddsModel.getHostId(), jczqOddsModel.getVisitId());
     }
 }

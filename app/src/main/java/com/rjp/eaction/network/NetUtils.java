@@ -8,6 +8,7 @@ import com.rjp.eaction.network.exception.ExceptionHandle;
 import com.rjp.eaction.network.model.BaseModel;
 import com.rjp.eaction.network.observer.CustomObserver;
 import com.rjp.eaction.network.retrofit.RetrofitClient;
+import com.rjp.eaction.util.LogUtils;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -117,6 +118,7 @@ public class NetUtils {
             public void onNext(ResponseBody responseBody) {
                 try {
                     String response = responseBody.string();
+                    LogUtils.json("net response ------------->", response);
                     responseCallback.success(response);
                 } catch (Exception e) {
                     ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
@@ -144,6 +146,7 @@ public class NetUtils {
             public void onNext(ResponseBody responseBody) {
                 try {
                     String response = responseBody.string();
+                    LogUtils.e(response);
                     Gson gson = new Gson();
                     Type resultType = wrapType(BaseModel.class, responseCallback.getGenericityType());
                     BaseModel<T> baseModel = gson.fromJson(response, resultType);
@@ -153,6 +156,7 @@ public class NetUtils {
                         responseCallback.failure(baseModel.getCode(), baseModel.getMsg());
                     }
                 } catch (Exception e) {
+                    e.printStackTrace();
                     ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
                     responseCallback.failure(exception.code, exception.message);
                 }

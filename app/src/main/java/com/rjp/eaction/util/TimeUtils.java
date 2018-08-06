@@ -10,6 +10,8 @@ import java.util.Date;
 public class TimeUtils {
     public static final String T0 = "yyyy-MM-dd HH:mm:ss";
     public static final String T1 = "MM-dd HH:mm";
+    public static final String T2 = "yyyy-MM-dd";
+    public static final String T3 = "MMdd";
 
     /**
      * 计算某一时间与现在时间间隔的文字提示

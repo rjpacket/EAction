@@ -38,7 +38,7 @@ public class OpenPrizeListView extends RefreshListView<OpenPrizeModel> {
             @Override
             protected void convert(ViewHolder viewHolder, OpenPrizeModel openPrizeModel, int i) {
                 viewHolder.setText(R.id.lottery_name, LotteryType.getLotteryName(openPrizeModel.getGameEn()));
-                viewHolder.setText(R.id.tv_phase, openPrizeModel.getPeriodName());
+                viewHolder.setText(R.id.tv_phase, "第" + openPrizeModel.getPeriodName() + "期");
                 viewHolder.setText(R.id.tv_number, openPrizeModel.getAwardNo());
             }
         };

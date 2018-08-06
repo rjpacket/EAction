@@ -50,7 +50,7 @@ public class BaseModel<T> {
      * @return
      */
     public boolean isOk() {
-        return code == 1 || result == 100;
+        return code == 1 || result == 100 || code == 100;
     }
 
     /**

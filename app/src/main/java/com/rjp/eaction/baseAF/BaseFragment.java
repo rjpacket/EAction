@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import com.rjp.eaction.R;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * fragment基类
@@ -22,6 +23,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     private FrameLayout layoutContainer;
     private NetworkView networkView;
     private TopBar topBar;
+    private Unbinder unbinder;
 
     public BaseFragment() {
         // Required empty public constructor
@@ -44,9 +46,15 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
 
         View childView = LayoutInflater.from(mContext).inflate(getLayoutId(), null);
         layoutContainer.addView(childView);
-        ButterKnife.bind(this, childView);
+        unbinder = ButterKnife.bind(this, childView);
         handle();
         return baseRootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 
     /**

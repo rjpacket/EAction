@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/eye_bg"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_match_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="14dp"
+                android:textColor="@color/text_middle"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- -:-"
+                android:textSize="12dp"
+                android:textColor="@color/text_middle"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_match_host"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:gravity="right"
+            android:textSize="14dp"
+            android:textColor="@color/text_dark"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_match_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-:-"
+                android:textSize="20dp"
+                android:textColor="@color/main_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_rang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-:-"
+                android:textColor="@color/text_middle"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-:-"
+                android:textColor="@color/text_middle"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-:-"
+                android:textColor="@color/text_middle"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_match_visit"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textSize="14dp"
+            android:textColor="@color/text_dark"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginBottom="1px"
+        />
+</LinearLayout>

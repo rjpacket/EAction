@@ -79,7 +79,6 @@ public class HomeNewsListView extends LoadMoreListView<HomeNewsModel> {
 
     @Override
     public void requestData() {
-
         new NetUtils.Builder()
                 .context(mContext)
                 .url("zx/wap_list.html?cache=" + System.currentTimeMillis() + "&pageNo=" + mPage + "&tp=" + type + "&ajax=1")

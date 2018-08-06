@@ -1,15 +1,11 @@
 package com.rjp.eaction.ui.activitys;
 
-import android.support.v4.app.Fragment;
-
-import com.flyco.tablayout.listener.CustomTabEntity;
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseActivity;
-import com.rjp.eaction.bean.TabEntity;
 
-import java.util.ArrayList;
+public abstract class TabBaseActivity extends BaseActivity {
 
-public class AnalyzeSSQActivity extends BaseActivity {
+
 
     @Override
     protected void networkReload() {
@@ -25,4 +21,5 @@ public class AnalyzeSSQActivity extends BaseActivity {
     protected void handle() {
 
     }
+
 }

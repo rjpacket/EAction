@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/eye_bg"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_match_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="莫秋被"
+                android:textSize="14dp"
+                android:textColor="@color/text_middle"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="027 10:00"
+                android:textSize="12dp"
+                android:textColor="@color/text_middle"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_match_host"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="托鲁卡"
+            android:gravity="right"
+            android:textSize="14dp"
+            android:textColor="@color/text_dark"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/tv_match_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2:3"
+                android:textSize="20dp"
+                android:textColor="@color/main_color"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_half_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="半2:1"
+                android:textColor="@color/text_middle"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_match_visit"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="托鲁卡"
+            android:textSize="14dp"
+            android:textColor="@color/text_dark"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_gray_right_arrow"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"
+        android:layout_marginBottom="1px"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_match_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="负"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.95"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_match_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="负"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.95"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_match_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="负"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.95"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/line"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_match_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="负"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.95"
+                android:textSize="14dp"
+                android:textColor="@color/text_dark"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"
+        android:layout_marginBottom="1px"
+        />
+</LinearLayout>

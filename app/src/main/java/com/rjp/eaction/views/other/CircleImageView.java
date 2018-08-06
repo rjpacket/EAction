@@ -55,9 +55,11 @@ public class CircleImageView extends AppCompatImageView {
         width = MeasureSpec.getSize(widthMeasureSpec) + AppUtils.dp2px(4);
         height = MeasureSpec.getSize(heightMeasureSpec) + AppUtils.dp2px(4);
         setMeasuredDimension(width, height);
-
-        srcBitmap = drawableToBitmap(getDrawable());
-        setPaintShader(srcBitmap, mPaint);
+        Drawable drawable = getDrawable();
+        if(drawable != null) {
+            srcBitmap = drawableToBitmap(drawable);
+            setPaintShader(srcBitmap, mPaint);
+        }
     }
 
 

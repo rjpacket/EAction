@@ -12,27 +12,21 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon"
         >
-        <activity android:name=".TestActivity">
+        <activity android:name=".TestActivity" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity">
-
-        </activity>
-        <activity android:name=".ui.activitys.MatchDetailActivity">
-
-        </activity>
-
-        <activity android:name=".ui.activitys.AnalyzeSSQActivity">
-
-        </activity>
-
-        <activity android:name=".ui.activitys.NewsDetailActivity">
-
-        </activity>
+        <activity android:name=".ui.activitys.MatchDetailActivity" />
+        <activity android:name=".ui.activitys.AnalyzeSSQActivity" />
+        <activity android:name=".ui.activitys.NewsDetailActivity" />
+        <activity android:name=".ui.activitys.OpenPrizeJCZQActivity" />
+        <activity android:name=".ui.activitys.OpenPrizeJCLQActivity" />
+        <activity android:name=".ui.activitys.OpenPrizeSFGGActivity"></activity>
+        <activity android:name=".ui.activitys.OddsOupeiActivity"></activity>
     </application>
 
 </manifest>

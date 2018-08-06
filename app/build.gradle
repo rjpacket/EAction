@@ -84,6 +84,3 @@ android {
         implementation 'org.jsoup:jsoup:1.11.2'
     }
 }
-dependencies {
-    implementation 'com.android.support:support-v4:27.+'
-}

@@ -5,6 +5,8 @@ import android.util.AttributeSet;
 import android.widget.ScrollView;
 
 /**
+ *
+ * 可以监听滚动的ScrollView
  * author : Gimpo create on 2018/7/17 15:38
  * email  : jimbo922@163.com
  */

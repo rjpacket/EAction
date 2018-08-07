@@ -82,5 +82,12 @@ android {
         implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
         implementation 'com.nineoldandroids:library:2.4.0'
         implementation 'org.jsoup:jsoup:1.11.2'
+        //design
+        implementation "com.android.support:design:27.1.1"
+        implementation "com.android.support:appcompat-v7:27.1.1"
+        implementation "com.android.support:cardview-v7:27.1.1"
+        implementation "com.android.support:recyclerview-v7:27.1.1"
+        //recycler的adapter
+        implementation 'com.zhy:base-rvadapter:3.0.3'
     }
 }

@@ -8,18 +8,18 @@
     android:orientation="vertical"
     tools:context="com.rjp.eaction.ui.activitys.MatchDetailActivity"
     >
-    <ScrollView
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         >
-        <LinearLayout
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             >
             <com.rjp.eaction.ui.views.MatchDetailTopPanelView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tl:layout_scrollFlags="scroll"
                 >
 
             </com.rjp.eaction.ui.views.MatchDetailTopPanelView>
@@ -37,14 +37,15 @@
                 tl:tl_underline_height="1dp"
                 tl:tl_indicator_anim_enable="false"
                 />
+        </android.support.design.widget.AppBarLayout>
 
-            <FrameLayout
-                android:id="@+id/layout_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/match_detail_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tl:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
 
-            </FrameLayout>
-        </LinearLayout>
-    </ScrollView>
+        </android.support.v4.view.ViewPager>
+    </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
@@ -18,6 +19,7 @@ import com.rjp.eaction.bean.JCZQBiFenGroupModel;
 import com.rjp.eaction.bean.JCZQBiFenModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.ui.activitys.MatchDetailActivity;
 import com.rjp.eaction.util.ImageUtils;
 import com.rjp.eaction.views.base_listview.EActionRefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
@@ -95,6 +97,16 @@ public class JCZQLiveListView extends PinnedListView<JCZQBiFenGroupModel> {
                 holder.tvAway.setText(model.getTeamB());
                 ImageUtils.load(mContext, model.getTeamALogo(), holder.ivHomeLogo);
                 ImageUtils.load(mContext, model.getTeamBLogo(), holder.ivAwayLogo);
+                holder.llLabel.setTag(groupPosition + "," + childPosition);
+                holder.llLabel.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String tag = (String) v.getTag();
+                        String[] split = tag.split(",");
+                        JCZQBiFenModel model = getChild(Integer.parseInt(split[0]), Integer.parseInt(split[1]));
+                        MatchDetailActivity.trendTo(mContext);
+                    }
+                });
                 return convertView;
             }
 
@@ -137,6 +149,8 @@ public class JCZQLiveListView extends PinnedListView<JCZQBiFenGroupModel> {
         ImageView ivHomeLogo;
         ImageView ivAwayLogo;
 
+        LinearLayout llLabel;
+
         public ChildHolder(View view){
             tvWeek = (TextView) view.findViewById(R.id.tv_week);
             tvClub = (TextView) view.findViewById(R.id.tv_club);
@@ -148,6 +162,7 @@ public class JCZQLiveListView extends PinnedListView<JCZQBiFenGroupModel> {
             tvAway = (TextView) view.findViewById(R.id.tv_away);
             ivHomeLogo = (ImageView) view.findViewById(R.id.tv_home_logo);
             ivAwayLogo = (ImageView) view.findViewById(R.id.tv_away_logo);
+            llLabel = (LinearLayout) view.findViewById(R.id.ll_label);
         }
     }
 
@@ -172,7 +187,6 @@ public class JCZQLiveListView extends PinnedListView<JCZQBiFenGroupModel> {
         new NetUtils.Builder()
                 .context(mContext)
                 .url("jjc_live.html?mobileType=android&channel=miui_cps&apiLevel=27&apiVer=1.1&ver=4.31&gameEn=" + gameEn)
-                .param("gameEn", gameEn)
                 .build()
                 .model(WANGYI_URL, new ResponseCallback<List<JCZQBiFenGroupModel>>() {
                     @Override

@@ -12,7 +12,7 @@ public class MatchDetailGameComparator implements Comparator<MatchDetailGameEven
     @Override
     public int compare(MatchDetailGameEventsModel o1, MatchDetailGameEventsModel o2) {
         try {
-            return Integer.parseInt(o1.getEventTime()) - Integer.parseInt(o2.getEventTime());
+            return Integer.parseInt(o2.getEventTime()) - Integer.parseInt(o1.getEventTime());
         }catch (Exception e){
 
         }

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.rjp.eaction.R;
 
@@ -25,6 +26,8 @@ public abstract class MatchDetailBaseFunctionView<T> extends LinearLayout {
     RelativeLayout rlFunctionLabel;
     @BindView(R.id.ll_child_container)
     LinearLayout llChildContainer;
+    @BindView(R.id.tv_title)
+    TextView tvTitle;
     public LayoutInflater layoutInflater;
 
     public MatchDetailBaseFunctionView(Context context) {
@@ -55,5 +58,9 @@ public abstract class MatchDetailBaseFunctionView<T> extends LinearLayout {
                 }
                 break;
         }
+    }
+
+    public void setTitle(String title){
+        tvTitle.setText(title);
     }
 }

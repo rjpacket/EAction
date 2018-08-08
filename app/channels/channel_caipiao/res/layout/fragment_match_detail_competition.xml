@@ -12,6 +12,7 @@
         android:orientation="vertical"
         >
         <com.rjp.eaction.ui.views.MatchDetailGameEventsView
+            android:id="@+id/game_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
@@ -19,6 +20,7 @@
         </com.rjp.eaction.ui.views.MatchDetailGameEventsView>
 
         <com.rjp.eaction.ui.views.MatchDetailInjuredEventsView
+            android:id="@+id/injured_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -27,6 +29,7 @@
         </com.rjp.eaction.ui.views.MatchDetailInjuredEventsView>
 
         <com.rjp.eaction.ui.views.MatchDetailPlayerView
+            android:id="@+id/player_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

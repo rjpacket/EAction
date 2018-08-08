@@ -9,6 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.SlidingTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
@@ -17,7 +19,11 @@ import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseActivity;
 import com.rjp.eaction.bean.JCZQBiFenGroupModel;
 import com.rjp.eaction.bean.JCZQBiFenModel;
+import com.rjp.eaction.bean.MatchDetailGameEventsModel;
+import com.rjp.eaction.bean.MatchDetailInjuredEventsModel;
+import com.rjp.eaction.bean.MatchDetailPlayerModel;
 import com.rjp.eaction.bean.TabEntity;
+import com.rjp.eaction.event.MessageEvent;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.fragments.JCZQSingleLiveFragment;
@@ -25,6 +31,8 @@ import com.rjp.eaction.ui.fragments.MatchDetailCompetitionFragment;
 import com.rjp.eaction.ui.fragments.MatchDetailGainsFragment;
 import com.rjp.eaction.ui.fragments.MatchDetailOddsFragment;
 import com.rjp.eaction.ui.fragments.MatchDetailRanksFragment;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +61,11 @@ public class MatchDetailActivity extends BaseActivity {
     }
 
     @Override
+    protected String getPageTitle() {
+        return "对阵详情";
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.activity_match_detail;
     }
@@ -66,7 +79,7 @@ public class MatchDetailActivity extends BaseActivity {
         tabEntities.add(new TabEntity("赔率"));
         fragments = new ArrayList<>();
         fragments.add(MatchDetailCompetitionFragment.getInstance());
-        fragments.add(MatchDetailGainsFragment.getInstance());
+        fragments.add(MatchDetailGainsFragment.getInstance("1410998", "20586", "20585"));
         fragments.add(MatchDetailRanksFragment.getInstance());
         fragments.add(MatchDetailOddsFragment.getInstance());
         tabLayout.setTabData(tabEntities);
@@ -132,7 +145,31 @@ public class MatchDetailActivity extends BaseActivity {
                 .originModel(WANGYI_URL, new ResponseCallback<String>() {
                     @Override
                     public void success(String response) {
+                        JSONObject result = JSONObject.parseObject(response);
+                        JSONArray data = result.getJSONArray("data");
+                        JSONObject jsonObject = data.getJSONObject(0);
+                        List<MatchDetailGameEventsModel> visitTimelineEvents = JSONArray.parseArray(jsonObject.getString("visitTimelineEvents"), MatchDetailGameEventsModel.class);
+                        List<MatchDetailGameEventsModel> hostTimelineEvents = JSONArray.parseArray(jsonObject.getString("hostTimelineEvents"), MatchDetailGameEventsModel.class);
+                        List<MatchDetailGameEventsModel> gameEventsModels = new ArrayList<>();
+                        gameEventsModels.addAll(visitTimelineEvents);
+                        gameEventsModels.addAll(hostTimelineEvents);
+                        EventBus.getDefault().post(new MessageEvent(MessageEvent.MATCH_DETAIL_GAME_EVENTS, gameEventsModels));
 
+                        List<MatchDetailInjuredEventsModel> visitInjuries = JSONArray.parseArray(jsonObject.getString("visitInjuries"), MatchDetailInjuredEventsModel.class);
+                        List<MatchDetailInjuredEventsModel> hostInjuries = JSONArray.parseArray(jsonObject.getString("hostInjuries"), MatchDetailInjuredEventsModel.class);
+                        List<MatchDetailInjuredEventsModel> injuredEventsModels = new ArrayList<>();
+                        injuredEventsModels.addAll(visitInjuries);
+                        injuredEventsModels.addAll(hostInjuries);
+                        EventBus.getDefault().post(new MessageEvent(MessageEvent.MATCH_DETAIL_INJURED_EVENTS, injuredEventsModels));
+
+                        List<MatchDetailPlayerModel> allPlayers = new ArrayList<>();
+                        JSONArray lineup = jsonObject.getJSONArray("lineup");
+                        for (int i = 0; i < lineup.size(); i++) {
+                            JSONObject players = lineup.getJSONObject(i);
+                            List<MatchDetailPlayerModel> playerModels = JSONArray.parseArray(players.getString("players"), MatchDetailPlayerModel.class);
+                            allPlayers.addAll(playerModels);
+                        }
+                        EventBus.getDefault().post(new MessageEvent(MessageEvent.MATCH_DETAIL_PLAYERS, allPlayers));
                     }
 
                     @Override

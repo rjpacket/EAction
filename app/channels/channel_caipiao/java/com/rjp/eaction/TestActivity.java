@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.PopupWindow;
+import android.widget.SeekBar;
 
 import com.liulishuo.filedownloader.BaseDownloadTask;
 import com.liulishuo.filedownloader.FileDownloadSampleListener;
@@ -18,12 +18,12 @@ import com.liulishuo.filedownloader.FileDownloader;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.permission.PermissionCallback;
 import com.rjp.eaction.permission.PermissionUtils;
-import com.rjp.eaction.ui.fragments.TestFragment;
 import com.rjp.eaction.util.FileUtils;
 import com.rjp.eaction.util.dialog.DialogUtils;
 import com.rjp.eaction.util.dialog.OnDialogClickListener;
 import com.rjp.eaction.util.popup.OnPopupBindDataListener;
 import com.rjp.eaction.util.popup.PopUtils;
+import com.rjp.eaction.views.base_listview.RefreshImageView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -35,6 +35,7 @@ public class TestActivity extends FragmentActivity {
     private PopupWindow popupWindow;
     private Context mContext;
     private List<Fragment> fragments;
+    private RefreshImageView ivMaoYan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,46 @@ public class TestActivity extends FragmentActivity {
         setContentView(R.layout.activity_pay);
 
         mContext = this;
+
+        ivMaoYan = findViewById(R.id.iv_maoyan);
+        ivMaoYan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivMaoYan.startAnim();
+            }
+        });
+
+        SeekBar seekBar = findViewById(R.id.seek_bar);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                ivMaoYan.setProgress((float) (progress * 1.0 / 100));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+        findViewById(R.id.btn_start).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivMaoYan.startAnim();
+            }
+        });
+
+        findViewById(R.id.btn_stop).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivMaoYan.stopAnim();
+            }
+        });
 
         FileDownloader.setup(this);
 
@@ -66,54 +107,6 @@ public class TestActivity extends FragmentActivity {
 
             }
         }).build().show();
-
-//        ListView listView = findViewById(R.id.list_view);
-//        listView.setAdapter(new BaseAdapter() {
-//            @Override
-//            public int getCount() {
-//                return 20;
-//            }
-//
-//            @Override
-//            public Object getItem(int position) {
-//                return null;
-//            }
-//
-//            @Override
-//            public long getItemId(int position) {
-//                return 0;
-//            }
-//
-//            @Override
-//            public View getView(int position, View convertView, ViewGroup parent) {
-//                if(convertView == null){
-//                    convertView = LayoutInflater.from(mContext).inflate(R.layout.item_test_activity, null);
-//                }
-//                CustomTextView ctv1 = convertView.findViewById(R.id.ctv_text1);
-//                if(position % 2 == 0){
-//                    ctv1.setText("test  ctv");
-//                }else {
-//                    ctv1.setText("综合分布图双色球走势图-福彩双色球走势图-双色球图表-中彩网图表，从擂台赛数据看,本期彩评师看好的红球向一区和二区倾斜,回顾双色球往期数据,自074期一等奖井喷后,连续6期一等奖开出的注数在个位数,本期继续看好低迷,在近，网易双色球代购平台为您提供双色球机选,双色球复式投注,双色球网上投注等双色球购");
-//                }
-//                return convertView;
-//            }
-//        });
-        fragments = new ArrayList<>();
-        fragments.add(TestFragment.getInstance(10));
-        fragments.add(TestFragment.getInstance(5));
-
-        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
-        viewPager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public int getCount() {
-                return fragments.size();
-            }
-
-            @Override
-            public Fragment getItem(int position) {
-                return fragments.get(position);
-            }
-        });
     }
 
     private void showUpdateDialog() {

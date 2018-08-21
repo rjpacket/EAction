@@ -1,0 +1,43 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rjp.eaction.ui.fragments.HomeFragment"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_book_search_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/shape_bg_bg_1000dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_search"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入关键字进行搜索"
+            android:layout_marginLeft="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/text_999999"
+            />
+    </LinearLayout>
+
+    <com.rjp.eaction.ui.listviews.ReadBookListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </com.rjp.eaction.ui.listviews.ReadBookListView>
+</LinearLayout>

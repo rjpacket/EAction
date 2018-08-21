@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
 /**
  * activity基类
  */
-public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener{
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     public Context mContext;
     private TopBar topBar;
@@ -55,10 +55,10 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         layoutContainer.addView(childRootView);
         ButterKnife.bind(this);
         EventBus.getDefault().register(this);
-        if(showTopBar() && shouldTranslucentStatusBar()){
+        if (shouldTranslucentStatusBar()) {
             setStatusBarTranslucent();
         }
-        if(showTopBar() && shouldAddStatusBar()){
+        if (shouldAddStatusBar()) {
             addStatusBar();
         }
         handle();
@@ -74,6 +74,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 默认需要添加一个自定义的状态栏View
+     *
      * @return
      */
     protected boolean shouldAddStatusBar() {
@@ -90,11 +91,15 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
             tintManager.setStatusBarTintEnabled(true);// 激活状态栏设置
             tintManager.setStatusBarTintColor(Color.TRANSPARENT);//设置状态栏颜色
             tintManager.setStatusBarDarkMode(true, this);// //false 状态栏字体颜色是白色 true 颜色是黑色
+            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+                getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);//设置状态栏黑色字体
+            }
         }
     }
 
     /**
      * 默认需要透明状态栏
+     *
      * @return
      */
     protected boolean shouldTranslucentStatusBar() {
@@ -108,14 +113,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     @Subscribe
-    public void onEvent(MessageEvent event){
+    public void onEvent(MessageEvent event) {
 
     }
 
     /**
      * 网络请求失败，页面隐藏，显示重新加载布局
      */
-    protected void setNetworkFail(String msg){
+    protected void setNetworkFail(String msg) {
         layoutContainer.setVisibility(View.GONE);
         networkView.setNetworkFail(msg);
         networkView.setReloadListener(new ReloadListener() {
@@ -129,8 +134,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     /**
      * 网络请求成功，界面显示出来
      */
-    protected void setNetworkSuccess(){
-        if(layoutContainer.getVisibility() == View.GONE) {
+    protected void setNetworkSuccess() {
+        if (layoutContainer.getVisibility() == View.GONE) {
             layoutContainer.setVisibility(View.VISIBLE);
         }
     }
@@ -142,12 +147,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 获取子类布局
+     *
      * @return
      */
     protected abstract int getLayoutId();
 
     /**
      * 右上角第二个操作图标的源图片
+     *
      * @return
      */
     protected void setIcon1(int resId) {
@@ -169,6 +176,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 右上角第一个操作图标的源图片
+     *
      * @return
      */
     protected void setIcon0(int resId) {
@@ -190,6 +198,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 页面的标题
+     *
      * @return
      */
     protected String getPageTitle() {
@@ -198,6 +207,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 修改页面的标题
+     *
      * @param title
      */
     protected void setTopTitle(String title) {
@@ -206,6 +216,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     /**
      * 默认每一个activity需要标题栏
+     *
      * @return
      */
     protected boolean showTopBar() {

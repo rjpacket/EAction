@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.rjp.eaction.ui.MainActivity"
+    tools:context="com.rjp.eaction.MainActivity"
     >
     <FrameLayout
         android:id="@+id/main_container"
@@ -17,20 +17,137 @@
 
     </FrameLayout>
 
-    <View
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/line"
-        />
-
-    <com.rjp.navigationview.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tab_unSelectedColor="@color/text_dark"
-        app:tab_selectedColor="@color/main_color"
-        app:tab_textSize="12dp"
+        android:layout_height="62dp"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_bg"
+            >
+            <LinearLayout
+                android:id="@+id/ll_tab1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/selector_home_tab_bg"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/selector_home_tab_1"
+                    />
 
-    </com.rjp.navigationview.NavigationView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推荐读物"
+                    android:textSize="12dp"
+                    android:textColor="@drawable/selector_home_tab_text_color"
+                    android:layout_marginTop="2dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/selector_home_tab_bg"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/selector_home_tab_2"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的书架"
+                    android:textSize="12dp"
+                    android:textColor="@drawable/selector_home_tab_text_color"
+                    android:layout_marginTop="2dp"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1.2"
+                android:layout_height="match_parent"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_tab3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/selector_home_tab_bg"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/selector_home_tab_3"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商城"
+                    android:textSize="12dp"
+                    android:textColor="@drawable/selector_home_tab_text_color"
+                    android:layout_marginTop="2dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab4"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/selector_home_tab_bg"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/selector_home_tab_4"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的"
+                    android:textSize="12dp"
+                    android:textColor="@drawable/selector_home_tab_text_color"
+                    android:layout_marginTop="2dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
 </LinearLayout>

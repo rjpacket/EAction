@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="94dp"
+            android:layout_height="130dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_read_book"
+                android:scaleType="centerCrop"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:text="童话故事"
+            android:lines="1"
+            android:layout_marginTop="6dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <FrameLayout
+            android:layout_width="94dp"
+            android:layout_height="130dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_read_book"
+                android:scaleType="centerCrop"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:text="童话故事"
+            android:lines="1"
+            android:layout_marginTop="6dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:layout_width="94dp"
+            android:layout_height="130dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_read_book"
+                android:scaleType="centerCrop"
+                />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:text="童话故事"
+            android:lines="1"
+            android:layout_marginTop="6dp"
+            />
+    </LinearLayout>
+</LinearLayout>

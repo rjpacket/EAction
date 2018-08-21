@@ -4,7 +4,7 @@
     >
 
     <application>
-        <activity android:name="com.rjp.eaction.ui.MainActivity"
+        <activity android:name="com.rjp.eaction.ui.com.rjp.eaction.MainActivity"
             >
         </activity>
     </application>

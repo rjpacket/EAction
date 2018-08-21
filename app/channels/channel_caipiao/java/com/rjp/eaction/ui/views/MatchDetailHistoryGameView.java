@@ -37,6 +37,7 @@ public class MatchDetailHistoryGameView extends MatchDetailBaseFunctionView<Matc
             TextView tvScore = view.findViewById(R.id.tv_score);
             TextView tvVisit = view.findViewById(R.id.tv_visit);
             TextView tvResult = view.findViewById(R.id.tv_result);
+
             tvTeam.setText(model.getLeagueName());
             tvTeam.setText(model.getLeagueName());
             tvTeam.setText(model.getLeagueName());

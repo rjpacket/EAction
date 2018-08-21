@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.rjp.eaction.R;
@@ -15,7 +15,7 @@ import com.rjp.eaction.R;
  * author : Gimpo create on 2018/5/24 17:58
  * email  : jimbo922@163.com
  */
-public class TopBar extends RelativeLayout {
+public class TopBar extends LinearLayout {
 
     private TextView tvBaseTitle;
     private ImageView ivBaseBack;
@@ -39,6 +39,8 @@ public class TopBar extends RelativeLayout {
         tvBaseTitle = (TextView) findViewById(R.id.tv_base_title);
         ivIcon0 = (ImageView) findViewById(R.id.iv_base_icon0);
         ivIcon1 = (ImageView) findViewById(R.id.iv_base_icon1);
+
+        setOrientation(VERTICAL);
     }
 
     public void setTitle(String pageTitle) {

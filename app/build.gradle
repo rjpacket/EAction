@@ -25,8 +25,10 @@ android {
             versionName "1.0.2"
         }
 
-        channel_B {
-            applicationId "com.rjp.eaction.B"
+        channel_XingDuoRobot {
+            applicationId "com.rjp.xingduorobot"
+            versionCode 1
+            versionName "1.0.0"
         }
 
         channel_C {
@@ -41,9 +43,10 @@ android {
             java.srcDirs = ['channels/channel_caipiao/java']
         }
 
-        channel_B {
-            res.srcDirs = ['channels/channel_B/res']
-            java.srcDirs = ['channels/channel_B/java']
+        channel_XingDuoRobot {
+            manifest.srcFile 'channels/channel_XingDuoRobot/AndroidManifest.xml'
+            res.srcDirs = ['channels/channel_XingDuoRobot/res']
+            java.srcDirs = ['channels/channel_XingDuoRobot/java']
         }
 
         channel_C {
@@ -91,4 +94,8 @@ android {
         implementation 'com.zhy:base-rvadapter:3.0.3'
         implementation 'org.greenrobot:eventbus:3.0.0'
     }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
 }

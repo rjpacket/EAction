@@ -7,6 +7,7 @@
     android:gravity="center_vertical"
     >
     <TextView
+        android:id="@+id/tv_pos"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -18,8 +19,33 @@
         />
 
     <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:text="门将"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="12dp"
+        android:textColor="#666"
+        />
+
+    <TextView
+        android:id="@+id/tv_number"
         android:layout_width="0dp"
         android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="凯塔"
+        android:gravity="center"
+        android:lines="1"
+        android:textSize="12dp"
+        android:textColor="#666"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
         android:text="凯塔"
         android:gravity="center"

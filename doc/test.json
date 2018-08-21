@@ -1,3192 +1,985 @@
 {
-  "code": "100",
-  "msg": "成功",
-  "data": {
-    "matchOddsInfo": [
+  "result": 100,
+  "data": [{
+    "hostName": "美洲狮",
+    "teamBPointGoal": "-",
+    "hostFutureMatch":
+    [
       {
-      "visitName": "巴特",
-      "hostId": "3648",
-      "visitId": "3178",
-      "leagueName": "欧冠",
-      "matchCode": "周三011",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/3648.html?mid=2799653",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/3178.html?mid=2799653",
-      "matchTime": "00:00",
-      "hostName": "赫尔辛基",
-      "matchId": "1418500",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "2.00",
-        "nowHostLevel": "2.00",
-        "firstVisitLevel": "1.70",
-        "nowVisitLevel": "1.70",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.98",
-        "nowHostLevel": "2.15",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "1.73",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.96",
-        "nowHostLevel": "2.13",
-        "firstVisitLevel": "1.80",
-        "nowVisitLevel": "1.70",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.59",
-        "nowHostOdds": "2.86",
-        "firstVisitOdds": "2.54",
-        "nowVisitOdds": "2.55",
-        "oddsFloat": [1, 0, 0],
-        "firstDrawOdds": "3.05",
-        "nowDrawOdds": "2.99",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.70",
-        "nowHostOdds": "2.88",
-        "firstVisitOdds": "2.62",
-        "nowVisitOdds": "2.50",
-        "oddsFloat": [-1, 0, 0],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.20",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.75",
-        "nowHostOdds": "3.00",
-        "firstVisitOdds": "2.70",
-        "nowVisitOdds": "2.60",
-        "oddsFloat": [1, 0, -1],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "3.00",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.13",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.75",
-        "nowBigLevel": "1.85",
-        "nowHandicap": "2",
-        "nowSmallLevel": "2.00",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.90",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.86",
-        "nowBigLevel": "2.05",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.75",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    },
-      {
-      "visitName": "阿斯塔纳",
-      "hostId": "4446",
-      "visitId": "66744",
-      "leagueName": "欧冠",
-      "matchCode": "周三012",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/4446.html?mid=2843859",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/66744.html?mid=2843859",
-      "matchTime": "01:00",
-      "hostName": "中日德兰",
-      "matchId": "1418501",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.82",
-        "nowHostLevel": "1.82",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "1.88",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "1.80",
-        "firstVisitLevel": "1.95",
-        "nowVisitLevel": "2.05",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.77",
-        "firstVisitLevel": "1.91",
-        "nowVisitLevel": "2.05",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.78",
-        "nowHostOdds": "1.83",
-        "firstVisitOdds": "2.97",
-        "nowVisitOdds": "4.21",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "2.89",
-        "nowDrawOdds": "3.40",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.95",
-        "nowHostOdds": "1.75",
-        "firstVisitOdds": "3.60",
-        "nowVisitOdds": "4.40",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.70",
-        "nowDrawOdds": "3.40",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.95",
-        "nowHostOdds": "1.80",
-        "firstVisitOdds": "3.90",
-        "nowVisitOdds": "4.50",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.40",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.05",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.80",
-        "nowBigLevel": "1.88",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.98",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, 1],
-        "firstBigLevel": "2.03",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.77",
-        "nowBigLevel": "2.03",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.77",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    },
-      {
-      "visitName": "克卢日",
-      "hostId": "5365",
-      "visitId": "15399",
-      "leagueName": "欧冠",
-      "matchCode": "周三013",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/5365.html?mid=2824739",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/15399.html?mid=2824739",
-      "matchTime": "01:15",
-      "hostName": "马尔默",
-      "matchId": "1418502",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.63",
-        "nowHostLevel": "1.66",
-        "firstVisitLevel": "2.07",
-        "nowVisitLevel": "2.04",
-        "firstConcede": "平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.80",
-        "nowHostLevel": "1.95",
-        "firstVisitLevel": "2.05",
-        "nowVisitLevel": "1.90",
-        "firstConcede": "平手/半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.68",
-        "nowHostLevel": "1.65",
-        "firstVisitLevel": "2.08",
-        "nowVisitLevel": "2.20",
-        "firstConcede": "平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.94",
-        "nowHostOdds": "2.03",
-        "firstVisitOdds": "3.54",
-        "nowVisitOdds": "3.72",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.14",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.05",
-        "nowHostOdds": "2.15",
-        "firstVisitOdds": "3.50",
-        "nowVisitOdds": "3.50",
-        "oddsFloat": [1, 1, -1],
-        "firstDrawOdds": "3.50",
-        "nowDrawOdds": "3.00",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.00",
-        "nowHostOdds": "2.10",
-        "firstVisitOdds": "3.90",
-        "nowVisitOdds": "3.70",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.10",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.98",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.88",
-        "nowBigLevel": "2.02",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.83",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.96",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.84",
-        "nowBigLevel": "2.00",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.80",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "帕丘卡",
+      "gap": 5,
+      "beginTime": "2018-08-13"
     }, {
-      "visitName": "塞萨洛",
-      "hostId": "3255",
-      "visitId": "4086",
-      "leagueName": "欧冠",
-      "matchCode": "周三014",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/3255.html?mid=2799647",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/4086.html?mid=2799647",
-      "matchTime": "02:00",
-      "hostName": "巴塞尔",
-      "matchId": "1418504",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "1.85",
-        "firstVisitLevel": "1.80",
-        "nowVisitLevel": "1.85",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.00",
-        "nowHostLevel": "1.93",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "1.93",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.93",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "1.89",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.73",
-        "nowHostOdds": "1.86",
-        "firstVisitOdds": "3.07",
-        "nowVisitOdds": "3.84",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "2.94",
-        "nowDrawOdds": "3.54",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.05",
-        "nowHostOdds": "1.85",
-        "firstVisitOdds": "3.50",
-        "nowVisitOdds": "3.90",
-        "oddsFloat": [0, -1, 1],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.75",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.05",
-        "nowHostOdds": "1.86",
-        "firstVisitOdds": "3.60",
-        "nowVisitOdds": "4.00",
-        "oddsFloat": [0, 1, 0],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.60",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.93",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.93",
-        "nowBigLevel": "1.85",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "2.00",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.88",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.92",
-        "nowBigLevel": "1.83",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.97",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "阿贾克斯",
-      "hostId": "842",
-      "visitId": "719",
-      "leagueName": "欧冠",
-      "matchCode": "周三015",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/842.html?mid=2799649",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/719.html?mid=2799649",
-      "matchTime": "02:30",
-      "hostName": "格风暴",
-      "matchId": "1418506",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.77",
-        "nowHostLevel": "1.90",
-        "firstVisitLevel": "1.93",
-        "nowVisitLevel": "1.80",
-        "firstConcede": "受让半球",
-        "nowConcede": "受让半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.80",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "2.05",
-        "nowVisitLevel": "1.88",
-        "firstConcede": "受让半球",
-        "nowConcede": "受让半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.80",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.96",
-        "nowVisitLevel": "1.80",
-        "firstConcede": "受让半球",
-        "nowConcede": "受让半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "3.40",
-        "nowHostOdds": "3.73",
-        "firstVisitOdds": "1.96",
-        "nowVisitOdds": "1.86",
-        "oddsFloat": [1, 1, 0],
-        "firstDrawOdds": "3.26",
-        "nowDrawOdds": "3.67",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "3.60",
-        "nowHostOdds": "3.80",
-        "firstVisitOdds": "1.91",
-        "nowVisitOdds": "1.85",
-        "oddsFloat": [1, -1, 0],
-        "firstDrawOdds": "3.75",
-        "nowDrawOdds": "3.50",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "3.75",
-        "nowHostOdds": "3.80",
-        "firstVisitOdds": "1.90",
-        "nowVisitOdds": "1.86",
-        "oddsFloat": [0, 0, -1],
-        "firstDrawOdds": "3.60",
-        "nowDrawOdds": "3.60",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.05",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.80",
-        "nowBigLevel": "1.93",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.93",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, 0],
-        "firstBigLevel": "1.99",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.81",
-        "nowBigLevel": "1.99",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.81",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "凯尔特人",
-      "hostId": "1707",
-      "visitId": "903",
-      "leagueName": "欧冠",
-      "matchCode": "周三016",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/1707.html?mid=2799772",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/903.html?mid=2799772",
-      "matchTime": "02:45",
-      "hostName": "罗森博格",
-      "matchId": "1418497",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.78",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "1.92",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.98",
-        "nowHostLevel": "1.83",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "2.02",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.82",
-        "firstVisitLevel": "1.94",
-        "nowVisitLevel": "2.00",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.81",
-        "nowHostOdds": "2.90",
-        "firstVisitOdds": "1.97",
-        "nowVisitOdds": "2.32",
-        "oddsFloat": [-1, 1, 0],
-        "firstDrawOdds": "2.27",
-        "nowDrawOdds": "3.28",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "3.10",
-        "nowHostOdds": "2.90",
-        "firstVisitOdds": "2.20",
-        "nowVisitOdds": "2.38",
-        "oddsFloat": [0, 1, -1],
-        "firstDrawOdds": "3.50",
-        "nowDrawOdds": "3.40",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "3.25",
-        "nowHostOdds": "3.00",
-        "firstVisitOdds": "2.20",
-        "nowVisitOdds": "2.35",
-        "oddsFloat": [1, 0, 0],
-        "firstDrawOdds": "3.30",
-        "nowDrawOdds": "3.30",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.98",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.88",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.90",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.92",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.88",
-        "nowBigLevel": "1.94",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.86",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "切尔西",
-      "hostId": "61",
-      "visitId": "60",
-      "leagueName": "国冠杯",
-      "matchCode": "周三017",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/61.html?mid=2780168",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/60.html?mid=2780168",
-      "matchTime": "03:00",
-      "hostName": "阿森纳",
-      "matchId": "1397829",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.96",
-        "nowHostLevel": "1.96",
-        "firstVisitLevel": "1.84",
-        "nowVisitLevel": "1.84",
-        "firstConcede": "平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "2.05",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "1.80",
-        "nowVisitLevel": "1.88",
-        "firstConcede": "平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.79",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "2.09",
-        "nowVisitLevel": "1.91",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.90",
-        "nowHostOdds": "2.23",
-        "firstVisitOdds": "2.14",
-        "nowVisitOdds": "2.84",
-        "oddsFloat": [-1, 0, 0],
-        "firstDrawOdds": "3.65",
-        "nowDrawOdds": "3.58",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.80",
-        "nowHostOdds": "2.10",
-        "firstVisitOdds": "2.38",
-        "nowVisitOdds": "2.90",
-        "oddsFloat": [0, 1, -1],
-        "firstDrawOdds": "3.10",
-        "nowDrawOdds": "3.70",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.75",
-        "nowHostOdds": "2.25",
-        "firstVisitOdds": "2.35",
-        "nowVisitOdds": "2.90",
-        "oddsFloat": [-1, 1, 0],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.60",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.77",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "2.02",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "3",
-        "nowSmallLevel": "1.85",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.82",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "2.06",
-        "nowBigLevel": "1.99",
-        "nowHandicap": "3",
-        "nowSmallLevel": "1.89",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "里昂",
-      "hostId": "1366",
-      "visitId": "436",
-      "leagueName": "国冠杯",
-      "matchCode": "周三018",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/1366.html?mid=2780151",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/436.html?mid=2780151",
-      "matchTime": "04:00",
-      "hostName": "本菲卡",
-      "matchId": "1418303",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.86",
-        "nowHostLevel": "1.84",
-        "firstVisitLevel": "1.94",
-        "nowVisitLevel": "1.96",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.80",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "2.05",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "2.04",
-        "nowHostLevel": "1.81",
-        "firstVisitLevel": "1.84",
-        "nowVisitLevel": "2.08",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.70",
-        "nowHostOdds": "2.39",
-        "firstVisitOdds": "2.33",
-        "nowVisitOdds": "2.72",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.45",
-        "nowDrawOdds": "3.39",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.80",
-        "nowHostOdds": "2.25",
-        "firstVisitOdds": "2.45",
-        "nowVisitOdds": "2.70",
-        "oddsFloat": [-1, 1, 0],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "3.50",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.75",
-        "nowHostOdds": "2.40",
-        "firstVisitOdds": "2.37",
-        "nowVisitOdds": "2.80",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "3.30",
-        "nowDrawOdds": "3.40",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.02",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.77",
-        "nowBigLevel": "1.88",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.93",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.05",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.81",
-        "nowBigLevel": "1.96",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.92",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "博塔弗戈",
-      "hostId": "14071",
-      "visitId": "12365",
-      "leagueName": "南俱杯",
-      "matchCode": "周三019",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/14071.html?mid=2792180",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/12365.html?mid=2792180",
-      "matchTime": "06:30",
-      "hostName": "亚国民",
-      "matchId": "1409721",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.87",
-        "nowHostLevel": "1.88",
-        "firstVisitLevel": "1.93",
-        "nowVisitLevel": "1.92",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.83",
-        "nowHostLevel": "1.93",
-        "firstVisitLevel": "2.02",
-        "nowVisitLevel": "1.93",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.83",
-        "nowHostLevel": "1.94",
-        "firstVisitLevel": "2.05",
-        "nowVisitLevel": "1.95",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.55",
-        "nowHostOdds": "2.79",
-        "firstVisitOdds": "2.75",
-        "nowVisitOdds": "2.69",
-        "oddsFloat": [-1, 0, 0],
-        "firstDrawOdds": "2.82",
-        "nowDrawOdds": "2.79",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.62",
-        "nowHostOdds": "2.75",
-        "firstVisitOdds": "2.80",
-        "nowVisitOdds": "2.75",
-        "oddsFloat": [-1, 1, 0],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "2.90",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.65",
-        "nowHostOdds": "2.80",
-        "firstVisitOdds": "2.70",
-        "nowVisitOdds": "2.62",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "2.80",
-        "nowDrawOdds": "2.70",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.05",
-        "firstHandicap": "2",
-        "firstSmallLevel": "1.80",
-        "nowBigLevel": "1.83",
-        "nowHandicap": "1.5/2",
-        "nowSmallLevel": "2.02",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.00",
-        "firstHandicap": "2",
-        "firstSmallLevel": "1.86",
-        "nowBigLevel": "1.85",
-        "nowHandicap": "1.5/2",
-        "nowSmallLevel": "2.01",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "克鲁塞罗",
-      "hostId": "5845",
-      "visitId": "6025",
-      "leagueName": "巴西杯",
-      "matchCode": "周三020",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/5845.html?mid=2793138",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/6025.html?mid=2793138",
-      "matchTime": "06:30",
-      "hostName": "桑托斯",
-      "matchId": "1422963",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.74",
-        "nowHostLevel": "1.66",
-        "firstVisitLevel": "2.06",
-        "nowVisitLevel": "2.14",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.80",
-        "nowHostLevel": "1.73",
-        "firstVisitLevel": "2.05",
-        "nowVisitLevel": "2.15",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.80",
-        "nowHostLevel": "1.76",
-        "firstVisitLevel": "2.08",
-        "nowVisitLevel": "2.14",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.50",
-        "nowHostOdds": "2.42",
-        "firstVisitOdds": "2.98",
-        "nowVisitOdds": "3.05",
-        "oddsFloat": [-1, 0, 0],
-        "firstDrawOdds": "3.38",
-        "nowDrawOdds": "2.86",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.38",
-        "nowHostOdds": "2.50",
-        "firstVisitOdds": "3.30",
-        "nowVisitOdds": "3.10",
-        "oddsFloat": [0, -1, 1],
-        "firstDrawOdds": "2.90",
-        "nowDrawOdds": "2.90",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.77",
-        "firstHandicap": "1.5/2",
-        "firstSmallLevel": "2.10",
-        "nowBigLevel": "1.77",
-        "nowHandicap": "1.5/2",
-        "nowSmallLevel": "2.10",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.79",
-        "firstHandicap": "1.5/2",
-        "firstSmallLevel": "2.07",
-        "nowBigLevel": "2.08",
-        "nowHandicap": "2",
-        "nowSmallLevel": "1.80",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "克雷塔罗",
-      "hostId": "50736",
-      "visitId": "22747",
-      "leagueName": "墨秋杯",
-      "matchCode": "周三021",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/50736.html?mid=2808823",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/22747.html?mid=2808823",
-      "matchTime": "08:00",
-      "hostName": "莱昂",
-      "matchId": "1407676",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.78",
-        "nowHostLevel": "1.78",
-        "firstVisitLevel": "1.92",
-        "nowVisitLevel": "1.92",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.77",
-        "firstVisitLevel": "1.95",
-        "nowVisitLevel": "2.02",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, 0],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.80",
-        "firstVisitLevel": "1.97",
-        "nowVisitLevel": "2.04",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.00",
-        "nowHostOdds": "1.76",
-        "firstVisitOdds": "3.30",
-        "nowVisitOdds": "4.18",
-        "oddsFloat": [-1, 1, 1],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.52",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.80",
-        "nowHostOdds": "1.80",
-        "firstVisitOdds": "4.20",
-        "nowVisitOdds": "4.20",
-        "oddsFloat": [0, 0, 0],
-        "firstDrawOdds": "3.60",
-        "nowDrawOdds": "3.60",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.80",
-        "nowHostOdds": "1.80",
-        "firstVisitOdds": "4.00",
-        "nowVisitOdds": "4.00",
-        "oddsFloat": [1, -1, 0],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.40",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.00",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.80",
-        "nowBigLevel": "2.00",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.80",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [0, 0, 1],
-        "firstBigLevel": "2.00",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.82",
-        "nowBigLevel": "2.00",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.82",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "蓝十字",
-      "hostId": "71400",
-      "visitId": "3525",
-      "leagueName": "墨秋杯",
-      "matchCode": "周三022",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/71400.html?mid=1407694",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/3525.html?mid=1407694",
-      "matchTime": "08:00",
-      "hostName": "萨卡特佩",
-      "matchId": "1407694",
-      "asiaOdds": [],
-      "ouOdds": [],
-      "dxpOdds": [],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "波士顿河",
-      "hostId": "1869",
-      "visitId": "92740",
-      "leagueName": "南俱杯",
-      "matchCode": "周三023",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/1869.html?mid=2792198",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/92740.html?mid=2792198",
-      "matchTime": "08:45",
-      "hostName": "班菲尔德",
-      "matchId": "1409722",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.84",
-        "firstVisitLevel": "1.92",
-        "nowVisitLevel": "1.96",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.98",
-        "nowHostLevel": "1.85",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "2.00",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.99",
-        "nowHostLevel": "1.86",
-        "firstVisitLevel": "1.89",
-        "nowVisitLevel": "2.03",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.47",
-        "nowHostOdds": "1.44",
-        "firstVisitOdds": "7.15",
-        "nowVisitOdds": "8.05",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "3.54",
-        "nowDrawOdds": "3.75",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.40",
-        "nowHostOdds": "1.40",
-        "firstVisitOdds": "8.50",
-        "nowVisitOdds": "8.50",
-        "oddsFloat": [-1, 1, 1],
-        "firstDrawOdds": "4.20",
-        "nowDrawOdds": "4.20",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.44",
-        "nowHostOdds": "1.44",
-        "firstVisitOdds": "8.00",
-        "nowVisitOdds": "8.00",
-        "oddsFloat": [0, 0, 0],
-        "firstDrawOdds": "3.60",
-        "nowDrawOdds": "3.60",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "1.88",
-        "firstHandicap": "2",
-        "firstSmallLevel": "1.98",
-        "nowBigLevel": "1.88",
-        "nowHandicap": "2",
-        "nowSmallLevel": "1.98",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "沙佩科",
-      "hostId": "6005",
-      "visitId": "40748",
-      "leagueName": "巴西杯",
-      "matchCode": "周三024",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/6005.html?mid=2793134",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/40748.html?mid=2793134",
-      "matchTime": "08:45",
-      "hostName": "科林蒂安",
-      "matchId": "1422964",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.88",
-        "firstVisitLevel": "1.92",
-        "nowVisitLevel": "1.92",
-        "firstConcede": "半球/一球",
-        "nowConcede": "半球/一球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.10",
-        "nowHostLevel": "1.95",
-        "firstVisitLevel": "1.77",
-        "nowVisitLevel": "1.90",
-        "firstConcede": "一球",
-        "nowConcede": "半球/一球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.12",
-        "nowHostLevel": "1.97",
-        "firstVisitLevel": "1.77",
-        "nowVisitLevel": "1.92",
-        "firstConcede": "一球",
-        "nowConcede": "半球/一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.50",
-        "nowHostOdds": "1.67",
-        "firstVisitOdds": "7.90",
-        "nowVisitOdds": "5.56",
-        "oddsFloat": [0, -1, 1],
-        "firstDrawOdds": "4.20",
-        "nowDrawOdds": "3.20",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.55",
-        "nowHostOdds": "1.70",
-        "firstVisitOdds": "6.50",
-        "nowVisitOdds": "5.50",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.70",
-        "nowDrawOdds": "3.30",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.40",
-        "nowHostOdds": "1.70",
-        "firstVisitOdds": "8.50",
-        "nowVisitOdds": "5.50",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "3.80",
-        "nowDrawOdds": "3.10",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.83",
-        "firstHandicap": "2",
-        "firstSmallLevel": "2.02",
-        "nowBigLevel": "1.83",
-        "nowHandicap": "2",
-        "nowSmallLevel": "2.02",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.82",
-        "firstHandicap": "2",
-        "firstSmallLevel": "2.04",
-        "nowBigLevel": "1.86",
-        "nowHandicap": "2",
-        "nowSmallLevel": "2.02",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "弗拉门戈",
-      "hostId": "861",
-      "visitId": "888",
-      "leagueName": "巴西杯",
-      "matchCode": "周三025",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/861.html?mid=2793136",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/888.html?mid=2793136",
-      "matchTime": "08:45",
-      "hostName": "格雷米奥",
-      "matchId": "1422965",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.98",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "1.82",
-        "nowVisitLevel": "1.82",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.95",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.90",
-        "nowVisitLevel": "1.83",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "2.05",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "1.84",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.35",
-        "nowHostOdds": "1.97",
-        "firstVisitOdds": "3.24",
-        "nowVisitOdds": "3.99",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.38",
-        "nowDrawOdds": "3.00",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.95",
-        "nowHostOdds": "2.05",
-        "firstVisitOdds": "4.20",
-        "nowVisitOdds": "4.00",
-        "oddsFloat": [1, -1, 0],
-        "firstDrawOdds": "3.10",
-        "nowDrawOdds": "3.00",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.00",
-        "nowHostOdds": "2.00",
-        "firstVisitOdds": "3.80",
-        "nowVisitOdds": "4.00",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "2.90",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.05",
-        "firstHandicap": "2",
-        "firstSmallLevel": "1.83",
-        "nowBigLevel": "2.06",
-        "nowHandicap": "2",
-        "nowSmallLevel": "1.82",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }, {
-      "visitName": "普埃布拉",
-      "hostId": "13227",
-      "visitId": "13971",
-      "leagueName": "墨秋杯",
-      "matchCode": "周三026",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/13227.html?mid=2808835",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/13971.html?mid=2808835",
-      "matchTime": "10:00",
+      "leagueName": "墨超",
       "hostName": "蒙特雷",
-      "matchId": "1407664",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.95",
-        "nowHostLevel": "1.95",
-        "firstVisitLevel": "1.75",
-        "nowVisitLevel": "1.75",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.00",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.80",
-        "nowVisitLevel": "1.77",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "2.01",
-        "nowHostLevel": "2.01",
-        "firstVisitLevel": "1.81",
-        "nowVisitLevel": "1.83",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.60",
-        "nowHostOdds": "1.56",
-        "firstVisitOdds": "4.70",
-        "nowVisitOdds": "5.57",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.71",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.57",
-        "nowHostOdds": "1.57",
-        "firstVisitOdds": "5.50",
-        "nowVisitOdds": "5.50",
-        "oddsFloat": [0, 0, 0],
-        "firstDrawOdds": "4.00",
-        "nowDrawOdds": "4.00",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.57",
-        "nowHostOdds": "1.57",
-        "firstVisitOdds": "5.25",
-        "nowVisitOdds": "5.25",
-        "oddsFloat": [0, 0, 0],
-        "firstDrawOdds": "3.70",
-        "nowDrawOdds": "3.70",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [1, 0, 0],
-        "firstBigLevel": "1.87",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.95",
-        "nowBigLevel": "1.87",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.95",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "visitName": "美洲狮",
+      "gap": 11,
+      "beginTime": "2018-08-19"
     }, {
-      "visitName": "华雷斯",
-      "hostId": "13186",
-      "visitId": "83941",
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "克雷塔罗",
+      "gap": 13,
+      "beginTime": "2018-08-21"
+    }],
+    "matchCode": "201808072013",
+    "teamAExtraGoal": "-",
+    "hostRankAll": "2",
+    "visitRankAll": "1",
+    "historyVS":
+    [
+      {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "5:3",
+      "halfScore": "1:1",
+      "beginTime": "2018-07-30"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "1:1",
+      "halfScore": "1:0",
+      "beginTime": "2018-04-02"
+    }, {
       "leagueName": "墨秋杯",
-      "matchCode": "周三027",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/13186.html?mid=2808841",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/83941.html?mid=2808841",
-      "matchTime": "10:00",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "1:2",
+      "halfScore": "1:0",
+      "beginTime": "2018-03-15"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "0:0",
+      "halfScore": "0:0",
+      "beginTime": "2017-10-15"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "3:1",
+      "halfScore": "0:1",
+      "beginTime": "2017-01-30"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "2:2",
+      "halfScore": "1:1",
+      "beginTime": "2016-08-07"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "0:1",
+      "halfScore": "0:0",
+      "beginTime": "2011-04-23"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "2:0",
+      "halfScore": "0:0",
+      "beginTime": "2010-11-08"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "1:2",
+      "halfScore": "0:1",
+      "beginTime": "2009-01-18"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "2:0",
+      "halfScore": "0:0",
+      "beginTime": "2008-07-28"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "0:3",
+      "halfScore": "0:2",
+      "beginTime": "2008-02-25"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "1:1",
+      "halfScore": "0:1",
+      "beginTime": "2007-09-10"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "0:0",
+      "halfScore": "0:0",
+      "beginTime": "2006-02-01"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "2:0",
+      "halfScore": "0:0",
+      "beginTime": "2005-08-13"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "3:1",
+      "halfScore": "0:0",
+      "beginTime": "2005-04-23"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "1:3",
+      "halfScore": "0:0",
+      "beginTime": "2004-11-07"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "0:1",
+      "halfScore": "0:0",
+      "beginTime": "2004-04-03"
+    }, {
+      "leagueName": "墨超",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "2:0",
+      "halfScore": "0:0",
+      "beginTime": "2003-10-19"
+    }],
+    "leagueName": "墨秋杯",
+    "visitLogoUrl": "http://pimg1.126.net/caipiao_info/images/zcdata/team/logo/12325.png",
+    "loseRate": "0",
+    "matchStatus": "2",
+    "hostGoal": "1",
+    "hostLogoUrl": "http://pimg1.126.net/caipiao_info/images/zcdata/team/logo/12134.png",
+    "pointGoalStatus": -1,
+    "hostRecentMatch":
+    [
+      {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "阿特拉斯",
+      "visitName": "美洲狮",
+      "score": "0:3",
+      "beginTime": "2018-08-04"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "5:3",
+      "beginTime": "2018-07-30"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "坦皮科",
+      "visitName": "美洲狮",
+      "score": "1:2",
+      "beginTime": "2018-07-25"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "韦拉",
+      "visitName": "美洲狮",
+      "score": "0:2",
+      "beginTime": "2018-07-21"
+    }, {
+      "leagueName": "国际冠军杯",
+      "result": "负",
+      "hostName": "圣路易斯",
+      "visitName": "美洲狮",
+      "score": "2:0",
+      "beginTime": "2018-07-08"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "墨美洲",
+      "visitName": "美洲狮",
+      "score": "2:1",
+      "beginTime": "2018-05-06"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "墨美洲",
+      "score": "1:4",
+      "beginTime": "2018-05-03"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "美洲狮",
+      "visitName": "克雷塔罗",
+      "score": "1:1",
+      "beginTime": "2018-04-30"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "拉古纳",
+      "visitName": "美洲狮",
+      "score": "1:2",
+      "beginTime": "2018-04-23"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "普埃布拉",
+      "score": "4:2",
+      "beginTime": "2018-04-16"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "蒙特雷",
+      "visitName": "美洲狮",
+      "score": "2:1",
+      "beginTime": "2018-04-08"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "1:1",
+      "beginTime": "2018-04-02"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "蓝十字",
+      "visitName": "美洲狮",
+      "score": "1:1",
+      "beginTime": "2018-03-18"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "1:2",
+      "beginTime": "2018-03-15"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "托卢卡",
+      "score": "0:1",
+      "beginTime": "2018-03-12"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "普埃大学",
+      "score": "3:0",
+      "beginTime": "2018-03-08"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "莱昂",
+      "visitName": "美洲狮",
+      "score": "3:0",
+      "beginTime": "2018-03-04"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "平",
+      "hostName": "华雷斯",
+      "visitName": "美洲狮",
+      "score": "1:1",
+      "beginTime": "2018-03-01"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "美洲狮",
+      "visitName": "瓜达拉",
+      "score": "1:1",
+      "beginTime": "2018-02-26"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "普埃大学",
+      "score": "4:1",
+      "beginTime": "2018-02-22"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "蒂华纳",
+      "visitName": "美洲狮",
+      "score": "4:1",
+      "beginTime": "2018-02-18"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "韦拉",
+      "score": "1:2",
+      "beginTime": "2018-02-15"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "莫雷利亚",
+      "visitName": "美洲狮",
+      "score": "1:2",
+      "beginTime": "2018-02-10"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "老虎大学",
+      "score": "2:0",
+      "beginTime": "2018-02-05"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "普埃大学",
+      "visitName": "美洲狮",
+      "score": "1:1",
+      "beginTime": "2018-01-28"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "华雷斯",
+      "score": "3:0",
+      "beginTime": "2018-01-25"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "美洲狮",
+      "visitName": "墨美洲",
+      "score": "0:0",
+      "beginTime": "2018-01-22"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "负",
+      "hostName": "普埃大学",
+      "visitName": "美洲狮",
+      "score": "2:0",
+      "beginTime": "2018-01-18"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "阿特拉斯",
+      "score": "3:1",
+      "beginTime": "2018-01-15"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "帕丘卡",
+      "visitName": "美洲狮",
+      "score": "2:3",
+      "beginTime": "2018-01-07"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "克雷塔罗",
+      "visitName": "美洲狮",
+      "score": "1:1",
+      "beginTime": "2017-11-19"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "美洲狮",
+      "visitName": "拉古纳",
+      "score": "2:2",
+      "beginTime": "2017-11-06"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "普埃布拉",
+      "visitName": "美洲狮",
+      "score": "3:0",
+      "beginTime": "2017-10-28"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "蒙特雷",
+      "score": "0:1",
+      "beginTime": "2017-10-23"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "莱昂",
+      "score": "2:0",
+      "beginTime": "2017-10-18"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "0:0",
+      "beginTime": "2017-10-15"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "蓝十字",
+      "score": "1:4",
+      "beginTime": "2017-10-02"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
       "hostName": "托卢卡",
-      "matchId": "1407670",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.88",
-        "firstVisitLevel": "1.82",
-        "nowVisitLevel": "1.82",
-        "firstConcede": "一球/球半",
-        "nowConcede": "一球/球半",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.93",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "1.83",
-        "firstConcede": "一球/球半",
-        "nowConcede": "一球/球半",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.97",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "1.86",
-        "firstConcede": "一球/球半",
-        "nowConcede": "一球/球半",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.28",
-        "nowHostOdds": "1.39",
-        "firstVisitOdds": "8.00",
-        "nowVisitOdds": "7.25",
-        "oddsFloat": [0, 0, -1],
-        "firstDrawOdds": "4.30",
-        "nowDrawOdds": "4.29",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "1.80",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "2.00",
-        "nowBigLevel": "1.80",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "2.00",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, 0],
-        "firstBigLevel": "1.82",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "2.00",
-        "nowBigLevel": "1.82",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "2.00",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "visitName": "美洲狮",
+      "score": "2:1",
+      "beginTime": "2017-09-28"
     }, {
-      "visitName": "北西兰",
-      "hostId": "3985",
-      "visitId": "7845",
-      "leagueName": "欧罗巴联",
-      "matchCode": "周四001",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/3985.html?mid=2800260",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/7845.html?mid=2800260",
-      "matchTime": "01:00",
-      "hostName": "索尔纳",
-      "matchId": "1418940",
-      "asiaOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstHostLevel": "1.76",
-        "nowHostLevel": "1.76",
-        "firstVisitLevel": "1.94",
-        "nowVisitLevel": "1.94",
-        "firstConcede": "半球/一球",
-        "nowConcede": "半球/一球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.83",
-        "nowHostLevel": "1.80",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "2.00",
-        "firstConcede": "半球/一球",
-        "nowConcede": "半球/一球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.78",
-        "nowHostLevel": "1.78",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "1.98",
-        "firstConcede": "半球/一球",
-        "nowConcede": "半球/一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.39",
-        "nowHostOdds": "1.59",
-        "firstVisitOdds": "2.89",
-        "nowVisitOdds": "5.08",
-        "oddsFloat": [0, -1, -1],
-        "firstDrawOdds": "2.44",
-        "nowDrawOdds": "3.79",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.67",
-        "nowHostOdds": "1.62",
-        "firstVisitOdds": "4.80",
-        "nowVisitOdds": "5.00",
-        "oddsFloat": [-1, 1, 0],
-        "firstDrawOdds": "4.00",
-        "nowDrawOdds": "4.20",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.66",
-        "nowHostOdds": "1.66",
-        "firstVisitOdds": "5.25",
-        "nowVisitOdds": "5.25",
-        "oddsFloat": [-1, 1, 1],
-        "firstDrawOdds": "3.75",
-        "nowDrawOdds": "3.70",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.90",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.90",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.85",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "瓜达拉",
+      "visitName": "美洲狮",
+      "score": "1:1",
+      "beginTime": "2017-09-17"
     }, {
-      "visitName": "佐加顿斯",
-      "hostId": "13066",
-      "visitId": "4445",
-      "leagueName": "欧罗巴联",
-      "matchCode": "周四002",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/13066.html?mid=2800310",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/4445.html?mid=2800310",
-      "matchTime": "01:00",
-      "hostName": "马里乌波",
-      "matchId": "1404332",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.87",
-        "nowHostLevel": "1.88",
-        "firstVisitLevel": "1.83",
-        "nowVisitLevel": "1.82",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "2.00",
-        "firstVisitLevel": "1.95",
-        "nowVisitLevel": "1.80",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "1.90",
-        "firstVisitLevel": "1.86",
-        "nowVisitLevel": "1.86",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.58",
-        "nowHostOdds": "3.48",
-        "firstVisitOdds": "1.94",
-        "nowVisitOdds": "2.05",
-        "oddsFloat": [0, 0, -1],
-        "firstDrawOdds": "2.80",
-        "nowDrawOdds": "3.13",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "3.20",
-        "nowHostOdds": "3.70",
-        "firstVisitOdds": "2.25",
-        "nowVisitOdds": "2.05",
-        "oddsFloat": [-1, 1, 0],
-        "firstDrawOdds": "3.30",
-        "nowDrawOdds": "3.25",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "3.10",
-        "nowHostOdds": "3.70",
-        "firstVisitOdds": "2.37",
-        "nowVisitOdds": "2.10",
-        "oddsFloat": [1, 0, -1],
-        "firstDrawOdds": "3.10",
-        "nowDrawOdds": "3.10",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "1.95",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.85",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨秋杯",
+      "result": "负",
+      "hostName": "蒙特雷",
+      "visitName": "美洲狮",
+      "score": "3:1",
+      "beginTime": "2017-09-14"
     }, {
-      "visitName": "阿拉木图",
-      "hostId": "726",
-      "visitId": "16747",
-      "leagueName": "欧罗巴联",
-      "matchCode": "周四003",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/726.html?mid=2800269",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/16747.html?mid=2800269",
-      "matchTime": "02:45",
-      "hostName": "阿尔克马",
-      "matchId": "1419564",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.65",
-        "firstVisitLevel": "1.95",
-        "nowVisitLevel": "2.20",
-        "firstConcede": "半球/一球",
-        "nowConcede": "一球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.68",
-        "nowHostLevel": "1.55",
-        "firstVisitLevel": "2.08",
-        "nowVisitLevel": "2.26",
-        "firstConcede": "半球/一球",
-        "nowConcede": "半球/一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.69",
-        "nowHostOdds": "1.38",
-        "firstVisitOdds": "5.00",
-        "nowVisitOdds": "7.09",
-        "oddsFloat": [0, 1, 1],
-        "firstDrawOdds": "3.91",
-        "nowDrawOdds": "4.53",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.67",
-        "nowHostOdds": "1.36",
-        "firstVisitOdds": "4.75",
-        "nowVisitOdds": "8.50",
-        "oddsFloat": [-1, -1, 1],
-        "firstDrawOdds": "4.00",
-        "nowDrawOdds": "4.80",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.57",
-        "nowHostOdds": "1.44",
-        "firstVisitOdds": "5.80",
-        "nowVisitOdds": "7.00",
-        "oddsFloat": [-1, 1, 1],
-        "firstDrawOdds": "4.00",
-        "nowDrawOdds": "4.25",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "1.95",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.85",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "蒂华纳",
+      "score": "0:2",
+      "beginTime": "2017-09-11"
     }, {
-      "visitName": "奥西耶克",
-      "hostId": "859",
-      "visitId": "12685",
-      "leagueName": "欧罗巴联",
-      "matchCode": "周四004",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/859.html?mid=2800266",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/12685.html?mid=2800266",
-      "matchTime": "02:45",
-      "hostName": "流浪者",
-      "matchId": "1418941",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "1.95",
-        "firstVisitLevel": "1.90",
-        "nowVisitLevel": "1.85",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.51",
-        "nowHostOdds": "1.89",
-        "firstVisitOdds": "2.46",
-        "nowVisitOdds": "3.92",
-        "oddsFloat": [0, 0, -1],
-        "firstDrawOdds": "2.26",
-        "nowDrawOdds": "3.27",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.91",
-        "nowHostOdds": "2.00",
-        "firstVisitOdds": "4.00",
-        "nowVisitOdds": "3.90",
-        "oddsFloat": [-1, -1, 1],
-        "firstDrawOdds": "3.50",
-        "nowDrawOdds": "3.30",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.00",
-        "nowHostOdds": "2.00",
-        "firstVisitOdds": "4.00",
-        "nowVisitOdds": "4.00",
-        "oddsFloat": [0, 0, 0],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.20",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.95",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "2.00",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.80",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.91",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "1.98",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.78",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "塞拉亚",
+      "score": "1:0",
+      "beginTime": "2017-09-04"
     }, {
-      "visitName": "阿伯丁",
-      "hostId": "280",
-      "visitId": "1847",
-      "leagueName": "欧罗巴联",
-      "matchCode": "周四005",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/280.html?mid=2800285",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/1847.html?mid=2800285",
-      "matchTime": "02:45",
-      "hostName": "伯恩利",
-      "matchId": "1404329",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.80",
-        "nowHostLevel": "1.75",
-        "firstVisitLevel": "2.00",
-        "nowVisitLevel": "2.05",
-        "firstConcede": "一球/球半",
-        "nowConcede": "一球/球半",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.83",
-        "nowHostLevel": "1.83",
-        "firstVisitLevel": "1.93",
-        "nowVisitLevel": "1.93",
-        "firstConcede": "一球/球半",
-        "nowConcede": "一球/球半",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.22",
-        "nowHostOdds": "1.31",
-        "firstVisitOdds": "3.86",
-        "nowVisitOdds": "8.67",
-        "oddsFloat": [0, 0, 0],
-        "firstDrawOdds": "3.16",
-        "nowDrawOdds": "4.73",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.35",
-        "nowHostOdds": "1.33",
-        "firstVisitOdds": "8.50",
-        "nowVisitOdds": "9.00",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "5.00",
-        "nowDrawOdds": "5.00",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.36",
-        "nowHostOdds": "1.33",
-        "firstVisitOdds": "9.00",
-        "nowVisitOdds": "10.00",
-        "oddsFloat": [0, 1, 0],
-        "firstDrawOdds": "4.75",
-        "nowDrawOdds": "4.75",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.95",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "2.08",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.73",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.92",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.84",
-        "nowBigLevel": "2.05",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.71",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "韦拉",
+      "visitName": "美洲狮",
+      "score": "1:0",
+      "beginTime": "2017-08-28"
     }, {
-      "visitName": "帕梅拉斯",
-      "hostId": "8791",
-      "visitId": "881",
-      "leagueName": "巴西杯",
-      "matchCode": "周四006",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/8791.html?mid=2793140",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/881.html?mid=2793140",
-      "matchTime": "06:15",
-      "hostName": "巴伊亚",
-      "matchId": "1422966",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.73",
-        "nowHostLevel": "2.13",
-        "firstVisitLevel": "2.15",
-        "nowVisitLevel": "1.75",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "平手",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.75",
-        "nowHostLevel": "2.11",
-        "firstVisitLevel": "2.14",
-        "nowVisitLevel": "1.78",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "平手",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "3.30",
-        "nowHostOdds": "2.94",
-        "firstVisitOdds": "2.35",
-        "nowVisitOdds": "2.36",
-        "oddsFloat": [0, 0, 0],
-        "firstDrawOdds": "3.30",
-        "nowDrawOdds": "3.00",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.88",
-        "nowHostOdds": "3.00",
-        "firstVisitOdds": "2.50",
-        "nowVisitOdds": "2.40",
-        "oddsFloat": [1, 0, -1],
-        "firstDrawOdds": "3.10",
-        "nowDrawOdds": "3.10",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "3.10",
-        "nowHostOdds": "2.87",
-        "firstVisitOdds": "2.25",
-        "nowVisitOdds": "2.45",
-        "oddsFloat": [-1, -1, 1],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "2.90",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": null,
-        "firstHandicap": null,
-        "firstSmallLevel": null,
-        "nowBigLevel": null,
-        "nowHandicap": null,
-        "nowSmallLevel": null,
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "莫雷利亚",
+      "score": "1:2",
+      "beginTime": "2017-08-23"
     }, {
-      "visitName": "科隆竞技",
-      "hostId": "1365",
-      "visitId": "1863",
-      "leagueName": "南俱杯",
-      "matchCode": "周四007",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/1365.html?mid=2792181",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/1863.html?mid=2792181",
-      "matchTime": "06:30",
-      "hostName": "圣保罗",
-      "matchId": "1409723",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.02",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.83",
-        "nowVisitLevel": "1.83",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.03",
-        "nowHostLevel": "2.11",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "1.78",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.28",
-        "nowHostOdds": "1.49",
-        "firstVisitOdds": "5.01",
-        "nowVisitOdds": "7.44",
-        "oddsFloat": [0, 0, -1],
-        "firstDrawOdds": "2.26",
-        "nowDrawOdds": "3.51",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "2.00",
-        "firstHandicap": "2",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "2.00",
-        "nowHandicap": "2",
-        "nowSmallLevel": "1.85",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "老虎大学",
+      "visitName": "美洲狮",
+      "score": "2:0",
+      "beginTime": "2017-08-20"
     }, {
-      "visitName": "卡利",
-      "hostId": "12133",
-      "visitId": "12125",
-      "leagueName": "南俱杯",
-      "matchCode": "周四008",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/12133.html?mid=2792201",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/12125.html?mid=2792201",
-      "matchTime": "08:45",
-      "hostName": "玻利瓦尔",
-      "matchId": "1409724",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.95",
-        "nowHostLevel": "2.00",
-        "firstVisitLevel": "1.90",
-        "nowVisitLevel": "1.85",
-        "firstConcede": "一球/球半",
-        "nowConcede": "一球/球半",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "2.01",
-        "firstVisitLevel": "2.03",
-        "nowVisitLevel": "1.87",
-        "firstConcede": "一球/球半",
-        "nowConcede": "一球/球半",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.18",
-        "nowHostOdds": "1.41",
-        "firstVisitOdds": "5.01",
-        "nowVisitOdds": "6.81",
-        "oddsFloat": [0, 0, -1],
-        "firstDrawOdds": "2.81",
-        "nowDrawOdds": "4.22",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "1.95",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.90",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "1.90",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "普埃大学",
+      "score": "2:0",
+      "beginTime": "2017-08-14"
     }, {
-      "visitName": "捍卫者",
-      "hostId": "6605",
-      "visitId": "16485",
-      "leagueName": "南俱杯",
-      "matchCode": "周四009",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/6605.html?mid=2792183",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/16485.html?mid=2792183",
-      "matchTime": "08:45",
-      "hostName": "弗鲁米嫩",
-      "matchId": "1409725",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.83",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "2.02",
-        "nowVisitLevel": "1.88",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.98",
-        "firstVisitLevel": "2.03",
-        "nowVisitLevel": "1.90",
-        "firstConcede": "一球",
-        "nowConcede": "一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.23",
-        "nowHostOdds": "1.50",
-        "firstVisitOdds": "4.01",
-        "nowVisitOdds": "7.02",
-        "oddsFloat": [1, 0, -1],
-        "firstDrawOdds": "2.39",
-        "nowDrawOdds": "3.61",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.50",
-        "nowHostOdds": "1.50",
-        "firstVisitOdds": "7.00",
-        "nowVisitOdds": "6.50",
-        "oddsFloat": [0, 1, -1],
-        "firstDrawOdds": "3.90",
-        "nowDrawOdds": "4.00",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "2.06",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.80",
-        "nowBigLevel": "2.06",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.80",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨秋杯",
+      "result": "平",
+      "hostName": "美洲狮",
+      "visitName": "蒙特雷",
+      "score": "1:1",
+      "beginTime": "2017-08-10"
     }, {
-      "visitName": "中央海岸",
-      "hostId": "20565",
-      "visitId": "20588",
-      "leagueName": "澳足总杯",
-      "matchCode": "周三001",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/20565.html?mid=2814923",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/20588.html?mid=2814923",
-      "matchTime": "17:30",
-      "hostName": "阿德莱德",
-      "matchId": "1410991",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.60",
-        "nowHostLevel": "1.60",
-        "firstVisitLevel": "2.20",
-        "nowVisitLevel": "2.20",
-        "firstConcede": "半球/一球",
-        "nowConcede": "一球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.93",
-        "nowHostLevel": "1.95",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "1.85",
-        "firstConcede": "半球/一球",
-        "nowConcede": "一球/球半",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.65",
-        "firstVisitLevel": "1.91",
-        "nowVisitLevel": "2.20",
-        "firstConcede": "半球/一球",
-        "nowConcede": "一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.65",
-        "nowHostOdds": "1.40",
-        "firstVisitOdds": "5.80",
-        "nowVisitOdds": "6.34",
-        "oddsFloat": [0, -1, 1],
-        "firstDrawOdds": "3.80",
-        "nowDrawOdds": "4.50",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.70",
-        "nowHostOdds": "1.40",
-        "firstVisitOdds": "4.00",
-        "nowVisitOdds": "6.50",
-        "oddsFloat": [0, -1, 1],
-        "firstDrawOdds": "4.00",
-        "nowDrawOdds": "4.50",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.70",
-        "nowHostOdds": "1.40",
-        "firstVisitOdds": "4.20",
-        "nowVisitOdds": "7.00",
-        "oddsFloat": [0, 1, 0],
-        "firstDrawOdds": "3.50",
-        "nowDrawOdds": "4.25",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": null,
-        "firstHandicap": null,
-        "firstSmallLevel": null,
-        "nowBigLevel": null,
-        "nowHandicap": null,
-        "nowSmallLevel": null,
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.85",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.95",
-        "nowBigLevel": "1.68",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "2.15",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.74",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "2.06",
-        "nowBigLevel": "1.68",
-        "nowHandicap": "2.5/3",
-        "nowSmallLevel": "2.13",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "墨美洲",
+      "visitName": "美洲狮",
+      "score": "2:1",
+      "beginTime": "2017-08-06"
     }, {
-      "visitName": "名古屋鲸",
-      "hostId": "2665",
-      "visitId": "2205",
-      "leagueName": "J1联赛",
-      "matchCode": "周三002",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/2665.html?mid=2722340",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/2205.html?mid=2722340",
-      "matchTime": "18:00",
-      "hostName": "仙台七夕",
-      "matchId": "1367515",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "1.88",
-        "firstVisitLevel": "1.96",
-        "nowVisitLevel": "1.98",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.83",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "2.02",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.85",
-        "nowHostLevel": "1.84",
-        "firstVisitLevel": "2.03",
-        "nowVisitLevel": "2.05",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.80",
-        "nowHostOdds": "1.79",
-        "firstVisitOdds": "3.90",
-        "nowVisitOdds": "3.91",
-        "oddsFloat": [-1, 1, 1],
-        "firstDrawOdds": "3.35",
-        "nowDrawOdds": "3.77",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.85",
-        "nowHostOdds": "1.80",
-        "firstVisitOdds": "4.00",
-        "nowVisitOdds": "3.90",
-        "oddsFloat": [0, -1, 1],
-        "firstDrawOdds": "3.70",
-        "nowDrawOdds": "4.00",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.80",
-        "nowHostOdds": "1.75",
-        "firstVisitOdds": "3.75",
-        "nowVisitOdds": "3.90",
-        "oddsFloat": [-1, 1, 1],
-        "firstDrawOdds": "3.50",
-        "nowDrawOdds": "3.60",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": null,
-        "firstHandicap": null,
-        "firstSmallLevel": null,
-        "nowBigLevel": null,
-        "nowHandicap": null,
-        "nowSmallLevel": null,
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.02",
-        "firstHandicap": "3",
-        "firstSmallLevel": "1.83",
-        "nowBigLevel": "2.00",
-        "nowHandicap": "3",
-        "nowSmallLevel": "1.85",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.03",
-        "firstHandicap": "3",
-        "firstSmallLevel": "1.83",
-        "nowBigLevel": "2.03",
-        "nowHandicap": "3",
-        "nowSmallLevel": "1.85",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨秋杯",
+      "result": "平",
+      "hostName": "塞拉亚",
+      "visitName": "美洲狮",
+      "score": "1:1",
+      "beginTime": "2017-08-02"
     }, {
-      "visitName": "神户胜利",
-      "hostId": "2226",
-      "visitId": "2235",
-      "leagueName": "J1联赛",
-      "matchCode": "周三003",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/2226.html?mid=2722345",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/2235.html?mid=2722345",
-      "matchTime": "18:00",
-      "hostName": "大阪樱花",
-      "matchId": "1367520",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.94",
-        "nowHostLevel": "2.04",
-        "firstVisitLevel": "1.92",
-        "nowVisitLevel": "1.82",
-        "firstConcede": "平手/半球",
-        "nowConcede": "半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.98",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "1.83",
-        "firstConcede": "平手/半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.95",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.93",
-        "nowVisitLevel": "1.87",
-        "firstConcede": "平手/半球",
-        "nowConcede": "半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.22",
-        "nowHostOdds": "2.00",
-        "firstVisitOdds": "2.88",
-        "nowVisitOdds": "3.47",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.14",
-        "nowDrawOdds": "3.41",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.30",
-        "nowHostOdds": "2.20",
-        "firstVisitOdds": "3.10",
-        "nowVisitOdds": "3.10",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.30",
-        "nowDrawOdds": "3.50",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.25",
-        "nowHostOdds": "1.95",
-        "firstVisitOdds": "2.90",
-        "nowVisitOdds": "3.50",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.30",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.90",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.95",
-        "nowBigLevel": "1.80",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "2.05",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.90",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.96",
-        "nowBigLevel": "1.91",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.97",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "阿特拉斯",
+      "visitName": "美洲狮",
+      "score": "2:1",
+      "beginTime": "2017-07-29"
+    }],
+    "extraTime": "0",
+    "teamBExtraGoal": "-",
+    "circlePostId": "3516360",
+    "matchId": "1407683",
+    "visitFutureMatch":
+    [
+      {
+      "leagueName": "墨超",
+      "hostName": "莫雷利亚",
+      "visitName": "内卡萨",
+      "gap": 3,
+      "beginTime": "2018-08-11"
     }, {
-      "visitName": "大阪钢巴",
-      "hostId": "883",
-      "visitId": "2206",
-      "leagueName": "J1联赛",
-      "matchCode": "周三004",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/883.html?mid=2722344",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/2206.html?mid=2722344",
-      "matchTime": "18:00",
-      "hostName": "磐田喜悦",
-      "matchId": "1367519",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "2.02",
-        "nowHostLevel": "1.82",
-        "firstVisitLevel": "1.84",
-        "nowVisitLevel": "2.04",
-        "firstConcede": "半球",
-        "nowConcede": "平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.98",
-        "nowHostLevel": "1.85",
-        "firstVisitLevel": "1.88",
-        "nowVisitLevel": "2.00",
-        "firstConcede": "半球",
-        "nowConcede": "平手/半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.03",
-        "nowHostLevel": "1.87",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "2.02",
-        "firstConcede": "半球",
-        "nowConcede": "平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.85",
-        "nowHostOdds": "2.10",
-        "firstVisitOdds": "3.77",
-        "nowVisitOdds": "3.26",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.28",
-        "nowDrawOdds": "3.34",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.95",
-        "nowHostOdds": "2.15",
-        "firstVisitOdds": "3.70",
-        "nowVisitOdds": "3.25",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.60",
-        "nowDrawOdds": "3.50",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.90",
-        "nowHostOdds": "2.10",
-        "firstVisitOdds": "3.50",
-        "nowVisitOdds": "3.20",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.20",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.98",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.88",
-        "nowBigLevel": "1.98",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.88",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, 0],
-        "firstBigLevel": "2.01",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "1.78",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "2.11",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨秋杯",
+      "hostName": "坦皮科",
+      "visitName": "内卡萨",
+      "gap": 7,
+      "beginTime": "2018-08-15"
     }, {
-      "visitName": "东京FC",
-      "hostId": "2207",
-      "visitId": "2232",
-      "leagueName": "J1联赛",
-      "matchCode": "周三005",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/2207.html?mid=2722341",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/2232.html?mid=2722341",
-      "matchTime": "18:00",
-      "hostName": "鹿岛鹿角",
-      "matchId": "1367516",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.02",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.84",
-        "nowVisitLevel": "1.84",
-        "firstConcede": "半球",
-        "nowConcede": "平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.73",
-        "nowHostLevel": "2.05",
-        "firstVisitLevel": "2.15",
-        "nowVisitLevel": "1.80",
-        "firstConcede": "平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "2.03",
-        "nowHostLevel": "2.03",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "1.86",
-        "firstConcede": "半球",
-        "nowConcede": "平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.96",
-        "nowHostOdds": "2.31",
-        "firstVisitOdds": "3.45",
-        "nowVisitOdds": "3.00",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.16",
-        "nowDrawOdds": "3.18",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.00",
-        "nowHostOdds": "2.15",
-        "firstVisitOdds": "3.75",
-        "nowVisitOdds": "3.40",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.25",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.95",
-        "nowHostOdds": "2.25",
-        "firstVisitOdds": "3.60",
-        "nowVisitOdds": "3.00",
-        "oddsFloat": [0, 0, 1],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.10",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [0, 0, 0],
-        "firstBigLevel": "2.02",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.83",
-        "nowBigLevel": "2.02",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.83",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.04",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.82",
-        "nowBigLevel": "2.04",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.84",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨超",
+      "hostName": "内卡萨",
+      "visitName": "普埃布拉",
+      "gap": 11,
+      "beginTime": "2018-08-19"
+    }],
+    "news": [{
+      "updateTime": "2018-07-28 08:29:02",
+      "source": "网易彩票",
+      "title": "独家-周日总进球玩法:美洲狮后防有空缺",
+      "url": "http://cai.163.com/article/18/0728/08/DNPP0682000597U8.html"
     }, {
-      "visitName": "鸟栖沙岩",
-      "hostId": "2231",
-      "visitId": "12196",
-      "leagueName": "J1联赛",
-      "matchCode": "周三006",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/2231.html?mid=2722343",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/12196.html?mid=2722343",
-      "matchTime": "18:00",
-      "hostName": "清水鼓动",
-      "matchId": "1367518",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.06",
-        "nowHostLevel": "2.06",
-        "firstVisitLevel": "1.80",
-        "nowVisitLevel": "1.80",
-        "firstConcede": "平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.20",
-        "nowHostLevel": "2.10",
-        "firstVisitLevel": "1.70",
-        "nowVisitLevel": "1.77",
-        "firstConcede": "半球",
-        "nowConcede": "平手/半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "2.03",
-        "nowHostLevel": "2.09",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "1.80",
-        "firstConcede": "平手/半球",
-        "nowConcede": "平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.04",
-        "nowHostOdds": "2.39",
-        "firstVisitOdds": "3.40",
-        "nowVisitOdds": "2.89",
-        "oddsFloat": [1, 0, -1],
-        "firstDrawOdds": "3.03",
-        "nowDrawOdds": "3.15",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.25",
-        "nowHostOdds": "2.50",
-        "firstVisitOdds": "3.30",
-        "nowVisitOdds": "2.80",
-        "oddsFloat": [1, -1, 0],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.30",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.15",
-        "nowHostOdds": "2.35",
-        "firstVisitOdds": "3.30",
-        "nowVisitOdds": "2.87",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "3.00",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.93",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.93",
-        "nowBigLevel": "1.85",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "2.00",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.93",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.93",
-        "nowBigLevel": "1.92",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "1.96",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "updateTime": "2018-07-20 17:38:55",
+      "source": "网易彩票",
+      "title": "[宝哥彩吧]推荐:美洲狮全身而退 多特不败",
+      "url": "http://cai.163.com/article/18/0720/17/DN6599LH000597U8.html"
     }, {
-      "visitName": "川崎前锋",
-      "hostId": "2234",
-      "visitId": "12191",
-      "leagueName": "J1联赛",
-      "matchCode": "周三007",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/2234.html?mid=2722342",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/12191.html?mid=2722342",
-      "matchTime": "18:00",
-      "hostName": "浦和红钻",
-      "matchId": "1367517",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.86",
-        "nowHostLevel": "2.04",
-        "firstVisitLevel": "2.00",
-        "nowVisitLevel": "1.82",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.83",
-        "nowHostLevel": "2.10",
-        "firstVisitLevel": "2.02",
-        "nowVisitLevel": "1.77",
-        "firstConcede": "平手",
-        "nowConcede": "平手",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "1.83",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "2.06",
-        "firstConcede": "平手",
-        "nowConcede": "受让平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "2.42",
-        "nowHostOdds": "2.78",
-        "firstVisitOdds": "2.65",
-        "nowVisitOdds": "2.38",
-        "oddsFloat": [1, 1, -1],
-        "firstDrawOdds": "3.05",
-        "nowDrawOdds": "3.31",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "2.60",
-        "nowHostOdds": "2.88",
-        "firstVisitOdds": "2.75",
-        "nowVisitOdds": "2.30",
-        "oddsFloat": [1, 1, -1],
-        "firstDrawOdds": "3.20",
-        "nowDrawOdds": "3.60",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "2.45",
-        "nowHostOdds": "2.80",
-        "firstVisitOdds": "2.70",
-        "nowVisitOdds": "2.30",
-        "oddsFloat": [1, 0, 0],
-        "firstDrawOdds": "3.10",
-        "nowDrawOdds": "3.20",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.05",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.80",
-        "nowBigLevel": "1.83",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "2.02",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "2.06",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "1.80",
-        "nowBigLevel": "2.03",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.85",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "updateTime": "2018-07-20 15:46:13",
+      "source": "网易彩票",
+      "title": "独家-7.20易眼金睛牛哥推荐:美洲狮不败",
+      "url": "http://cai.163.com/article/18/0720/15/DN5UQV2H000597U8.html"
     }, {
-      "visitName": "札幌冈萨",
-      "hostId": "47255",
-      "visitId": "2227",
-      "leagueName": "J1联赛",
-      "matchCode": "周三008",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/47255.html?mid=2722346",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/2227.html?mid=2722346",
-      "matchTime": "18:00",
-      "hostName": "长崎航海",
-      "matchId": "1367521",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.84",
-        "nowHostLevel": "1.84",
-        "firstVisitLevel": "2.02",
-        "nowVisitLevel": "2.02",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
+      "updateTime": "2018-07-20 14:25:58",
+      "source": "网易彩票",
+      "title": "[关小刀]竞彩推荐:康塞大学主称雄 美洲狮占先机",
+      "url": "http://cai.163.com/article/18/0720/14/DN5Q80JL000597U8.html"
+    }],
+    "yingkuiData": {
+      "bifaList": [{
+        "type": "主胜",
+        "dealPrice": 0.00,
+        "volume": 0,
+        "yingkui": 0,
+        "zhishu": 0,
+        "volumeRote": 0.00
       }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.75",
-        "nowHostLevel": "1.80",
-        "firstVisitLevel": "2.13",
-        "nowVisitLevel": "2.05",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
+        "type": "平局",
+        "dealPrice": 0.00,
+        "volume": 0,
+        "yingkui": 0,
+        "zhishu": 0,
+        "volumeRote": 0.00
       }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "2.08",
-        "nowHostLevel": "1.81",
-        "firstVisitLevel": "1.80",
-        "nowVisitLevel": "2.08",
-        "firstConcede": "平手",
-        "nowConcede": "受让平手/半球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
+        "type": "主负",
+        "dealPrice": 0.00,
+        "volume": 0,
+        "yingkui": 0,
+        "zhishu": 0,
+        "volumeRote": 0.00
       }],
-      "ouOdds": [{
-        "firstHostOdds": "2.75",
-        "nowHostOdds": "2.94",
-        "firstVisitOdds": "2.37",
-        "nowVisitOdds": "2.35",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "3.18",
-        "companyId": "1",
-        "companyCnName": "99家平均"
+      "wangyiList": [{
+        "type": "主胜",
+        "dealPrice": 1.92,
+        "volumeRote": 0.00,
+        "yingkui": 0.00,
+        "zhishu": 0
       }, {
-        "firstHostOdds": "2.90",
-        "nowHostOdds": "2.80",
-        "firstVisitOdds": "2.45",
-        "nowVisitOdds": "2.40",
-        "oddsFloat": [-1, 1, -1],
-        "firstDrawOdds": "3.25",
-        "nowDrawOdds": "3.50",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
+        "type": "平局",
+        "dealPrice": 3.12,
+        "volumeRote": 0.00,
+        "yingkui": 0.00,
+        "zhishu": 0
       }, {
-        "firstHostOdds": "2.80",
-        "nowHostOdds": "2.87",
-        "firstVisitOdds": "2.37",
-        "nowVisitOdds": "2.35",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.00",
-        "nowDrawOdds": "3.10",
-        "companyId": "17",
-        "companyCnName": "立博"
+        "type": "主负",
+        "dealPrice": 3.15,
+        "volumeRote": 0.00,
+        "yingkui": 0.00,
+        "zhishu": 0
       }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.85",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "2.00",
-        "nowBigLevel": "1.83",
-        "nowHandicap": "2/2.5",
-        "nowSmallLevel": "2.02",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.88",
-        "firstHandicap": "2/2.5",
-        "firstSmallLevel": "1.98",
-        "nowBigLevel": "2.12",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "1.77",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "bifaTotalTrade": 0,
+      "jsjJiaList": [42.53, 27.79, 29.68],
+      "jsjJiaMaxType": "主胜",
+      "wangyiMaxType": "主胜",
+      "bifaMaxType": "主胜"
+    },
+    "statusDesc": "已结束",
+    "circleReplyNum": "0",
+    "matchDay": "2018-08-08",
+    "matchTime": "08:00",
+    "teamAPointGoal": "-",
+    "hostRankHomeCourt": "3",
+    "betRadarUrl": "",
+    "zxHostName": "美洲狮",
+    "visitName": "内卡萨",
+    "drawRate": "0",
+    "visitRankAwayCourt": "1",
+    "visitRecentMatch":
+    [
+      {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "普埃大学",
+      "score": "1:0",
+      "beginTime": "2018-08-05"
     }, {
-      "visitName": "湘南海洋",
-      "hostId": "2229",
-      "visitId": "9385",
-      "leagueName": "J1联赛",
-      "matchCode": "周三009",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/2229.html?mid=2722347",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/9385.html?mid=2722347",
-      "matchTime": "18:30",
-      "hostName": "柏太阳神",
-      "matchId": "1367522",
-      "asiaOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.84",
-        "nowHostLevel": "1.82",
-        "firstVisitLevel": "2.02",
-        "nowVisitLevel": "2.04",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.93",
-        "nowHostLevel": "1.80",
-        "firstVisitLevel": "1.93",
-        "nowVisitLevel": "2.05",
-        "firstConcede": "半球",
-        "nowConcede": "半球",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [1, 0, -1],
-        "firstHostLevel": "1.90",
-        "nowHostLevel": "2.06",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "1.83",
-        "firstConcede": "半球",
-        "nowConcede": "半球/一球",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "1.98",
-        "nowHostOdds": "1.81",
-        "firstVisitOdds": "3.34",
-        "nowVisitOdds": "4.07",
-        "oddsFloat": [1, -1, -1],
-        "firstDrawOdds": "3.25",
-        "nowDrawOdds": "3.52",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "1.95",
-        "nowHostOdds": "1.85",
-        "firstVisitOdds": "3.80",
-        "nowVisitOdds": "4.00",
-        "oddsFloat": [1, 1, -1],
-        "firstDrawOdds": "3.50",
-        "nowDrawOdds": "3.40",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "1.90",
-        "nowHostOdds": "1.80",
-        "firstVisitOdds": "3.70",
-        "nowVisitOdds": "4.00",
-        "oddsFloat": [1, 0, 0],
-        "firstDrawOdds": "3.25",
-        "nowDrawOdds": "3.40",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.83",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "2.02",
-        "nowBigLevel": "1.83",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "2.02",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "1.85",
-        "firstHandicap": "2.5",
-        "firstSmallLevel": "2.01",
-        "nowBigLevel": "1.84",
-        "nowHandicap": "2.5",
-        "nowSmallLevel": "2.04",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "坦皮科",
+      "score": "1:0",
+      "beginTime": "2018-08-02"
     }, {
-      "visitName": "广岛三箭",
-      "hostId": "2236",
-      "visitId": "2230",
-      "leagueName": "J1联赛",
-      "matchCode": "周三010",
-      "hostLogoUrl": "http://zx.caipiao.163.com/football/team/2236.html?mid=2722348",
-      "visitLogoUrl": "http://zx.caipiao.163.com/football/team/2230.html?mid=2722348",
-      "matchTime": "18:30",
-      "hostName": "横滨水手",
-      "matchId": "1367523",
-      "asiaOdds": [{
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.88",
-        "nowHostLevel": "1.74",
-        "firstVisitLevel": "1.98",
-        "nowVisitLevel": "2.12",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "受让平手/半球",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "2.00",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.85",
-        "nowVisitLevel": "1.83",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "平手",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstHostLevel": "1.94",
-        "nowHostLevel": "2.02",
-        "firstVisitLevel": "1.94",
-        "nowVisitLevel": "1.87",
-        "firstConcede": "受让平手/半球",
-        "nowConcede": "平手",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOdds": [{
-        "firstHostOdds": "3.05",
-        "nowHostOdds": "2.57",
-        "firstVisitOdds": "2.08",
-        "nowVisitOdds": "2.45",
-        "oddsFloat": [0, 1, -1],
-        "firstDrawOdds": "3.25",
-        "nowDrawOdds": "3.51",
-        "companyId": "1",
-        "companyCnName": "99家平均"
-      }, {
-        "firstHostOdds": "3.25",
-        "nowHostOdds": "2.50",
-        "firstVisitOdds": "2.15",
-        "nowVisitOdds": "2.60",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.50",
-        "nowDrawOdds": "3.60",
-        "companyId": "42",
-        "companyCnName": "威廉希尔"
-      }, {
-        "firstHostOdds": "3.10",
-        "nowHostOdds": "2.50",
-        "firstVisitOdds": "2.05",
-        "nowVisitOdds": "2.45",
-        "oddsFloat": [-1, 0, 1],
-        "firstDrawOdds": "3.40",
-        "nowDrawOdds": "3.40",
-        "companyId": "17",
-        "companyCnName": "立博"
-      }],
-      "dxpOdds": [{
-        "oddsFloat": [1, 0, -1],
-        "firstBigLevel": "1.90",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.90",
-        "nowBigLevel": "1.96",
-        "nowHandicap": "3",
-        "nowSmallLevel": "1.84",
-        "companyId": "229",
-        "companyCnName": "澳门彩票"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.02",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.83",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "3",
-        "nowSmallLevel": "1.90",
-        "companyId": "126",
-        "companyCnName": "Bet 365"
-      }, {
-        "oddsFloat": [-1, 0, 1],
-        "firstBigLevel": "2.01",
-        "firstHandicap": "2.5/3",
-        "firstSmallLevel": "1.85",
-        "nowBigLevel": "1.95",
-        "nowHandicap": "3",
-        "nowSmallLevel": "1.93",
-        "companyId": "282",
-        "companyCnName": "皇冠"
-      }],
-      "ouOddsKaili": [],
-      "asiaOddsKaili": [],
-      "dxpOddsKaili": []
-    }]
-  }
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "5:3",
+      "beginTime": "2018-07-30"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "墨美洲",
+      "score": "2:1",
+      "beginTime": "2018-07-23"
+    }, {
+      "leagueName": "墨超级杯",
+      "result": "胜",
+      "hostName": "蒙特雷",
+      "visitName": "内卡萨",
+      "score": "0:1",
+      "beginTime": "2018-07-16"
+    }, {
+      "leagueName": "国际冠军杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "瓜达拉",
+      "score": "2:1",
+      "beginTime": "2018-07-09"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "莫雷利亚",
+      "visitName": "内卡萨",
+      "score": "2:2",
+      "beginTime": "2018-04-28"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "老虎大学",
+      "score": "1:1",
+      "beginTime": "2018-04-22"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "普埃大学",
+      "visitName": "内卡萨",
+      "score": "0:1",
+      "beginTime": "2018-04-15"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "托卢卡",
+      "score": "1:0",
+      "beginTime": "2018-04-12"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "墨美洲",
+      "score": "1:1",
+      "beginTime": "2018-04-08"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "拉古纳",
+      "score": "2:1",
+      "beginTime": "2018-04-05"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "1:1",
+      "beginTime": "2018-04-02"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "帕丘卡",
+      "score": "1:1",
+      "beginTime": "2018-03-18"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "美洲狮",
+      "visitName": "内卡萨",
+      "score": "1:2",
+      "beginTime": "2018-03-15"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "克雷塔罗",
+      "visitName": "内卡萨",
+      "score": "1:1",
+      "beginTime": "2018-03-11"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "阿特拉斯",
+      "score": "2:1",
+      "beginTime": "2018-03-07"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "内卡萨",
+      "visitName": "拉古纳",
+      "score": "1:2",
+      "beginTime": "2018-03-04"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "普埃布拉",
+      "visitName": "内卡萨",
+      "score": "1:1",
+      "beginTime": "2018-02-24"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "洛斯莫奇",
+      "score": "1:0",
+      "beginTime": "2018-02-21"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "蒙特雷",
+      "score": "3:0",
+      "beginTime": "2018-02-18"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "阿特拉斯",
+      "visitName": "内卡萨",
+      "score": "1:1",
+      "beginTime": "2018-02-14"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "蓝十字",
+      "visitName": "内卡萨",
+      "score": "0:2",
+      "beginTime": "2018-02-11"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "负",
+      "hostName": "Atlé",
+      "visitName": "内卡萨",
+      "score": "2:0",
+      "beginTime": "2018-02-08"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "托卢卡",
+      "score": "0:0",
+      "beginTime": "2018-02-04"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "莱昂",
+      "visitName": "内卡萨",
+      "score": "0:4",
+      "beginTime": "2018-01-28"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "平",
+      "hostName": "洛斯莫奇",
+      "visitName": "内卡萨",
+      "score": "1:1",
+      "beginTime": "2018-01-24"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "内卡萨",
+      "visitName": "瓜达拉",
+      "score": "1:3",
+      "beginTime": "2018-01-21"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "Atlé",
+      "score": "5:0",
+      "beginTime": "2018-01-17"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "蒂华纳",
+      "visitName": "内卡萨",
+      "score": "1:0",
+      "beginTime": "2018-01-13"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "韦拉",
+      "score": "0:0",
+      "beginTime": "2018-01-07"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "内卡萨",
+      "visitName": "莫雷利亚",
+      "score": "1:2",
+      "beginTime": "2017-11-19"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "老虎大学",
+      "visitName": "内卡萨",
+      "score": "1:0",
+      "beginTime": "2017-11-06"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "普埃大学",
+      "score": "5:0",
+      "beginTime": "2017-10-29"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "负",
+      "hostName": "拉古纳",
+      "visitName": "内卡萨",
+      "score": "2:0",
+      "beginTime": "2017-10-26"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "墨美洲",
+      "visitName": "内卡萨",
+      "score": "0:1",
+      "beginTime": "2017-10-22"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "拉古纳",
+      "visitName": "内卡萨",
+      "score": "3:2",
+      "beginTime": "2017-10-19"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "美洲狮",
+      "score": "0:0",
+      "beginTime": "2017-10-15"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "帕丘卡",
+      "visitName": "内卡萨",
+      "score": "0:0",
+      "beginTime": "2017-10-01"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "克雷塔罗",
+      "score": "1:0",
+      "beginTime": "2017-09-28"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "普埃布拉",
+      "score": "1:1",
+      "beginTime": "2017-09-17"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "负",
+      "hostName": "莫雷利亚",
+      "visitName": "内卡萨",
+      "score": "2:1",
+      "beginTime": "2017-09-13"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "蒙特雷",
+      "visitName": "内卡萨",
+      "score": "1:0",
+      "beginTime": "2017-09-10"
+    }, {
+      "leagueName": "墨超",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "阿特拉斯",
+      "score": "2:1",
+      "beginTime": "2017-08-27"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "蓝十字",
+      "score": "1:1",
+      "beginTime": "2017-08-24"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "托卢卡",
+      "visitName": "内卡萨",
+      "score": "0:0",
+      "beginTime": "2017-08-21"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "胜",
+      "hostName": "内卡萨",
+      "visitName": "萨卡特卡",
+      "score": "4:0",
+      "beginTime": "2017-08-17"
+    }, {
+      "leagueName": "墨超",
+      "result": "负",
+      "hostName": "内卡萨",
+      "visitName": "莱昂",
+      "score": "0:3",
+      "beginTime": "2017-08-13"
+    }, {
+      "leagueName": "墨秋杯",
+      "result": "平",
+      "hostName": "内卡萨",
+      "visitName": "莫雷利亚",
+      "score": "1:1",
+      "beginTime": "2017-08-09"
+    }, {
+      "leagueName": "墨超",
+      "result": "平",
+      "hostName": "瓜达拉",
+      "visitName": "内卡萨",
+      "score": "2:2",
+      "beginTime": "2017-08-06"
+    }],
+    "hint": "",
+    "visitGoal": "3",
+    "zxVisitName": "内卡萨",
+    "winRate": "0",
+    "extraStatus": -1,
+    "supportLive": true
+  }]
 }

@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.rjp.eaction.R;
+import com.rjp.eaction.event.MessageEvent;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.ButterKnife;
 
@@ -43,7 +47,19 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         View childRootView = LayoutInflater.from(mContext).inflate(getLayoutId(), null);
         layoutContainer.addView(childRootView);
         ButterKnife.bind(this);
+        EventBus.getDefault().register(this);
         handle();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe
+    public void onEvent(MessageEvent event){
+
     }
 
     /**

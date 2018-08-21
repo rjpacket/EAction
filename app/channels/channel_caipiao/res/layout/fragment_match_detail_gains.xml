@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <com.rjp.eaction.ui.views.MatchDetailHistoryGameView
+            android:id="@+id/history_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        </com.rjp.eaction.ui.views.MatchDetailHistoryGameView>
+
+        <com.rjp.eaction.ui.views.MatchDetailCurrentScoreView
+            android:id="@+id/current_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+        </com.rjp.eaction.ui.views.MatchDetailCurrentScoreView>
+
+        <com.rjp.eaction.ui.views.MatchDetailFutureGameView
+            android:id="@+id/future_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+        </com.rjp.eaction.ui.views.MatchDetailFutureGameView>
+
+        <com.rjp.eaction.ui.views.MatchDetailNewsView
+            android:id="@+id/news_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            >
+
+        </com.rjp.eaction.ui.views.MatchDetailNewsView>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -15,11 +15,23 @@ public class MatchDetailCurrentScoreModel {
      * beginTime : 2018-07-10
      */
 
+    /**
+     * {
+     "leagueName": "墨超",
+     "hostName": "美洲狮",
+     "visitName": "内卡萨",
+     "score": "5:3",
+     "halfScore": "1:1",
+     "beginTime": "2018-07-30"
+     }
+     */
+
     private String leagueName;
     private String result;
     private String hostName;
     private String visitName;
     private String score;
+    private String halfScore;
     private String beginTime;
 
     public String getLeagueName() {
@@ -68,5 +80,13 @@ public class MatchDetailCurrentScoreModel {
 
     public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
+    }
+
+    public String getHalfScore() {
+        return halfScore;
+    }
+
+    public void setHalfScore(String halfScore) {
+        this.halfScore = halfScore;
     }
 }

@@ -1,14 +1,21 @@
 package com.rjp.eaction.baseAF;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.event.MessageEvent;
+import com.rjp.eaction.util.AppUtils;
+import com.rjp.eaction.util.SystemBarTintManager;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -48,7 +55,50 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         layoutContainer.addView(childRootView);
         ButterKnife.bind(this);
         EventBus.getDefault().register(this);
+        if(showTopBar() && shouldTranslucentStatusBar()){
+            setStatusBarTranslucent();
+        }
+        if(showTopBar() && shouldAddStatusBar()){
+            addStatusBar();
+        }
         handle();
+    }
+
+    private void addStatusBar() {
+        View view = new View(mContext);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, AppUtils.getStatusBarHeight(mContext));
+        view.setLayoutParams(params);
+        view.setBackgroundResource(R.drawable.shape_status_bar);
+        topBar.addView(view, 0);
+    }
+
+    /**
+     * 默认需要添加一个自定义的状态栏View
+     * @return
+     */
+    protected boolean shouldAddStatusBar() {
+        return true;
+    }
+
+    private void setStatusBarTranslucent() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                getWindow().addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            }
+            SystemBarTintManager tintManager = new SystemBarTintManager(this);// 创建状态栏的管理实例
+            tintManager.setStatusBarTintEnabled(true);// 激活状态栏设置
+            tintManager.setStatusBarTintColor(Color.TRANSPARENT);//设置状态栏颜色
+            tintManager.setStatusBarDarkMode(true, this);// //false 状态栏字体颜色是白色 true 颜色是黑色
+        }
+    }
+
+    /**
+     * 默认需要透明状态栏
+     * @return
+     */
+    protected boolean shouldTranslucentStatusBar() {
+        return true;
     }
 
     @Override

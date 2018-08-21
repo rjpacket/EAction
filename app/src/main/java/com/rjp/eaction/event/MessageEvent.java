@@ -1,9 +1,5 @@
 package com.rjp.eaction.event;
 
-import com.rjp.eaction.bean.MatchDetailGameEventsModel;
-
-import java.util.List;
-
 /**
  * Created by small on 2018/8/8.
  */

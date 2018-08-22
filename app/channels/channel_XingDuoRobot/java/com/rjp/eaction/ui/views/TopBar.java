@@ -1,4 +1,4 @@
-package com.rjp.eaction.baseAF;
+package com.rjp.eaction.ui.views;
 
 import android.content.Context;
 import android.text.TextUtils;

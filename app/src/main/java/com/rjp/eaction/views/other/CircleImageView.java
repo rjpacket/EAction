@@ -55,11 +55,6 @@ public class CircleImageView extends AppCompatImageView {
         width = MeasureSpec.getSize(widthMeasureSpec) + AppUtils.dp2px(4);
         height = MeasureSpec.getSize(heightMeasureSpec) + AppUtils.dp2px(4);
         setMeasuredDimension(width, height);
-        Drawable drawable = getDrawable();
-        if(drawable != null) {
-            srcBitmap = drawableToBitmap(drawable);
-            setPaintShader(srcBitmap, mPaint);
-        }
     }
 
 
@@ -94,9 +89,14 @@ public class CircleImageView extends AppCompatImageView {
     @Override
     protected void onDraw(Canvas canvas) {
 //        super.onDraw(canvas);
-        canvas.drawCircle(width / 2, height / 2, (width - AppUtils.dp2px(4)) / 2, mPaint);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            canvas.drawArc(AppUtils.dp2px(1), AppUtils.dp2px(1), width - AppUtils.dp2px(1), height - AppUtils.dp2px(1), 0, 360, false, whitePaint);
+        Drawable drawable = getDrawable();
+        if(drawable != null) {
+            srcBitmap = drawableToBitmap(drawable);
+            setPaintShader(srcBitmap, mPaint);
+            canvas.drawCircle(width / 2, height / 2, (width - AppUtils.dp2px(4)) / 2, mPaint);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                canvas.drawArc(AppUtils.dp2px(1), AppUtils.dp2px(1), width - AppUtils.dp2px(1), height - AppUtils.dp2px(1), 0, 360, false, whitePaint);
+            }
         }
     }
 }

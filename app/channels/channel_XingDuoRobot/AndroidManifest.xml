@@ -19,6 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.activitys.ModifyPasswordActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.BindMobileActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.BindWechatActivity">
+
+        </activity>
     </application>
 
 </manifest>

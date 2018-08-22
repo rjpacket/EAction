@@ -7,13 +7,13 @@
     android:orientation="vertical"
     tools:context=".baseAF.BaseFragment"
     >
-    <com.rjp.eaction.baseAF.TopBar
+    <com.rjp.eaction.ui.views.TopBar
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         >
 
-    </com.rjp.eaction.baseAF.TopBar>
+    </com.rjp.eaction.ui.views.TopBar>
 
     <FrameLayout
         android:id="@+id/base_container"

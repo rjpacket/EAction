@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.event.MessageEvent;
+import com.rjp.eaction.ui.views.TopBar;
 import com.rjp.eaction.util.AppUtils;
 import com.rjp.eaction.util.SystemBarTintManager;
 

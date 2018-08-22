@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.event.MessageEvent;
+import com.rjp.eaction.ui.views.TopBar;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

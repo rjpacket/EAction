@@ -8,13 +8,13 @@
     android:orientation="vertical"
     tools:context=".baseAF.BaseActivity"
     >
-    <com.rjp.eaction.baseAF.TopBar
+    <com.rjp.eaction.ui.views.TopBar
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
 
-    </com.rjp.eaction.baseAF.TopBar>
+    </com.rjp.eaction.ui.views.TopBar>
 
     <FrameLayout
         android:id="@+id/layout_container"

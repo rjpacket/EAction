@@ -11,19 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-        <ImageView
+        <com.rjp.eaction.ui.views.UserHeaderView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/mine_bg"
-            android:scaleType="centerCrop"
             />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/mine_user_head"
-            android:layout_centerHorizontal="true"
-            />
     </RelativeLayout>
 
     <LinearLayout

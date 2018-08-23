@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,5 +8,102 @@
     android:orientation="vertical"
     tools:context="com.rjp.eaction.MainActivity"
     >
+    <LinearLayout
+        android:id="@+id/ll_buy_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="42dp"
+            android:text="加入购物车"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_bg_bg_100dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/text_333333"
+            />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="42dp"
+            android:text="立即购买"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_yellow_yellow_100dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_buy_bottom"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/icon_home_read_book"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《狼和七只小羊》"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/text_000000"
+                android:textSize="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥334"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textColor="@color/text_yellow"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="简介"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_000000"
+                android:textSize="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="你说的什么几把万一啊，我不知道你在说啥啊，今天大家冷冷的夜冷冷汗的吹，我开始慌了。你哭着对着我说，童话里都是骗人的，我不可能是你的王子，也许你不会懂，我愿变成你爱的那个天使，张开双手变成翅膀守护你，相信我们会像童话故事里，幸福和快乐是结局你哭着对我说，童话颗粒都是骗人的，我不可能是你的王子，也许你不会懂，从你说爱我以后，我院变成守护你，你要相信，相信我们会像童话故事里，幸福和快乐是结局，你要相信，相信我们会像童话故事里，我会变成你爱的那个天使，展开双手变成翅膀守护你，幸福和快乐是结局"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_000000"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

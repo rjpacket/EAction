@@ -31,6 +31,30 @@
         <activity android:name=".ui.activitys.BindWechatActivity">
 
         </activity>
+
+        <activity android:name=".ui.activitys.AccountManageActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.OrderDetailActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.OrderActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.EditOrderActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.StoreDetailActivity">
+
+        </activity>
+
+        <activity android:name=".ui.activitys.BookDetailActivity">
+
+        </activity>
     </application>
 
 </manifest>

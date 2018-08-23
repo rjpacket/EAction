@@ -8,5 +8,25 @@
     android:orientation="vertical"
     tools:context="com.rjp.eaction.MainActivity"
     >
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="#ffffff"
+        app:tl_iconVisible="false"
+        app:tl_indicator_color="@color/main_color"
+        app:tl_textSelectColor="@color/main_color"
+        app:tl_textUnselectColor="#66000000"
+        app:tl_underline_color="#DDDDDD"
+        app:tl_underline_height="1dp"
+        app:tl_indicator_anim_enable="false"
+        />
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </android.support.v4.view.ViewPager>
 </LinearLayout>

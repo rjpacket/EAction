@@ -7,6 +7,74 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.rjp.eaction.MainActivity"
+    android:gravity="center_horizontal"
     >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mine_user_head"
+        android:layout_marginTop="60dp"
+        />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机音量调至最大，手机靠近设备10cm以内"
+        android:layout_marginTop="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIFI名称："
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIFI密码："
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接"
+        android:background="@drawable/selector_blue_blue_100dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        />
 </LinearLayout>

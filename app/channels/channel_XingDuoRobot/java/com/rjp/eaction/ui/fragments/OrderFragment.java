@@ -31,6 +31,11 @@ public class OrderFragment extends BaseFragment {
     }
 
     @Override
+    protected boolean showTopBar() {
+        return false;
+    }
+
+    @Override
     protected String getPageTitle() {
         return "";
     }

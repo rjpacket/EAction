@@ -1,13 +1,12 @@
 package com.rjp.eaction;
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.ui.fragments.BookFragment;
 import com.rjp.eaction.ui.fragments.HomeFragment;
 import com.rjp.eaction.ui.fragments.MineFragment;
@@ -16,7 +15,6 @@ import com.rjp.eaction.ui.fragments.StoreFragment;
 import java.util.ArrayList;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {

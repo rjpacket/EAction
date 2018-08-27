@@ -5,15 +5,11 @@ import android.content.Intent;
 import android.text.TextUtils;
 
 import com.rjp.eaction.R;
-import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.baseAF.Const;
-import com.rjp.eaction.bean.LoginModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
-import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.util.ToastUtils;
-
-import java.util.List;
 
 public class PersonalInfoActivity extends BaseActivity {
 

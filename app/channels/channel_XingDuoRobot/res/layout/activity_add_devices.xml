@@ -8,5 +8,10 @@
     android:orientation="vertical"
     tools:context="com.rjp.eaction.MainActivity"
     >
+    <com.rjp.eaction.ui.listviews.AddNewDeviceListView
+        android:id="@+id/add_new_device_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+    </com.rjp.eaction.ui.listviews.AddNewDeviceListView>
 </LinearLayout>

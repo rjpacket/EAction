@@ -11,7 +11,7 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
 import com.rjp.eaction.R;
-import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.util.AppUtils;
 
 import butterknife.BindView;

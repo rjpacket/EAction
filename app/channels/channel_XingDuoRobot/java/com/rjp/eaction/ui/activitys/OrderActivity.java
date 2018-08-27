@@ -1,5 +1,7 @@
 package com.rjp.eaction.ui.activitys;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -8,9 +10,8 @@ import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 import com.rjp.eaction.R;
-import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.bean.TabEntity;
-import com.rjp.eaction.ui.fragments.HomeFragment;
 import com.rjp.eaction.ui.fragments.OrderFragment;
 
 import java.util.ArrayList;
@@ -26,9 +27,8 @@ public class OrderActivity extends BaseActivity {
     ViewPager viewPager;
     private List<Fragment> fragments;
 
-    @Override
-    protected boolean showTopBar() {
-        return false;
+    public static void trendTo(Context mContext){
+        mContext.startActivity(new Intent(mContext, OrderActivity.class));
     }
 
     @Override

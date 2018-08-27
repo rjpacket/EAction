@@ -1,7 +1,7 @@
 package com.rjp.eaction.ui.activitys;
 
 import com.rjp.eaction.R;
-import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.base.BaseActivity;
 
 public class OrderDetailActivity extends BaseActivity {
 

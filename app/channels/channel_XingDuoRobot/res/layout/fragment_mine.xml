@@ -44,24 +44,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         >
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/mine_icon_wechat"
             android:layout_marginLeft="10dp"
+            android:src="@drawable/mine_icon_wechat"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="小不提"
-            android:textSize="14dp"
-            android:textColor="@color/text_999999"
             android:layout_marginLeft="10dp"
+            android:text="小不提"
+            android:textColor="@color/text_999999"
+            android:textSize="14dp"
             />
     </LinearLayout>
 
@@ -74,6 +75,7 @@
         android:layout_marginRight="30dp"
         >
         <LinearLayout
+            android:id="@+id/ll_had_read"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -112,6 +114,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_today_with"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -159,6 +162,7 @@
         android:layout_marginRight="30dp"
         >
         <LinearLayout
+            android:id="@+id/ll_read_time"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -197,6 +201,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_family_with"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -236,6 +241,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_devices_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -269,6 +275,7 @@
         />
 
     <LinearLayout
+        android:id="@+id/ll_orders_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

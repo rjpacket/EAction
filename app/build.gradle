@@ -30,10 +30,6 @@ android {
             versionCode 1
             versionName "1.0.0"
         }
-
-        channel_C {
-            applicationId "com.rjp.eaction.C"
-        }
     }
 
     sourceSets {
@@ -47,11 +43,6 @@ android {
             manifest.srcFile 'channels/channel_XingDuoRobot/AndroidManifest.xml'
             res.srcDirs = ['channels/channel_XingDuoRobot/res']
             java.srcDirs = ['channels/channel_XingDuoRobot/java']
-        }
-
-        channel_C {
-            res.srcDirs = ['channels/channel_C/res']
-            java.srcDirs = ['channels/channel_C/java']
         }
     }
 
@@ -93,10 +84,7 @@ android {
         //recycler的adapter
         implementation 'com.zhy:base-rvadapter:3.0.3'
         implementation 'org.greenrobot:eventbus:3.0.0'
+        //左滑listview
+        implementation 'com.baoyz.swipemenulistview:library:1.3.0'
     }
-}
-
-dependencies {
-    implementation 'com.android.support.constraint:constraint-layout:+'
-    implementation 'com.android.support:support-v4:27.1.1'
 }

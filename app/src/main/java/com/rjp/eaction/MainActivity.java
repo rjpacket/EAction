@@ -4,7 +4,7 @@
 //import android.widget.FrameLayout;
 //import android.widget.Toast;
 //
-//import com.rjp.eaction.baseAF.BaseActivity;
+//import BaseActivity;
 //import com.rjp.eaction.ui.home.HomeFragment;
 //import com.rjp.eaction.ui.mine.MineFragment;
 //import com.rjp.eaction.ui.social.SocialFragment;

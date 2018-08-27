@@ -9,13 +9,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.rjp.eaction.R;
-import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.baseAF.Const;
 import com.rjp.eaction.bean.LoginModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.network.retrofit.RetrofitClient;
-import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.util.SPUtils;
 import com.rjp.eaction.util.ToastUtils;
 

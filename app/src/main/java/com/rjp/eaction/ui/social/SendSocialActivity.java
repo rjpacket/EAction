@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.rjp.eaction.R;
-import com.rjp.eaction.baseAF.BaseActivity;
+import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.baseAF.Const;
 import com.rjp.eaction.util.dialog.DialogUtils;
 import com.rjp.eaction.util.dialog.OnDialogClickListener;

@@ -8,5 +8,14 @@
     android:orientation="vertical"
     tools:context="com.rjp.eaction.MainActivity"
     >
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/swipe_menu_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        >
 
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
 </LinearLayout>

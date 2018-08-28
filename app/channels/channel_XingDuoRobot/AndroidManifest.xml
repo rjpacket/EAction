@@ -59,6 +59,10 @@
         <activity android:name=".ui.activitys.DevicesManageActivity">
 
         </activity>
+
+        <activity android:name=".ui.activitys.AddDevicesActivity">
+
+        </activity>
     </application>
 
 </manifest>

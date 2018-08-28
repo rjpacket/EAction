@@ -18,6 +18,7 @@ import com.rjp.eaction.base.BaseActivity;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import com.rjp.eaction.ui.listviews.AddNewDeviceListView;
 
 import static com.rjp.eaction.util.AppUtils.dp2px;
 
@@ -69,9 +70,9 @@ public class DevicesManageActivity extends BaseActivity {
             public void create(SwipeMenu menu) {
                 SwipeMenuItem openItem = new SwipeMenuItem(mContext);
                 openItem.setBackground(new ColorDrawable(Color.parseColor("#ffeb1c42")));
-                openItem.setWidth(dp2px(90));
+                openItem.setWidth(dp2px(70));
                 openItem.setTitle("删除");
-                openItem.setTitleSize(18);
+                openItem.setTitleSize(16);
                 openItem.setTitleColor(Color.WHITE);
                 menu.addMenuItem(openItem);
             }
@@ -82,7 +83,7 @@ public class DevicesManageActivity extends BaseActivity {
 
     @Override
     protected void clickOnIcon0() {
-
+        AddDevicesActivity.trendTo(mContext);
     }
 
     @Override

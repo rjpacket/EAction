@@ -105,7 +105,7 @@ public class SendSocialActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(data != null) {
             Uri uri = data.getData();
-            String filePath = FileUtils.getFilePathByUri(mContext, uri);
+            String filePath = FileUtils.getFilePathByUri(this, uri);
             pickPhotoView.addPickPhotoModel(new PhotoModel(PhotoModel.TYPE_FILE, filePath));
         }
     }

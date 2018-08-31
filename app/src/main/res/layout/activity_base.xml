@@ -16,11 +16,19 @@
 
     </com.rjp.eaction.ui.views.TopBar>
 
+    <View
+        android:id="@+id/base_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line"
+        android:layout_below="@id/top_bar"
+        />
+
     <FrameLayout
         android:id="@+id/layout_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/top_bar"
+        android:layout_below="@id/base_top_line"
         >
 
     </FrameLayout>

@@ -49,8 +49,8 @@ public class UserHeaderView extends View {
 
     private void initView(Context context, AttributeSet attrs) {
         mContext = context;
-        radius = AppUtils.dp2px(40);
-        borderWidth = AppUtils.dp2px(10);
+        radius = AppUtils.dp2px(50);
+        borderWidth = AppUtils.dp2px(6);
 
         bgPath = new Path();
         mPaint = new Paint();
@@ -106,11 +106,11 @@ public class UserHeaderView extends View {
         bgPath.lineTo(width, 0);
         int height = radius * 2 + borderWidth;
         bgPath.lineTo(width, height);
-        int x0 = width / 2 + radius + borderWidth + AppUtils.dp2px(10);
+        int x0 = width / 2 + radius + borderWidth + AppUtils.dp2px(8);
         int y0 = height;
         bgPath.lineTo(x0, y0);
         bgPath.arcTo(new RectF(width / 2 - radius - borderWidth, radius, width / 2 + radius + borderWidth, radius * 3), -5, -170);
-        int x3 = width / 2 - radius - borderWidth - AppUtils.dp2px(10);
+        int x3 = width / 2 - radius - borderWidth - AppUtils.dp2px(8);
         int y3 = radius * 2 + borderWidth;
         bgPath.quadTo(width / 2 - radius - borderWidth, y3, x3, y3);
         bgPath.lineTo(0, y3);

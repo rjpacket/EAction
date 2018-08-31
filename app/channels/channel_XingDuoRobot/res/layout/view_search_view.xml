@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        >
+
+    <ImageView
+            android:id="@+id/iv_head_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/home_online"
+            android:layout_marginLeft="15dp"
+            />
+
+    <LinearLayout
+            android:id="@+id/ll_book_search_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/shape_bg_bg_1000dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+
+        <ImageView
+                android:id="@+id/iv_input_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_search"
+                />
+
+        <TextView
+                android:id="@+id/tv_search_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请输入关键字进行搜索"
+                android:layout_marginLeft="10dp"
+                android:textSize="12dp"
+                android:textColor="@color/text_999999"
+                />
+    </LinearLayout>
+</merge>

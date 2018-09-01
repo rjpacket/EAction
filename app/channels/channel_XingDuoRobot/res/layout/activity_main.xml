@@ -19,7 +19,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="62dp"
+        android:layout_height="70dp"
+        android:background="#00000000"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -143,11 +144,12 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="62dp"
-            android:layout_height="62dp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_centerInParent="true"
-            />
+        <com.rjp.eaction.ui.views.RatingCircleImageView
+                android:id="@+id/rating_circle_image_view"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_home_read_book"
+                />
     </RelativeLayout>
 </LinearLayout>

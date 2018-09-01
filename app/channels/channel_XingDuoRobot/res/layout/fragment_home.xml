@@ -1,9 +1,9 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         tools:context="com.rjp.eaction.ui.fragments.HomeFragment"
         >
@@ -12,12 +12,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-        <ImageView
+
+        <com.youth.banner.Banner
+                android:id="@+id/home_banner"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:src="@drawable/banner"
-                android:scaleType="centerCrop"
-                />
+                android:layout_height="200dp"
+                app:image_scale_type="center_crop"
+                app:indicator_drawable_unselected="@drawable/indicator_normal"
+                app:indicator_drawable_selected="@drawable/indicator_selected"
+                app:indicator_height="2dp"
+                app:indicator_width="12dp"
+                >
+
+        </com.youth.banner.Banner>
 
         <com.rjp.eaction.ui.views.SearchLabelView
                 android:id="@+id/home_search_view"
@@ -33,44 +40,85 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/main_bg"
-        >
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="热门读物"
-            android:padding="10dp"
-            />
+            android:layout_marginTop="10dp"
+            android:background="@color/main_bg"
+            >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="读物"
-            android:padding="10dp"
-            />
+                android:id="@+id/tv_home_hot_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门读物"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_1"
+                android:layout_marginLeft="10dp"
+                />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="火火兔"
-            android:padding="10dp"
-            />
+                android:id="@+id/tv_home_electronic_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电子绘本"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_2"
+                android:layout_marginLeft="10dp"
+                />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="笔"
-            android:padding="10dp"
-            />
+                android:id="@+id/tv_home_voice_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有声读物"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_3"
+                android:layout_marginLeft="10dp"
+                />
+
+        <TextView
+                android:id="@+id/tv_home_fm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FM"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_4"
+                android:layout_marginLeft="10dp"
+                />
     </LinearLayout>
 
     <com.rjp.eaction.ui.listviews.HomeReadBookListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
     </com.rjp.eaction.ui.listviews.HomeReadBookListView>
 </LinearLayout>

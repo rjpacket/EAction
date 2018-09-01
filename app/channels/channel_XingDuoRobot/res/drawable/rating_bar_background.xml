@@ -2,14 +2,14 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@android:id/background"
-        android:drawable="@drawable/home_02">
+        android:drawable="@drawable/rating_normal">
     </item>
     <item
         android:id="@android:id/secondaryProgress"
-        android:drawable="@drawable/home_02">
+        android:drawable="@drawable/rating_normal">
     </item>
     <item
         android:id="@android:id/progress"
-        android:drawable="@drawable/home_01">
+        android:drawable="@drawable/rating_selected">
     </item>
 </layer-list>

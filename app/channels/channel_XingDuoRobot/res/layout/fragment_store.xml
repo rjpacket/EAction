@@ -1,18 +1,42 @@
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.rjp.eaction.ui.fragments.HomeFragment"
-    >
-
-    <ImageView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
-        android:src="@drawable/banner"
-        android:scaleType="centerCrop"
-        />
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context="com.rjp.eaction.ui.fragments.HomeFragment"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <com.youth.banner.Banner
+                android:id="@+id/home_banner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:image_scale_type="center_crop"
+                app:indicator_drawable_unselected="@drawable/indicator_normal"
+                app:indicator_drawable_selected="@drawable/indicator_selected"
+                app:indicator_height="2dp"
+                app:indicator_width="12dp"
+                >
+
+        </com.youth.banner.Banner>
+
+        <com.rjp.eaction.ui.views.SearchLabelView
+                android:id="@+id/store_search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:slv_input_text_color="@color/white"
+                app:slv_input_text_size="12dp"
+                app:slv_input_background="@drawable/shape_home_input_background"
+                app:slv_input_icon="@drawable/home_search_icon"
+                >
+
+        </com.rjp.eaction.ui.views.SearchLabelView>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

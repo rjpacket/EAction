@@ -12,7 +12,7 @@ public abstract class ResponseCallback<T> {
     public abstract void success(T model);
 
     //失败回调
-    public abstract void failure(int code, String msg);
+    public abstract void failure(String code, String msg);
 
     protected Type resultType;
 

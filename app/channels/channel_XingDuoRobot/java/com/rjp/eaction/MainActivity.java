@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.rjp.eaction.base.BaseActivity;
+import com.rjp.eaction.ui.activitys.PlayBookActivity;
 import com.rjp.eaction.ui.fragments.BookFragment;
 import com.rjp.eaction.ui.fragments.HomeFragment;
 import com.rjp.eaction.ui.fragments.MineFragment;
@@ -79,7 +80,7 @@ public class MainActivity extends BaseActivity {
         return "首页";
     }
 
-    @OnClick({R.id.ll_tab1, R.id.ll_tab2, R.id.ll_tab3, R.id.ll_tab4})
+    @OnClick({R.id.ll_tab1, R.id.ll_tab2, R.id.ll_tab3, R.id.ll_tab4, R.id.rating_circle_image_view})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.ll_tab1:
@@ -97,6 +98,9 @@ public class MainActivity extends BaseActivity {
             case R.id.ll_tab4:
                 showFragment(3);
                 setTabSelect(llTab4, llTab2, llTab3, llTab1);
+                break;
+            case R.id.rating_circle_image_view:
+                PlayBookActivity.trendTo(mContext);
                 break;
         }
     }

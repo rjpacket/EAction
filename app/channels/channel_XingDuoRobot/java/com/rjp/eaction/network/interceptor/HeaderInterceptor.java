@@ -34,14 +34,13 @@ public class HeaderInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
         Request.Builder builder = chain.request()
                 .newBuilder();
-        if (headers != null && headers.size() > 0) {
-            Set<String> keys = headers.keySet();
-            for (String headerKey : keys) {
-                String value = headers.get(headerKey);
-                LogUtils.e("------header----->", value);
-                builder.addHeader(headerKey, value).build();
-            }
-        }
+//        if (headers != null && headers.size() > 0) {
+//            Set<String> keys = headers.keySet();
+//            for (String headerKey : keys) {
+//                String value = headers.get(headerKey);
+//                builder.addHeader(headerKey, value).build();
+//            }
+//        }
         return chain.proceed(builder.build());
 
     }

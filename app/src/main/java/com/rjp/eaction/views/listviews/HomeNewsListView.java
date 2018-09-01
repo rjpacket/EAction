@@ -52,7 +52,7 @@ public class HomeNewsListView extends RefreshListView<String> {
                     }
 
                     @Override
-                    public void failure(int code, String msg) {
+                    public void failure(String code, String msg) {
 
                     }
                 });

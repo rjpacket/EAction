@@ -75,7 +75,7 @@ public class UploadImageUtils {
                     }
 
                     @Override
-                    public void failure(int code, String msg) {
+                    public void failure(String code, String msg) {
 
                     }
                 });

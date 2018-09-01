@@ -1,79 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="10dp"
-    android:gravity="center_vertical"
-    >
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        >
+
     <ImageView
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:src="@drawable/icon_home_read_book"
-        android:scaleType="centerCrop"
-        />
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_home_read_book"
+            android:scaleType="centerCrop"
+            />
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1.5"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
             >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="《狼和七只小羊》"
-                android:lines="1"
-                android:ellipsize="end"
-                />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="五角星"
-                />
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="《狼和七只小羊》"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/text_000000"
+                    android:textSize="16dp"
+                    />
+
+            <RatingBar
+                    android:id="@+id/rb_home_rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:isIndicator="false"
+                    android:maxHeight="15dp"
+                    android:minHeight="15dp"
+                    android:rating="3.5"
+                    android:stepSize="0.5"
+                    android:progressDrawable="@drawable/rating_bar_background"
+                    android:numStars="5"
+                    />
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="这是一段简介，这个简介只有两行，多的不显示"
-            android:lines="2"
-            android:layout_marginTop="8dp"
-            />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这是一段简介，这个简介只有两行，多的不显示"
+                android:lines="2"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_666666"
+                android:textSize="14dp"
+                android:ellipsize="end"
+                />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="20000"
-                />
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="28.3Mb"
-                />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20000"
+                    android:drawableLeft="@drawable/home_item_devices"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/text_999999"
+                    android:textSize="12dp"
+                    />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4300"
-                />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28.3Mb"
+                    android:drawableLeft="@drawable/home_item_size"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/text_999999"
+                    android:textSize="12dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="1px"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4300"
+                    android:drawableLeft="@drawable/home_item_zan"
+                    android:drawablePadding="4dp"
+                    android:textColor="@color/text_999999"
+                    android:textSize="12dp"
+                    />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

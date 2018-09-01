@@ -26,7 +26,7 @@ public class RatingCircleImageView extends AppCompatImageView {
     private Bitmap srcBitmap;
     private float bScale;
     private Paint whitePaint;
-    private float rating;
+    private float rating = 0.5f;
 
     public RatingCircleImageView(Context context) {
         super(context);
@@ -53,8 +53,8 @@ public class RatingCircleImageView extends AppCompatImageView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        width = MeasureSpec.getSize(widthMeasureSpec) + AppUtils.dp2px(4);
-        height = MeasureSpec.getSize(heightMeasureSpec) + AppUtils.dp2px(4);
+        width = MeasureSpec.getSize(widthMeasureSpec);
+        height = MeasureSpec.getSize(heightMeasureSpec);
         setMeasuredDimension(width, height);
     }
 

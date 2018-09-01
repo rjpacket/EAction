@@ -7,17 +7,17 @@ package com.rjp.eaction.network.model;
  * email  : jimbo922@163.com
  */
 public class BaseModel<T> {
-    private int code;
+    private String code;
     private int result;
     private String msg;
     private String servertime;
     private T data;
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -50,7 +50,7 @@ public class BaseModel<T> {
      * @return
      */
     public boolean isOk() {
-        return code == 1 || result == 100 || code == 100;
+        return "200".equals(code);
     }
 
     /**

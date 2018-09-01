@@ -129,7 +129,7 @@ public class LoginActivity extends BaseActivity {
                     }
 
                     @Override
-                    public void failure(int code, String msg) {
+                    public void failure(String code, String msg) {
                         ToastUtils.showToast(mContext, TextUtils.isEmpty(msg) ? "登录失败" : msg);
                     }
                 });
@@ -158,7 +158,7 @@ public class LoginActivity extends BaseActivity {
                     }
 
                     @Override
-                    public void failure(int code, String msg) {
+                    public void failure(String code, String msg) {
                         ToastUtils.showToast(mContext, TextUtils.isEmpty(msg) ? "发送验证码失败" : msg);
                     }
                 });

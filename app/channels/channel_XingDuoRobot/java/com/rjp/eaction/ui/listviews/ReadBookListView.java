@@ -3,11 +3,15 @@ package com.rjp.eaction.ui.listviews;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 
 import com.rjp.commonadapter.CommonAdapter;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.R;
+import com.rjp.eaction.ui.activitys.BookDetailActivity;
+import com.rjp.eaction.ui.activitys.PlayBookActivity;
 import com.rjp.eaction.views.base_listview.LoadMoreListView;
 
 /**
@@ -43,5 +47,10 @@ public class ReadBookListView extends LoadMoreListView<String> {
     @Override
     protected void requestData() {
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        BookDetailActivity.trendTo(mContext);
     }
 }

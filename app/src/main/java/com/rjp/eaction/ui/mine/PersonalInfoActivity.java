@@ -51,7 +51,7 @@ public class PersonalInfoActivity extends BaseActivity {
                     }
 
                     @Override
-                    public void failure(int code, String msg) {
+                    public void failure(String code, String msg) {
                         ToastUtils.showToast(mContext, TextUtils.isEmpty(msg) ? "获取个人信息失败" : msg);
                     }
                 });

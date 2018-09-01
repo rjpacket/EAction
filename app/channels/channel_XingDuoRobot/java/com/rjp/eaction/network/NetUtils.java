@@ -111,7 +111,7 @@ public class NetUtils {
         new RetrofitClient(context, baseUrl).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
-                responseCallback.failure(e.code, e.message);
+                responseCallback.failure(String.valueOf(e.code), e.message);
             }
 
             @Override
@@ -122,7 +122,7 @@ public class NetUtils {
                     responseCallback.success(response);
                 } catch (Exception e) {
                     ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
-                    responseCallback.failure(exception.code, exception.message);
+                    responseCallback.failure(String.valueOf(exception.code), exception.message);
                 }
             }
         });
@@ -139,7 +139,7 @@ public class NetUtils {
         new RetrofitClient(context, baseUrl).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
-                responseCallback.failure(e.code, e.message);
+                responseCallback.failure(String.valueOf(e.code), e.message);
             }
 
             @Override
@@ -158,7 +158,7 @@ public class NetUtils {
                 } catch (Exception e) {
                     e.printStackTrace();
                     ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
-                    responseCallback.failure(exception.code, exception.message);
+                    responseCallback.failure(String.valueOf(exception.code), exception.message);
                 }
             }
         });
@@ -174,13 +174,14 @@ public class NetUtils {
         RetrofitClient.getInstance(context).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
-                responseCallback.failure(e.code, e.message);
+                responseCallback.failure(String.valueOf(e.code), e.message);
             }
 
             @Override
             public void onNext(ResponseBody responseBody) {
                 try {
                     String response = responseBody.string();
+                    LogUtils.json(response);
                     Gson gson = new Gson();
                     Type resultType = wrapType(BaseModel.class, responseCallback.getGenericityType());
                     BaseModel<T> baseModel = gson.fromJson(response, resultType);
@@ -191,7 +192,7 @@ public class NetUtils {
                     }
                 } catch (Exception e) {
                     ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
-                    responseCallback.failure(exception.code, exception.message);
+                    responseCallback.failure(String.valueOf(exception.code), exception.message);
                 }
             }
         });

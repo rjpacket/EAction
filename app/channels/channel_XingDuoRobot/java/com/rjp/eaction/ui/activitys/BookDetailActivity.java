@@ -1,13 +1,14 @@
 package com.rjp.eaction.ui.activitys;
 
+import android.content.Context;
+import android.content.Intent;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 
 public class BookDetailActivity extends BaseActivity {
 
-    @Override
-    protected boolean showTopBar() {
-        return false;
+    public static void trendTo(Context mContext){
+        mContext.startActivity(new Intent(mContext, BookDetailActivity.class));
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.rjp.eaction.BuildConfig;
 
 import java.util.Map;
 
+import com.rjp.eaction.base.UrlConst;
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
 import retrofit2.http.Body;
@@ -20,7 +21,7 @@ import retrofit2.http.QueryMap;
 public interface ApiService {
 
     //地址
-    String BASE_URL = BuildConfig.DEBUG ? "http://192.168.3.8:80" : "http://47.96.127.217";
+    String BASE_URL = BuildConfig.DEBUG ? UrlConst.RELEASE_HOST : "http://47.96.127.217";
 
     String WANGYI_URL = "http://api.caipiao.163.com/";
 
@@ -42,3 +43,4 @@ public interface ApiService {
     @POST("{url}")
     Observable<ResponseBody> post(@Path("url") String url, @Body Map<String, String> map);
 }
+ 

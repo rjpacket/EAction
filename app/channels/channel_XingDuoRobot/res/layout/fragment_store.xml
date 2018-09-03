@@ -39,38 +39,79 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/main_bg"
-        >
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="热门读物"
-            android:padding="10dp"
-            />
+            android:layout_marginTop="10dp"
+            android:background="@color/main_bg"
+            >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="电子绘本"
-            android:padding="10dp"
-            />
+                android:id="@+id/tv_home_hot_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门推荐"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_1"
+                android:layout_marginLeft="10dp"
+                />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="有声读物"
-            android:padding="10dp"
-            />
+                android:id="@+id/tv_home_electronic_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="读物"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_2"
+                android:layout_marginLeft="10dp"
+                />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FM"
-            android:padding="10dp"
-            />
+                android:id="@+id/tv_home_voice_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="火火兔"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_3"
+                android:layout_marginLeft="10dp"
+                />
+
+        <TextView
+                android:id="@+id/tv_home_fm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="笔"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12dp"
+                android:drawablePadding="5dp"
+                android:background="@drawable/selector_home_tab_background"
+                android:textColor="@drawable/selector_home_top_tab_text_color"
+                android:drawableLeft="@drawable/selector_home_top_tab_4"
+                android:layout_marginLeft="10dp"
+                />
     </LinearLayout>
 
     <com.rjp.eaction.ui.listviews.StoreListView

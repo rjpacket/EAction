@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.widget.Toast;
-
+import butterknife.BindView;
 import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
@@ -16,17 +16,10 @@ import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.BindView;
-import com.rjp.eaction.bean.HomeBannerModel;
-import com.rjp.eaction.network.NetUtils;
-import com.rjp.eaction.network.callback.ResponseCallback;
-import com.rjp.eaction.ui.listviews.AddNewDeviceListView;
 
 import static com.rjp.eaction.util.AppUtils.dp2px;
 
-public class DevicesManageActivity extends BaseActivity {
+public class AddressManageActivity extends BaseActivity {
 
     @BindView(R.id.swipe_menu_list_view)
     SwipeMenuListView swipeMenuListView;
@@ -34,16 +27,12 @@ public class DevicesManageActivity extends BaseActivity {
     private SwipeMenuCreator creator;
 
     public static void trendTo(Context mContext){
-        mContext.startActivity(new Intent(mContext, DevicesManageActivity.class));
+        mContext.startActivity(new Intent(mContext, AddressManageActivity.class));
     }
 
     @Override
     protected void handle() {
-        setIcon0(R.drawable.device_manage_add);
 
-        initSwipeMenuList();
-
-        getDevicesList();
     }
 
     private void initSwipeMenuList() {
@@ -73,24 +62,6 @@ public class DevicesManageActivity extends BaseActivity {
         });
     }
 
-    private void getDevicesList() {
-        new NetUtils.Builder()
-                .url("equipment/findAll.jhtml")
-                .context(mContext)
-                .build()
-                .model(new ResponseCallback<String>() {
-                    @Override
-                    public void success(String models) {
-
-                    }
-
-                    @Override
-                    public void failure(String code, String msg) {
-
-                    }
-                });
-    }
-
     private void creatSwipeMenu() {
         creator = new SwipeMenuCreator() {
 
@@ -110,23 +81,18 @@ public class DevicesManageActivity extends BaseActivity {
     }
 
     @Override
-    protected void clickOnIcon0() {
-        AddDevicesActivity.trendTo(mContext);
-    }
-
-    @Override
     protected void networkReload() {
 
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_devices_manage;
+        return R.layout.activity_address_manage;
     }
 
     @Override
     protected String getPageTitle() {
-        return "设备管理";
+        return "地址管理";
     }
 
 }

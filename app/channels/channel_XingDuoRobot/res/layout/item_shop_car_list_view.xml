@@ -7,6 +7,15 @@
         android:padding="10dp"
         android:gravity="center_vertical"
         >
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/selector_shop_car_switch"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            />
+
 
     <ImageView
             android:layout_width="0dp"
@@ -48,6 +57,7 @@
                 android:text="这是一段简介，这个简介只有两行，多的不显示"
                 android:lines="2"
                 android:layout_marginTop="6dp"
+                android:visibility="invisible"
                 />
 
         <LinearLayout

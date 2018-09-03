@@ -49,6 +49,33 @@
         <activity android:name=".ui.activitys.PlayBookActivity">
 
         </activity>
+        <activity android:name=".ui.activitys.LoginActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.RegisterActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.AddressManageActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.ShopCarActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.AlreadyReadBookActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.TodayWithActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.ReadTimeActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.FamilyWithActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.SettingActivity">
+
+        </activity>
     </application>
 
 </manifest>

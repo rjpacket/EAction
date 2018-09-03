@@ -1,4 +1,4 @@
-package com.rjp.eaction.util;
+package com.rjp.eaction.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,21 +11,25 @@ import com.rjp.eaction.baseAF.App;
  */
 public class SPUtils {
 
+    public static final String USER_NAME = "robot.username";
+    public static final String PASSWORD = "robot.password";
+    public static final String IS_LOGIN = "robot.islogin";
+
     private final SharedPreferences.Editor editor;
     private final SharedPreferences sp;
 
-    private SPUtils(){
-        sp = App.getContext().getSharedPreferences("eaction", Context.MODE_PRIVATE);
+    private SPUtils(Context mContext){
+        sp = mContext.getSharedPreferences("robot", Context.MODE_PRIVATE);
         editor = sp.edit();
     }
 
     private static SPUtils instance = null;
 
-    public static SPUtils getInstance(){
+    public static SPUtils getInstance(Context mContext){
         if(instance == null){
             synchronized (SPUtils.class){
                 if(instance == null){
-                    instance = new SPUtils();
+                    instance = new SPUtils(mContext);
                 }
             }
         }

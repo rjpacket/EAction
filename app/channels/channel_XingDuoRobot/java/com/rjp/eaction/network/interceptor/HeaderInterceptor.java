@@ -63,7 +63,7 @@ public class HeaderInterceptor implements Interceptor {
         headers.put(Const.HEADER_BRAND,                 AppUtils.getBrand());
         headers.put(Const.HEADER_TIME_STAMP,            AppUtils.getTimeStamp());
         headers.put(Const.HEADER_OSVERSION,             AppUtils.getOSVersion());
-        headers.put(Const.HEADER_ACCESS_USER_TOKEN,     AppUtils.getAccessUserToken());
+        headers.put(Const.HEADER_ACCESS_USER_TOKEN,     AppUtils.getAccessUserToken(mContext));
         LogUtils.e(headers.toString());
     }
 }

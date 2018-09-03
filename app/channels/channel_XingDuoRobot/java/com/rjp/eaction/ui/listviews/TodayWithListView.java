@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-
 import com.rjp.commonadapter.CommonAdapter;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.R;
@@ -17,12 +16,12 @@ import com.rjp.eaction.views.base_listview.LoadMoreListView;
  * Created by small on 2018/8/21.
  */
 
-public class StoreListView extends LoadMoreListView<String> {
-    public StoreListView(Context context) {
+public class TodayWithListView extends LoadMoreListView<String> {
+    public TodayWithListView(Context context) {
         super(context);
     }
 
-    public StoreListView(Context context, @Nullable AttributeSet attrs) {
+    public TodayWithListView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -37,7 +36,7 @@ public class StoreListView extends LoadMoreListView<String> {
         mDatas.add("");
         mDatas.add("");
         mDatas.add("");
-        return new CommonAdapter<String>(mContext, R.layout.item_store_list_view, mDatas) {
+        return new CommonAdapter<String>(mContext, R.layout.item_today_with_list_view, mDatas) {
             @Override
             protected void convert(ViewHolder viewHolder, String s, int i) {
 

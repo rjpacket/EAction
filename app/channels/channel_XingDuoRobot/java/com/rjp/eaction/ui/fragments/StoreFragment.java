@@ -9,6 +9,9 @@ import android.widget.RelativeLayout;
 import butterknife.BindView;
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
+import com.rjp.eaction.bean.HomeBannerModel;
+import com.rjp.eaction.network.NetUtils;
+import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.views.SearchLabelView;
 import com.rjp.eaction.util.AppUtils;
 import com.rjp.eaction.util.ImageUtils;
@@ -18,6 +21,7 @@ import com.youth.banner.Transformer;
 import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -63,6 +67,25 @@ public class StoreFragment extends BaseFragment {
         params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
 
         initBanner();
+        getStoreBanner();
+    }
+
+    private void getStoreBanner() {
+        new NetUtils.Builder()
+                .url("shuffling/findGoods.jhtml")
+                .context(mContext)
+                .build()
+                .model(new ResponseCallback<List<HomeBannerModel>>() {
+                    @Override
+                    public void success(List<HomeBannerModel> models) {
+
+                    }
+
+                    @Override
+                    public void failure(String code, String msg) {
+
+                    }
+                });
     }
 
     /**

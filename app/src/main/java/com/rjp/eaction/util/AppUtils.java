@@ -19,6 +19,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.rjp.eaction.BuildConfig;
 import com.rjp.eaction.baseAF.Const;
+import com.rjp.eaction.utils.SPUtils;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -348,8 +349,8 @@ public class AppUtils {
         return String.valueOf(System.currentTimeMillis());
     }
 
-    public static String getAccessUserToken() {
-        String token = SPUtils.getInstance().getString(Const.ACCESS_USER_TOKEN);
+    public static String getAccessUserToken(Context mContext) {
+        String token = SPUtils.getInstance(mContext).getString(Const.ACCESS_USER_TOKEN);
         LogUtils.e("------getAccessUserToken----->", token);
         return token;
     }

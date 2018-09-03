@@ -16,6 +16,7 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
+import com.rjp.eaction.bean.HomeBannerModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.views.SearchLabelView;
@@ -27,6 +28,7 @@ import com.youth.banner.Transformer;
 import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -88,9 +90,9 @@ public class HomeFragment extends BaseFragment {
                 .url("shuffling/findHome.jhtml")
                 .context(mContext)
                 .build()
-                .model(new ResponseCallback<String>() {
+                .model(new ResponseCallback<List<HomeBannerModel>>() {
                     @Override
-                    public void success(String model) {
+                    public void success(List<HomeBannerModel> models) {
 
                     }
 

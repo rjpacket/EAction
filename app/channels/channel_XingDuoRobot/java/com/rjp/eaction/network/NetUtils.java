@@ -52,7 +52,7 @@ public class NetUtils {
         private Context context;
         private String url;
         private Map<String, String> params = new HashMap<>();
-        private boolean isShowLoading = true;  //默认显示加载框
+        private boolean isShowLoading = false;  //默认显示加载框
         private String tag = "net";  //默认存一个net
 
         public Builder() {
@@ -181,7 +181,7 @@ public class NetUtils {
             public void onNext(ResponseBody responseBody) {
                 try {
                     String response = responseBody.string();
-                    LogUtils.json(response);
+                    LogUtils.json(url, response);
                     Gson gson = new Gson();
                     Type resultType = wrapType(BaseModel.class, responseCallback.getGenericityType());
                     BaseModel<T> baseModel = gson.fromJson(response, resultType);

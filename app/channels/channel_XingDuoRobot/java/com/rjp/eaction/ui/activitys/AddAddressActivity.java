@@ -5,10 +5,10 @@ import android.content.Intent;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 
-public class StoreDetailActivity extends BaseActivity {
+public class AddAddressActivity extends BaseActivity {
 
     public static void trendTo(Context mContext){
-        mContext.startActivity(new Intent(mContext, StoreDetailActivity.class));
+        mContext.startActivity(new Intent(mContext, AddAddressActivity.class));
     }
 
     @Override
@@ -28,12 +28,12 @@ public class StoreDetailActivity extends BaseActivity {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_store_detail;
+        return R.layout.activity_add_address;
     }
 
     @Override
     protected String getPageTitle() {
-        return "商品详情";
+        return "新增地址";
     }
 
 }

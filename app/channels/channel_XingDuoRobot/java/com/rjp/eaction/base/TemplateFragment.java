@@ -1,4 +1,4 @@
-package com.rjp.eaction.ui.fragments;
+package com.rjp.eaction.base;
 
 
 import android.support.v4.app.Fragment;

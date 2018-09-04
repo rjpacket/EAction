@@ -8,10 +8,10 @@
     android:orientation="vertical"
     tools:context="com.rjp.eaction.TestActivity"
     >
-    <com.rjp.eaction.ui.views.RatingCircleImageView
-        android:id="@+id/image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@mipmap/bg_mine_top"
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新"
         />
 </LinearLayout>

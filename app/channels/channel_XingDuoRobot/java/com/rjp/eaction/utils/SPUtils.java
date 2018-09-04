@@ -5,11 +5,14 @@ import android.content.SharedPreferences;
 
 import com.rjp.eaction.baseAF.App;
 
+import java.util.Set;
+
 /**
  * author : Gimpo create on 2018/7/10 12:33
  * email  : jimbo922@163.com
  */
 public class SPUtils {
+    public static final String USER_ID = "d8db84c5-401b-441a-b53e-f046162888f2";
 
     public static final String USER_NAME = "robot.username";
     public static final String PASSWORD = "robot.password";
@@ -50,8 +53,10 @@ public class SPUtils {
             editor.putInt(key, (Integer) value);
         }else if(value instanceof Long){
             editor.putLong(key, (Long) value);
-        }else {
+        }else if(value instanceof String){
             editor.putString(key, (String) value);
+        }else{
+            editor.putStringSet(key, (Set<String>) value);
         }
         return editor.commit();
     }
@@ -99,6 +104,10 @@ public class SPUtils {
 
     public Long getLong(String key, long defVal){
         return sp.getLong(key, defVal);
+    }
+
+    public Set<String> getSet(String key){
+        return sp.getStringSet(key, null);
     }
 
     /**

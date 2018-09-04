@@ -2,6 +2,7 @@ package com.rjp.eaction.network;
 
 import android.content.Context;
 
+import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.network.exception.ExceptionHandle;
@@ -16,6 +17,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 
 /**
@@ -26,7 +30,7 @@ import okhttp3.ResponseBody;
 public class NetUtils {
     private Context context;
     private String url;
-    private Map<String, String> params = new HashMap<>();
+    private JSONObject params = new JSONObject();
     private boolean isShowLoading;
     private String tag;
 
@@ -51,7 +55,7 @@ public class NetUtils {
     public static class Builder {
         private Context context;
         private String url;
-        private Map<String, String> params = new HashMap<>();
+        private JSONObject params = new JSONObject();
         private boolean isShowLoading = false;  //默认显示加载框
         private String tag = "net";  //默认存一个net
 
@@ -174,6 +178,7 @@ public class NetUtils {
         RetrofitClient.getInstance(context).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
+                LogUtils.e("-----onError----->", e.toString());
                 responseCallback.failure(String.valueOf(e.code), e.message);
             }
 

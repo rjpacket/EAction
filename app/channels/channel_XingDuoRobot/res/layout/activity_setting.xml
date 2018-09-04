@@ -23,8 +23,8 @@
                 android:text="通知"
                 android:textSize="14dp"
                 android:textColor="@color/text_000000"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
                 />
 
         <ImageView
@@ -55,8 +55,8 @@
                 android:text="缓存"
                 android:textSize="14dp"
                 android:textColor="@color/text_000000"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
                 />
 
         <TextView
@@ -89,8 +89,8 @@
                 android:text="更新"
                 android:textSize="14dp"
                 android:textColor="@color/text_000000"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
                 />
 
         <TextView

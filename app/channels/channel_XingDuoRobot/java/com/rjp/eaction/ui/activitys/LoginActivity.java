@@ -12,6 +12,10 @@ import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.util.LogUtils;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+import okhttp3.Call;
 
 public class LoginActivity extends BaseActivity {
     @BindView(R.id.et_user_name)
@@ -63,8 +67,8 @@ public class LoginActivity extends BaseActivity {
         new NetUtils.Builder()
                 .context(mContext)
                 .url("user/login.jhtml")
-                .param("username", "admin")
-                .param("password", "admin")
+                .param("userName", "admin")
+                .param("userPassword", "admin")
                 .build()
                 .model(new ResponseCallback<String>() {
                     @Override
@@ -77,5 +81,25 @@ public class LoginActivity extends BaseActivity {
 
                     }
                 });
+
+//        String url = "http://118.89.217.77:8090/edu/user/login.jhtml";
+//
+//        OkHttpUtils
+//                .post()
+//                .url(url)
+//                .addParams("userName", "admin")
+//                .addParams("userPassword", "123")
+//                .build()
+//                .execute(new StringCallback() {
+//                    @Override
+//                    public void onError(Call call, Exception e, int id) {
+//                        LogUtils.e("--------->", e.toString());
+//                    }
+//
+//                    @Override
+//                    public void onResponse(String response, int id) {
+//                        LogUtils.e("--------->", response);
+//                    }
+//                });
     }
 }

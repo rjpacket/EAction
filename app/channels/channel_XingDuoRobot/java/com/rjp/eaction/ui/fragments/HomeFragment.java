@@ -93,7 +93,8 @@ public class HomeFragment extends BaseFragment {
                 .model(new ResponseCallback<List<HomeBannerModel>>() {
                     @Override
                     public void success(List<HomeBannerModel> models) {
-
+                        banner.setImages(models);
+                        banner.start();
                     }
 
                     @Override
@@ -111,18 +112,14 @@ public class HomeFragment extends BaseFragment {
         banner.setImageLoader(new ImageLoader() {
             @Override
             public void displayImage(Context context, Object path, ImageView imageView) {
-                ImageUtils.load(context, (String) path, imageView);
+                HomeBannerModel model = (HomeBannerModel) path;
+                ImageUtils.load(context, model.getPicAddress(), imageView);
             }
         });
-        ArrayList<String> imageUrls = new ArrayList<>();
-        imageUrls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535743329138&di=62567ffae5b736e3b2041bc8278a0dc9&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01e4a2577deac20000018c1bdd823a.jpg%401280w_1l_2o_100sh.jpg");
-        imageUrls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1535743329138&di=d606e8d04c7a5323159216e64569948c&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01ee55577deabf0000012e7ef4343a.jpg");
-        banner.setImages(imageUrls);
         banner.setBannerAnimation(Transformer.Default);
         banner.isAutoPlay(true);
         banner.setDelayTime(2000);
         banner.setIndicatorGravity(BannerConfig.CENTER);
-        banner.start();
     }
 
     @OnClick({R.id.tv_home_hot_read, R.id.tv_home_electronic_book, R.id.tv_home_voice_book, R.id.tv_home_fm})

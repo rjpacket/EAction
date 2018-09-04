@@ -12,12 +12,12 @@
         android:theme="@style/AppTheme"
         tools:replace="android:icon"
         >
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <service android:name=".utils.UpdateService">
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+        </service>
+
+        <activity android:name=".MainActivity">
+
         </activity>
         <activity android:name=".ui.activitys.ModifyPasswordActivity">
         </activity>
@@ -40,7 +40,11 @@
         <activity android:name=".ui.activitys.DevicesManageActivity">
         </activity>
         <activity android:name=".TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
 
         <activity android:name=".ui.activitys.AddDevicesActivity">

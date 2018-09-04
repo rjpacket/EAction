@@ -1,6 +1,5 @@
 package com.rjp.eaction.util;
 
-import android.app.Activity;
 import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
@@ -138,7 +137,7 @@ public class FileUtils {
         }
     }
 
-    public static String getFilePathByUri(Activity context, Uri imageUri) {
+    public static String getFilePathByUri(Context context, Uri imageUri) {
         if (context == null || imageUri == null) return null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT && DocumentsContract.isDocumentUri(context, imageUri)) {
             if (isExternalStorageDocument(imageUri)) {

@@ -30,6 +30,8 @@ import com.youth.banner.loader.ImageLoader;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.rjp.eaction.network.UrlConst.URL_HOME_CATEGORY;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -83,6 +85,25 @@ public class HomeFragment extends BaseFragment {
 
         initBanner();
         getHomeBanner();
+        getHomeCategory();
+    }
+
+    private void getHomeCategory() {
+        new NetUtils.Builder()
+                .url(URL_HOME_CATEGORY)
+                .context(mContext)
+                .build()
+                .model(new ResponseCallback<String>() {
+                    @Override
+                    public void success(String models) {
+
+                    }
+
+                    @Override
+                    public void failure(String code, String msg) {
+
+                    }
+                });
     }
 
     private void getHomeBanner() {

@@ -12,8 +12,7 @@ import java.util.Set;
  * email  : jimbo922@163.com
  */
 public class SPUtils {
-    public static final String USER_ID = "d8db84c5-401b-441a-b53e-f046162888f2";
-
+    public static final String USER_ID = "robot.userid";
     public static final String USER_NAME = "robot.username";
     public static final String PASSWORD = "robot.password";
     public static final String IS_LOGIN = "robot.islogin";

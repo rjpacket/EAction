@@ -60,23 +60,7 @@ public class BookFragment extends BaseFragment {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) bookSearchView.getLayoutParams();
         params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
 
-        getBookList();
+
     }
 
-    private void getBookList() {
-        new NetUtils.Builder()
-                .url("book/findAll.jhtml")
-                .context(mContext)
-                .build()
-                .model(new ResponseCallback<String>() {
-                    @Override
-                    public void success(String models) {
-                    }
-
-                    @Override
-                    public void failure(String code, String msg) {
-
-                    }
-                });
-    }
 }

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
 
+import android.widget.Toast;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.network.NetUtils;
@@ -12,6 +13,7 @@ import com.rjp.eaction.network.callback.ResponseCallback;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import com.rjp.eaction.utils.SPUtils;
 
 public class LoginActivity extends BaseActivity {
     @BindView(R.id.et_user_name)
@@ -69,33 +71,15 @@ public class LoginActivity extends BaseActivity {
                 .model(new ResponseCallback<String>() {
                     @Override
                     public void success(String model) {
-
+                        SPUtils.getInstance(mContext).save(SPUtils.USER_ID, model);
+                        Toast.makeText(mContext, "登录成功", Toast.LENGTH_SHORT).show();
+                        finish();
                     }
 
                     @Override
                     public void failure(String code, String msg) {
-
+                        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
-
-//        String url = "http://118.89.217.77:8090/edu/user/login.jhtml";
-
-//        OkHttpUtils
-//                .post()
-//                .url(url)
-//                .addParams("userName", "admin")
-//                .addParams("userPassword", "admin")
-//                .build()
-//                .execute(new StringCallback() {
-//                    @Override
-//                    public void onError(Call call, Exception e, int id) {
-//                        LogUtils.e("--------->", e.toString());
-//                    }
-//
-//                    @Override
-//                    public void onResponse(String response, int id) {
-//                        LogUtils.e("--------->", response);
-//                    }
-//                });
     }
 }

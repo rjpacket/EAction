@@ -11,10 +11,12 @@ import com.rjp.eaction.network.observer.CustomObserver;
 import com.rjp.eaction.network.retrofit.RetrofitClient;
 import com.rjp.eaction.util.LogUtils;
 
+import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+import com.rjp.eaction.utils.SPUtils;
 import okhttp3.ResponseBody;
 
 /**
@@ -181,6 +183,7 @@ public class NetUtils {
             public void onNext(ResponseBody responseBody) {
                 try {
                     String response = responseBody.string();
+                    SPUtils.getInstance(context).save("response-data", response);
                     LogUtils.json(url, response);
                     Gson gson = new Gson();
                     Type resultType = wrapType(BaseModel.class, responseCallback.getGenericityType());
@@ -191,8 +194,20 @@ public class NetUtils {
                         responseCallback.failure(baseModel.getCode(), baseModel.getMsg());
                     }
                 } catch (Exception e) {
-                    ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
-                    responseCallback.failure(String.valueOf(exception.code), exception.message);
+                    e.printStackTrace();
+                    try {
+                        String response = SPUtils.getInstance(context).getString("response-data");
+                        JSONObject jsonObject = JSONObject.parseObject(response);
+                        String code = jsonObject.getString("code");
+                        if(!"200".equals(code)){
+                            responseCallback.failure(code, jsonObject.getString("msg"));
+                        }
+                        SPUtils.getInstance(context).remove("response-data");
+                    } catch (Exception e1) {
+                        e1.printStackTrace();
+                        ExceptionHandle.ResponeThrowable exception = ExceptionHandle.handleException(e);
+                        responseCallback.failure(String.valueOf(exception.code), exception.message);
+                    }
                 }
             }
         });

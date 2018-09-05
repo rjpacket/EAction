@@ -2,20 +2,16 @@ package com.rjp.eaction.ui.activitys;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
-import com.rjp.eaction.util.LogUtils;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.StringCallback;
-import okhttp3.Call;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 public class LoginActivity extends BaseActivity {
     @BindView(R.id.et_user_name)
@@ -83,12 +79,12 @@ public class LoginActivity extends BaseActivity {
                 });
 
 //        String url = "http://118.89.217.77:8090/edu/user/login.jhtml";
-//
+
 //        OkHttpUtils
 //                .post()
 //                .url(url)
 //                .addParams("userName", "admin")
-//                .addParams("userPassword", "123")
+//                .addParams("userPassword", "admin")
 //                .build()
 //                .execute(new StringCallback() {
 //                    @Override

@@ -3,14 +3,18 @@ package com.rjp.eaction.network.retrofit;
 
 import com.alibaba.fastjson.JSONObject;
 import com.rjp.eaction.BuildConfig;
+import com.rjp.eaction.base.UrlConst;
 
 import java.util.Map;
 
-import com.rjp.eaction.base.UrlConst;
 import io.reactivex.Observable;
-import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
-import retrofit2.http.*;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.QueryMap;
 
 /**
  * author : Gimpo create on 2018/5/14 10:27
@@ -39,6 +43,7 @@ public interface ApiService {
      * @return
      */
     @POST("{url}")
-    Observable<ResponseBody> post(@Path("url") String url, @Body JSONObject map);
+    @Headers("Content-Type: application/x-www-form-urlencoded; charset=UTF-8")
+    Observable<ResponseBody> post(@Path("url") String url, @Body JSONObject body);
 }
  

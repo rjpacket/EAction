@@ -14,12 +14,8 @@ import com.rjp.eaction.util.LogUtils;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import okhttp3.FormBody;
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 
 /**
@@ -112,6 +108,10 @@ public class NetUtils {
      * @param responseCallback
      */
     public void originModel(String baseUrl, final ResponseCallback<String> responseCallback) {
+        FormBody.Builder builder = new FormBody.Builder();
+        for (String key : params.keySet()) {
+            builder.add(key, params.getString(key));
+        }
         new RetrofitClient(context, baseUrl).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
@@ -140,6 +140,10 @@ public class NetUtils {
      * @param <T>
      */
     public <T> void model(String baseUrl, final ResponseCallback<T> responseCallback) {
+        FormBody.Builder builder = new FormBody.Builder();
+        for (String key : params.keySet()) {
+            builder.add(key, params.getString(key));
+        }
         new RetrofitClient(context, baseUrl).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {
@@ -175,6 +179,10 @@ public class NetUtils {
      * @param <T>
      */
     public <T> void model(final ResponseCallback<T> responseCallback) {
+        FormBody.Builder builder = new FormBody.Builder();
+        for (String key : params.keySet()) {
+            builder.add(key, params.getString(key));
+        }
         RetrofitClient.getInstance(context).post(url, params, new CustomObserver<ResponseBody>(context, isShowLoading, tag) {
             @Override
             public void onError(ExceptionHandle.ResponeThrowable e) {

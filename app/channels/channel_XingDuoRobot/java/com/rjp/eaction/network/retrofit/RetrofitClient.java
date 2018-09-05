@@ -5,9 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.alibaba.fastjson.JSONObject;
-import com.rjp.eaction.network.interceptor.AddCookiesInterceptor;
 import com.rjp.eaction.network.interceptor.HeaderInterceptor;
-import com.rjp.eaction.network.interceptor.ReceivedCookiesInterceptor;
 import com.rjp.eaction.network.interceptor.UrlDecodeInterceptor;
 
 import java.io.File;
@@ -17,7 +15,10 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import okhttp3.*;
+import okhttp3.Cache;
+import okhttp3.ConnectionPool;
+import okhttp3.OkHttpClient;
+import okhttp3.ResponseBody;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -108,11 +109,11 @@ public class RetrofitClient {
     /**
      * post请求
      * @param url
-     * @param params
+     * @param body
      * @param observer
      */
-    public void post(String url, JSONObject params, Observer<ResponseBody> observer) {
-        apiService.post(url, params)
+    public void post(String url, JSONObject body, Observer<ResponseBody> observer) {
+        apiService.post(url, body)
                 .subscribeOn(Schedulers.io())
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

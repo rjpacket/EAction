@@ -6,17 +6,22 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Toast;
 
+import android.widget.Toast;
 import com.rjp.commonadapter.CommonAdapter;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.R;
 import com.rjp.eaction.network.NetUtils;
+import com.rjp.eaction.network.UrlConst;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.activitys.BookDetailActivity;
+import com.rjp.eaction.ui.activitys.PlayBookActivity;
+import com.rjp.eaction.utils.SPUtils;
 import com.rjp.eaction.views.base_listview.LoadMoreListView;
 
 import java.util.List;
+
+import static com.rjp.eaction.network.UrlConst.URL_BOOK_LIST;
 
 /**
  * Created by small on 2018/8/21.
@@ -43,7 +48,9 @@ public class ReadBookListView extends LoadMoreListView<String> {
 
     @Override
     protected void requestData() {
-        new NetUtils.Builder().url("book/findAll.jhtml")
+        new NetUtils.Builder()
+                .url(URL_BOOK_LIST)
+                .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
                 .context(mContext)
                 .build()
                 .model(new ResponseCallback<List<String>>() {
@@ -55,8 +62,7 @@ public class ReadBookListView extends LoadMoreListView<String> {
                     @Override
                     public void failure(String code, String msg) {
                         dealFailureData();
-                        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT)
-                                .show();
+                        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
     }

@@ -2,22 +2,14 @@ package com.rjp.eaction.ui.fragments;
 
 
 import android.support.v4.app.Fragment;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
-import com.rjp.eaction.bean.HomeBannerModel;
-import com.rjp.eaction.network.NetUtils;
-import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.views.SearchLabelView;
 import com.rjp.eaction.util.AppUtils;
 
 import butterknife.BindView;
-
-import java.util.List;
-
-import static com.rjp.eaction.utils.SPUtils.USER_ID;
 
 /**
  * A simple {@link Fragment} subclass.

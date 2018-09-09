@@ -21,6 +21,7 @@
     </com.baoyz.swipemenulistview.SwipeMenuListView>
 
     <TextView
+            android:id="@+id/tv_add_address"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:text="新增地址"

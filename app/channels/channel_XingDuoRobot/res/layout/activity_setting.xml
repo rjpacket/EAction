@@ -9,6 +9,7 @@
     tools:context="com.rjp.eaction.MainActivity"
     >
     <LinearLayout
+            android:id="@+id/ll_address_manage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -20,7 +21,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="通知"
+                android:text="地址管理"
                 android:textSize="14dp"
                 android:textColor="@color/text_000000"
                 android:paddingTop="15dp"
@@ -30,7 +31,7 @@
         <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/selector_add_address_switch"
+                android:src="@drawable/mine_gray_arrow"
                 />
     </LinearLayout>
 
@@ -52,6 +53,40 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:text="通知"
+                android:textSize="14dp"
+                android:textColor="@color/text_000000"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                />
+
+        <ImageView
+                android:id="@+id/iv_setting_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_add_address_switch"
+                />
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line"
+            />
+
+    <LinearLayout
+            android:id="@+id/ll_clear_cache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            >
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="缓存"
                 android:textSize="14dp"
                 android:textColor="@color/text_000000"
@@ -60,6 +95,7 @@
                 />
 
         <TextView
+                android:id="@+id/tv_cache_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="37M"
@@ -94,6 +130,7 @@
                 />
 
         <TextView
+                android:id="@+id/tv_current_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="当前版本1.1"
@@ -102,6 +139,7 @@
                 />
 
         <TextView
+                android:id="@+id/tv_check_update"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="检查更新"
@@ -120,5 +158,23 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:background="@color/line"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+    <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退出当前账号"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@color/main_color"
             />
 </LinearLayout>

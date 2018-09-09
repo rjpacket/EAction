@@ -2,6 +2,10 @@ package com.rjp.eaction.network;
 
 public class UrlConst {
     public static final String URL_HOME_CATEGORY = "classify/findHome.jhtml";
+    public static final String URL_HOME_BOOK_LIST = "details/findPage.jhtml";
+
+    public static final String URL_BOOK_LIST = "book/findAll.jhtml";
+
     public static final String URL_STORE_CATEGORY = "classify/findGoods.jhtml";
 
     /**
@@ -72,5 +76,20 @@ public class UrlConst {
      */
     public static final String URL_USER_MODIFY_PASSWORD = "user/updatepwd.jhtml";
 
-
+    /**
+     * 已读书籍
+     */
+    public static final String URL_MINE_HAD_READ = "readbook/findusercount.jhtml";
+    /**
+     * 今日陪伴
+     */
+    public static final String URL_MINE_TODAY_WITH = "readtime/add.jhtml";
+    /**
+     * 阅读时长
+     */
+    public static final String URL_MINE_READ_TIME = "family/findPage.jhtml";
+    /**
+     * 亲子陪伴
+     */
+    public static final String URL_MINE_FAMILY_WITH = "family/add.jhtml";
 }

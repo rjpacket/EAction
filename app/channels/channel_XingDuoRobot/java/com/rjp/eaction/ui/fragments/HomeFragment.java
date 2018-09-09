@@ -17,11 +17,13 @@ import butterknife.Unbinder;
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
 import com.rjp.eaction.bean.HomeBannerModel;
+import com.rjp.eaction.bean.HomeCategoryModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.views.SearchLabelView;
 import com.rjp.eaction.util.AppUtils;
 import com.rjp.eaction.util.ImageUtils;
+import com.rjp.eaction.util.LogUtils;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -93,10 +95,12 @@ public class HomeFragment extends BaseFragment {
                 .url(URL_HOME_CATEGORY)
                 .context(mContext)
                 .build()
-                .model(new ResponseCallback<String>() {
+                .model(new ResponseCallback<List<HomeCategoryModel>>() {
                     @Override
-                    public void success(String models) {
-
+                    public void success(List<HomeCategoryModel> models) {
+                        for (HomeCategoryModel model : models) {
+                            LogUtils.e("---------home category------>", model.getUserNew());
+                        }
                     }
 
                     @Override

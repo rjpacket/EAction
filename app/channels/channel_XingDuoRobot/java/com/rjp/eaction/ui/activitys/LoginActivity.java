@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
+import com.rjp.eaction.bean.UserLoginModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 
@@ -68,10 +69,10 @@ public class LoginActivity extends BaseActivity {
                 .param("userName", "admin")
                 .param("userPassword", "admin")
                 .build()
-                .model(new ResponseCallback<String>() {
+                .model(new ResponseCallback<UserLoginModel>() {
                     @Override
-                    public void success(String model) {
-                        SPUtils.getInstance(mContext).save(SPUtils.USER_ID, model);
+                    public void success(UserLoginModel model) {
+                        SPUtils.getInstance(mContext).save(SPUtils.USER_TOKEN, model.getToken());
                         Toast.makeText(mContext, "登录成功", Toast.LENGTH_SHORT).show();
                         finish();
                     }

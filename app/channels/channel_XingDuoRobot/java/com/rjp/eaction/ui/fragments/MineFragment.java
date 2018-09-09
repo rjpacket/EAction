@@ -66,7 +66,7 @@ public class MineFragment extends BaseFragment {
             SettingActivity.trendTo(mContext);
             return;
         }
-        if(!SPUtils.getInstance(mContext).getBoolean(SPUtils.IS_LOGIN)){
+        if(!SPUtils.getInstance(mContext).getIsLogin()){
             LoginActivity.trendTo(mContext);
             return;
         }

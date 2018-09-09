@@ -3,6 +3,7 @@ package com.rjp.eaction.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import android.text.TextUtils;
 import com.rjp.eaction.baseAF.App;
 
 import java.util.Set;
@@ -12,10 +13,9 @@ import java.util.Set;
  * email  : jimbo922@163.com
  */
 public class SPUtils {
-    public static final String USER_ID = "robot.userid";
+    public static final String USER_TOKEN = "robot.usertoken";
     public static final String USER_NAME = "robot.username";
     public static final String PASSWORD = "robot.password";
-    public static final String IS_LOGIN = "robot.islogin";
 
     private final SharedPreferences.Editor editor;
     private final SharedPreferences sp;
@@ -130,6 +130,15 @@ public class SPUtils {
      */
     public boolean contain(String key) {
         return sp.contains(key);
+    }
+
+    /**
+     * 判断用户是否登录
+     * @return
+     */
+    public boolean getIsLogin() {
+        String token = getString(USER_TOKEN);
+        return !TextUtils.isEmpty(token);
     }
 
 

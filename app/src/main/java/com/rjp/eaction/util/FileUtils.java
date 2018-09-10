@@ -108,6 +108,15 @@ public class FileUtils {
     }
 
     /**
+     * 缓存下的音乐文件
+     * @param context
+     * @return
+     */
+    public static String getCacheMusicDir(Context context) {
+        return createDir(getCacheDir(context), "music-cache").getAbsolutePath();
+    }
+
+    /**
      * 获取 存储图片 的路径
      *
      * @param context

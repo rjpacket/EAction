@@ -88,6 +88,10 @@ android {
         implementation 'com.baoyz.swipemenulistview:library:1.3.0'
         //banner
         implementation 'com.youth.banner:banner:1.4.10'
+        //exoplayer
+        implementation 'com.google.android.exoplayer:exoplayer:2.8.4'
+        //videocache
+        implementation 'com.danikula:videocache:2.6.4'
     }
 }
 

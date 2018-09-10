@@ -14,4 +14,17 @@
         android:layout_height="wrap_content"
         android:text="更新"
         />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
+        android:progressDrawable="@drawable/seek_bar_background"
+        android:thumbOffset="2dp"
+        android:thumb="@drawable/rating_selected"
+        />
+
 </LinearLayout>

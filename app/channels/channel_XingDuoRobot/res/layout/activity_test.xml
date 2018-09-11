@@ -31,7 +31,7 @@
         android:minHeight="3dp"
         android:progressDrawable="@drawable/seek_bar_background"
         android:thumbOffset="2dp"
-        android:thumb="@drawable/rating_selected"
+        android:thumb="@drawable/play_progress"
         />
 
 </LinearLayout>

@@ -5,9 +5,11 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.BaseAdapter;
 
+import android.widget.Toast;
 import com.rjp.commonadapter.CommonAdapter;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.R;
+import com.rjp.eaction.bean.HomeBookModel;
 import com.rjp.eaction.bean.HomeCategoryModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
@@ -23,7 +25,7 @@ import static com.rjp.eaction.network.UrlConst.URL_HOME_CATEGORY;
  * Created by small on 2018/8/21.
  */
 
-public class HomeReadBookListView extends LoadMoreListView<String> {
+public class HomeReadBookListView extends LoadMoreListView<HomeBookModel> {
     public HomeReadBookListView(Context context) {
         super(context);
     }
@@ -34,9 +36,9 @@ public class HomeReadBookListView extends LoadMoreListView<String> {
 
     @Override
     protected BaseAdapter getListAdapter() {
-        return new CommonAdapter<String>(mContext, R.layout.item_home_read_book_list_view, mDatas) {
+        return new CommonAdapter<HomeBookModel>(mContext, R.layout.item_home_read_book_list_view, mDatas) {
             @Override
-            protected void convert(ViewHolder viewHolder, String s, int i) {
+            protected void convert(ViewHolder viewHolder, HomeBookModel model, int position) {
 
             }
         };
@@ -57,15 +59,16 @@ public class HomeReadBookListView extends LoadMoreListView<String> {
                 .param("page", String.valueOf(mPage))
                 .param("rows", String.valueOf(mPageSize))
                 .build()
-                .model(new ResponseCallback<String>() {
+                .model(new ResponseCallback<List<HomeBookModel>>() {
                     @Override
-                    public void success(String models) {
-
+                    public void success(List<HomeBookModel> models) {
+                        dealSuccessData(models);
                     }
 
                     @Override
                     public void failure(String code, String msg) {
-
+                        dealFailureData();
+                        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
     }

@@ -1,54 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingLeft="15dp"
-    android:paddingTop="15dp"
-    android:paddingRight="15dp"
-    >
-    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
         >
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/device_manage_device"
-            />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/device_manage_device"
+                />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="666"
-            android:layout_marginLeft="10dp"
-            android:textSize="16dp"
-            android:textColor="@color/text_000000"
-            />
+                android:id="@+id/tv_equipment_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="666"
+                android:layout_marginLeft="10dp"
+                android:textSize="16dp"
+                android:textColor="@color/text_000000"
+                />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="online"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/text_999999"
-            />
+                android:id="@+id/tv_equipment_status"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="online"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_999999"
+                />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="对话"
-            />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对话"
+                android:textSize="14dp"
+                android:textColor="@color/text_666666"
+                />
     </LinearLayout>
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="@color/line"
-        android:layout_marginTop="15dp"
-        />
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line"
+            android:layout_marginTop="15dp"
+            />
 </LinearLayout>

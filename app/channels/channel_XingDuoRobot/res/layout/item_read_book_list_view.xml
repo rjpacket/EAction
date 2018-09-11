@@ -1,91 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:paddingTop="15dp"
-    android:paddingBottom="15dp"
-    >
-    <LinearLayout
-        android:layout_width="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         >
-        <FrameLayout
-            android:layout_width="94dp"
-            android:layout_height="130dp"
+
+    <LinearLayout
+            android:id="@+id/ll_left_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             >
+
+        <FrameLayout
+                android:layout_width="94dp"
+                android:layout_height="130dp"
+                >
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/icon_read_book"
-                android:scaleType="centerCrop"
-                />
+                    android:id="@+id/iv_book_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_read_book"
+                    android:scaleType="centerCrop"
+                    />
         </FrameLayout>
 
         <TextView
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:text="童话故事"
-            android:lines="1"
-            android:layout_marginTop="6dp"
-            />
+                android:id="@+id/tv_book_left_name"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:text="童话故事"
+                android:lines="1"
+                android:layout_marginTop="6dp"
+                />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        >
-        <FrameLayout
-            android:layout_width="94dp"
-            android:layout_height="130dp"
+            android:id="@+id/ll_middle_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
             >
+
+        <FrameLayout
+                android:layout_width="94dp"
+                android:layout_height="130dp"
+                >
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/icon_read_book"
-                android:scaleType="centerCrop"
-                />
+                    android:id="@+id/iv_book_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_read_book"
+                    android:scaleType="centerCrop"
+                    />
         </FrameLayout>
 
         <TextView
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:text="童话故事"
-            android:lines="1"
-            android:layout_marginTop="6dp"
-            />
+                android:id="@+id/tv_book_middle_name"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:text="童话故事"
+                android:lines="1"
+                android:layout_marginTop="6dp"
+                />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <FrameLayout
-            android:layout_width="94dp"
-            android:layout_height="130dp"
+            android:id="@+id/ll_right_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             >
+
+        <FrameLayout
+                android:layout_width="94dp"
+                android:layout_height="130dp"
+                >
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/icon_read_book"
-                android:scaleType="centerCrop"
-                />
+                    android:id="@+id/iv_book_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_read_book"
+                    android:scaleType="centerCrop"
+                    />
         </FrameLayout>
 
         <TextView
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:text="童话故事"
-            android:lines="1"
-            android:layout_marginTop="6dp"
-            />
+                android:id="@+id/tv_book_right_name"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:text="童话故事"
+                android:lines="1"
+                android:layout_marginTop="6dp"
+                />
     </LinearLayout>
 </LinearLayout>

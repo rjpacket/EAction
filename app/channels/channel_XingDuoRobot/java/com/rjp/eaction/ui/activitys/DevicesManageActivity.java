@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import com.rjp.eaction.bean.EquipmentModel;
 import com.rjp.eaction.bean.HomeBannerModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
@@ -30,8 +31,9 @@ public class DevicesManageActivity extends BaseActivity {
 
     @BindView(R.id.swipe_menu_list_view)
     SwipeMenuListView swipeMenuListView;
-    private ArrayList<String> models;
+    private ArrayList<EquipmentModel> models;
     private SwipeMenuCreator creator;
+    private CommonAdapter<EquipmentModel> adapter;
 
     public static void trendTo(Context mContext){
         mContext.startActivity(new Intent(mContext, DevicesManageActivity.class));
@@ -48,14 +50,11 @@ public class DevicesManageActivity extends BaseActivity {
 
     private void initSwipeMenuList() {
         models = new ArrayList<>();
-        models.add("");
-        models.add("");
-        models.add("");
-        models.add("");
-        swipeMenuListView.setAdapter(new CommonAdapter<String>(mContext, R.layout.item_devices_manage_list_view, models) {
+        swipeMenuListView.setAdapter(adapter = new CommonAdapter<EquipmentModel>(mContext, R.layout.item_devices_manage_list_view, models) {
             @Override
-            protected void convert(ViewHolder viewHolder, String item, int position) {
-
+            protected void convert(ViewHolder viewHolder, EquipmentModel item, int position) {
+                viewHolder.setText(R.id.tv_equipment_name, item.getEquipmentName());
+                viewHolder.setText(R.id.tv_equipment_status, "1".equals(item.getStatus()) ? "online" : "offline");
             }
         });
         creatSwipeMenu();
@@ -78,10 +77,11 @@ public class DevicesManageActivity extends BaseActivity {
                 .url("equipment/findAll.jhtml")
                 .context(mContext)
                 .build()
-                .model(new ResponseCallback<String>() {
+                .model(new ResponseCallback<List<EquipmentModel>>() {
                     @Override
-                    public void success(String models) {
-
+                    public void success(List<EquipmentModel> items) {
+                        models.addAll(items);
+                        adapter.notifyDataSetChanged();
                     }
 
                     @Override

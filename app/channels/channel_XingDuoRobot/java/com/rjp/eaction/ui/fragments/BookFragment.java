@@ -6,6 +6,7 @@ import android.widget.LinearLayout;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
+import com.rjp.eaction.ui.listviews.ReadBookListView;
 import com.rjp.eaction.ui.views.SearchLabelView;
 import com.rjp.eaction.util.AppUtils;
 
@@ -17,6 +18,8 @@ import butterknife.BindView;
 public class BookFragment extends BaseFragment {
     @BindView(R.id.book_search_view)
     SearchLabelView bookSearchView;
+    @BindView(R.id.read_book_list_view)
+    ReadBookListView readBookListView;
 
     public BookFragment() {
         // Required empty public constructor
@@ -51,8 +54,6 @@ public class BookFragment extends BaseFragment {
     protected void handle() {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) bookSearchView.getLayoutParams();
         params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
-
-
     }
 
 }

@@ -92,6 +92,8 @@ android {
         implementation 'com.google.android.exoplayer:exoplayer:2.8.4'
         //videocache
         implementation 'com.danikula:videocache:2.6.4'
+        //今日头条适配方案
+        implementation 'me.jessyan:autosize:0.9.1'
     }
 }
 

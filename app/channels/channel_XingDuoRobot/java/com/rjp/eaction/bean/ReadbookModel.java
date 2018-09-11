@@ -1,27 +1,30 @@
 package com.rjp.eaction.bean;
 
-public class HomeCategoryModel {
-
+public class ReadbookModel {
 
     /**
-     * id : 1
-     * name : one
-     * status : 1
+     * id : 3
+     * picName : 海底有多远
+     * picPath : http://suo.im/5nphIk
+     * userId :
+     * newTime :
      * userNew :
      * updateTime :
      * userUpdate :
      * delFlag :
-     * positionClassification : 1
+     * userName : admin
      */
 
     private String id;
-    private String name;
-    private String status;
+    private String picName;
+    private String picPath;
+    private String userId;
+    private String newTime;
     private String userNew;
     private String updateTime;
     private String userUpdate;
     private String delFlag;
-    private String positionClassification;
+    private String userName;
 
     public String getId() {
         return id;
@@ -31,20 +34,36 @@ public class HomeCategoryModel {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPicName() {
+        return picName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPicName(String picName) {
+        this.picName = picName;
     }
 
-    public String getStatus() {
-        return status;
+    public String getPicPath() {
+        return picPath;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setPicPath(String picPath) {
+        this.picPath = picPath;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getNewTime() {
+        return newTime;
+    }
+
+    public void setNewTime(String newTime) {
+        this.newTime = newTime;
     }
 
     public String getUserNew() {
@@ -79,11 +98,11 @@ public class HomeCategoryModel {
         this.delFlag = delFlag;
     }
 
-    public String getPositionClassification() {
-        return positionClassification;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setPositionClassification(String positionClassification) {
-        this.positionClassification = positionClassification;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }

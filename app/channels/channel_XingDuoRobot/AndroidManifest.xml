@@ -44,7 +44,8 @@
         </activity>
         <activity android:name=".ui.activitys.DevicesManageActivity">
         </activity>
-        <activity android:name=".TestActivity">
+        <activity android:name=".TestActivity"
+                  android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

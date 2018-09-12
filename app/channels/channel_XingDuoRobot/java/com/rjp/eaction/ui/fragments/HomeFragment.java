@@ -2,18 +2,13 @@ package com.rjp.eaction.ui.fragments;
 
 
 import android.content.Context;
-import android.os.Bundle;
+import android.os.Build;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-import butterknife.Unbinder;
+
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
 import com.rjp.eaction.bean.HomeBannerModel;
@@ -29,8 +24,10 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
 import com.youth.banner.loader.ImageLoader;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 import static com.rjp.eaction.network.UrlConst.URL_HOME_CATEGORY;
 
@@ -82,8 +79,10 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void handle() {
-        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) homeSearchView.getLayoutParams();
-        params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) homeSearchView.getLayoutParams();
+            params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
+        }
 
         initBanner();
         getHomeBanner();

@@ -1,6 +1,7 @@
 package com.rjp.eaction.ui.fragments;
 
 
+import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.widget.LinearLayout;
 
@@ -49,8 +50,10 @@ public class BookFragment extends BaseFragment {
 
     @Override
     protected void handle() {
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) bookSearchView.getLayoutParams();
-        params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) bookSearchView.getLayoutParams();
+            params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
+        }
 
 
     }

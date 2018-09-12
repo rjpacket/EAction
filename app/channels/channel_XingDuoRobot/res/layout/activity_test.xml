@@ -8,30 +8,47 @@
     android:orientation="vertical"
     tools:context="com.rjp.eaction.TestActivity"
     >
-    <Button
-        android:id="@+id/btn_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="更新"
-        />
-
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        />
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更新"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                />
 
 
-    <SeekBar
-        android:id="@+id/seek_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:max="100"
-        android:maxHeight="3dp"
-        android:minHeight="3dp"
-        android:progressDrawable="@drawable/seek_bar_background"
-        android:thumbOffset="2dp"
-        android:thumb="@drawable/rating_selected"
-        />
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                android:progressDrawable="@drawable/seek_bar_background"
+                android:thumbOffset="2dp"
+                android:thumb="@drawable/rating_selected"
+                />
 
+            <com.rjp.eaction.ui.views.IndicatorTabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+            </com.rjp.eaction.ui.views.IndicatorTabLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

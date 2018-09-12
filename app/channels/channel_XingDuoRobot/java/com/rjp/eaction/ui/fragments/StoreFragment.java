@@ -2,11 +2,11 @@ package com.rjp.eaction.ui.fragments;
 
 
 import android.content.Context;
+import android.os.Build;
 import android.support.v4.app.Fragment;
-
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import butterknife.BindView;
+
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
 import com.rjp.eaction.bean.HomeBannerModel;
@@ -22,6 +22,8 @@ import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,8 +66,10 @@ public class StoreFragment extends BaseFragment {
 
     @Override
     protected void handle() {
-        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) storeSearchView.getLayoutParams();
-        params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) storeSearchView.getLayoutParams();
+            params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
+        }
 
         initBanner();
         getStoreBanner();

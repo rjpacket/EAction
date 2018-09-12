@@ -38,6 +38,7 @@
                 android:padding="10dp"
                 android:lines="1"
                 android:hint="请输入收件人"
+                android:text="abc"
                 />
     </LinearLayout>
 
@@ -76,6 +77,7 @@
                 android:padding="10dp"
                 android:lines="1"
                 android:hint="请输入手机号"
+                android:text="13552280894"
                 />
     </LinearLayout>
 
@@ -169,6 +171,7 @@
                 android:background="@android:color/transparent"
                 android:padding="10dp"
                 android:lines="1"
+                android:text="asdasfafasf"
                 />
     </LinearLayout>
 

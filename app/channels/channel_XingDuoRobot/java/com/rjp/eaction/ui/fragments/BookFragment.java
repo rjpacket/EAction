@@ -58,7 +58,7 @@ public class BookFragment extends BaseFragment {
             params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
         }
 
-
+        readBookListView.requestData();
     }
 
 }

@@ -7,16 +7,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.TextView;
 import butterknife.BindView;
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
+import com.rjp.eaction.bean.HomeCategoryModel;
+import com.rjp.eaction.bean.UserAccountModel;
+import com.rjp.eaction.network.NetUtils;
+import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.activitys.*;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 import com.rjp.eaction.ui.views.UserHeaderView;
+import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.utils.SPUtils;
+
+import java.util.List;
+
+import static com.rjp.eaction.network.UrlConst.URL_HOME_CATEGORY;
+import static com.rjp.eaction.network.UrlConst.URL_USER_ACCOUNT;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +36,8 @@ public class MineFragment extends BaseFragment {
 
     @BindView(R.id.mine_user_header_view)
     UserHeaderView userHeaderView;
+    @BindView(R.id.tv_user_name)
+    TextView tvUserName;
 
     public MineFragment() {
         // Required empty public constructor
@@ -57,7 +70,34 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void handle() {
+        getUserAccount();
+    }
 
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if(!hidden){
+            getUserAccount();
+        }
+    }
+
+    private void getUserAccount() {
+        new NetUtils.Builder()
+                .url(URL_USER_ACCOUNT)
+                .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
+                .context(mContext)
+                .build()
+                .model(new ResponseCallback<UserAccountModel>() {
+                    @Override
+                    public void success(UserAccountModel model) {
+                        tvUserName.setText(model.getUserName());
+                    }
+
+                    @Override
+                    public void failure(String code, String msg) {
+
+                    }
+                });
     }
 
     @OnClick({R.id.ll_setting_label, R.id.mine_user_header_view, R.id.ll_had_read, R.id.ll_today_with, R.id.ll_read_time, R.id.ll_family_with, R.id.ll_devices_label, R.id.ll_orders_label})

@@ -3,10 +3,10 @@ package com.rjp.eaction.network.retrofit;
 
 import com.alibaba.fastjson.JSONObject;
 import com.rjp.eaction.BuildConfig;
-import com.rjp.eaction.base.UrlConst;
 
 import java.util.Map;
 
+import com.rjp.eaction.network.UrlConst;
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
 import retrofit2.http.FieldMap;

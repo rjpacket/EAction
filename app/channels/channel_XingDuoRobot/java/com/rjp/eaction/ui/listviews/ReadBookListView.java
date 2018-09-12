@@ -105,7 +105,7 @@ public class ReadBookListView extends RefreshListView<ReadbookModel> {
     }
 
     @Override
-    protected void requestData() {
+    public void requestData() {
         new NetUtils.Builder()
                 .url(URL_BOOK_LIST)
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
@@ -123,10 +123,5 @@ public class ReadBookListView extends RefreshListView<ReadbookModel> {
                         Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        BookDetailActivity.trendTo(mContext);
     }
 }

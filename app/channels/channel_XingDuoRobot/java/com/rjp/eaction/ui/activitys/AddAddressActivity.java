@@ -98,7 +98,7 @@ public class AddAddressActivity extends BaseActivity {
                 .url(URL_USER_ADD_ADDRESS)
                 .param("name", username)
                 .param("phone", phone)
-                .param("area", "北京")
+                .param("area", "abc")
                 .param("address", address)
                 .param("isDefault", ivDefault.isSelected() ? "0" : "1")
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))

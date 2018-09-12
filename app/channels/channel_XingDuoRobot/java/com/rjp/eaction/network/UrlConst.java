@@ -1,6 +1,8 @@
 package com.rjp.eaction.network;
 
 public class UrlConst {
+    public static final String RELEASE_HOST = "http://118.89.217.77:8090/edu/";
+
     public static final String URL_HOME_CATEGORY = "classify/findHome.jhtml";
     public static final String URL_HOME_BOOK_LIST = "details/findPage.jhtml";
 

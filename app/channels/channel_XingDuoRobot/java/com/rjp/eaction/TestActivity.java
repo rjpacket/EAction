@@ -91,7 +91,7 @@ public class TestActivity extends BaseActivity {
             }
         });
         mPlayer.prepare(mediaSource);
-//        mPlayer.setPlayWhenReady(true);
+        mPlayer.setPlayWhenReady(true);
     }
 
     private Handler mHandler = new Handler(){

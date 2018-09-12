@@ -9,6 +9,7 @@
         >
 
     <ImageView
+            android:id="@+id/iv_book_picture"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -32,6 +33,7 @@
                 >
 
             <TextView
+                    android:id="@+id/tv_book_name"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -58,6 +60,7 @@
         </LinearLayout>
 
         <TextView
+                android:id="@+id/tv_book_desc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="这是一段简介，这个简介只有两行，多的不显示"
@@ -76,9 +79,9 @@
                 >
 
             <TextView
+                    android:id="@+id/tv_book_read"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20000"
                     android:drawableLeft="@drawable/home_item_devices"
                     android:drawablePadding="4dp"
                     android:textColor="@color/text_999999"
@@ -86,9 +89,9 @@
                     />
 
             <TextView
+                    android:id="@+id/tv_book_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="28.3Mb"
                     android:drawableLeft="@drawable/home_item_size"
                     android:drawablePadding="4dp"
                     android:textColor="@color/text_999999"
@@ -103,9 +106,9 @@
                     />
 
             <TextView
+                    android:id="@+id/tv_book_zan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4300"
                     android:drawableLeft="@drawable/home_item_zan"
                     android:drawablePadding="4dp"
                     android:textColor="@color/text_999999"

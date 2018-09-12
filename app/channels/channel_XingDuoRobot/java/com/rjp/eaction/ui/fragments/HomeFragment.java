@@ -15,6 +15,7 @@ import com.rjp.eaction.bean.HomeBannerModel;
 import com.rjp.eaction.bean.HomeCategoryModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.ui.listviews.HomeReadBookListView;
 import com.rjp.eaction.ui.views.SearchLabelView;
 import com.rjp.eaction.util.AppUtils;
 import com.rjp.eaction.util.ImageUtils;
@@ -47,6 +48,8 @@ public class HomeFragment extends BaseFragment {
     TextView tvHomeVoiceBook;
     @BindView(R.id.tv_home_fm)
     TextView tvHomeFm;
+    @BindView(R.id.home_book_list_view)
+    HomeReadBookListView homeReadBookListView;
 
     public HomeFragment() {
         // Required empty public constructor

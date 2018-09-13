@@ -24,7 +24,8 @@
                 android:text="更新"
                 />
 
-            <EditText
+            <com.rjp.eaction.ui.views.AvoidEmojiEditText
+                android:id="@+id/et_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="100dp"

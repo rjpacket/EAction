@@ -2,26 +2,21 @@ package com.rjp.eaction.ui.activitys;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
-import com.rjp.eaction.bean.HomeCategoryModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
-import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.utils.SPUtils;
 
-import java.util.List;
+import butterknife.BindView;
+import butterknife.OnClick;
 
-import static com.rjp.eaction.network.UrlConst.URL_HOME_CATEGORY;
 import static com.rjp.eaction.network.UrlConst.URL_USER_ADD_ADDRESS;
 
 public class AddAddressActivity extends BaseActivity {
@@ -100,7 +95,7 @@ public class AddAddressActivity extends BaseActivity {
                 .param("phone", phone)
                 .param("area", "abc")
                 .param("address", address)
-                .param("isDefault", ivDefault.isSelected() ? "0" : "1")
+                .param("isdefault", ivDefault.isSelected() ? "0" : "1")
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
                 .context(mContext)
                 .build()

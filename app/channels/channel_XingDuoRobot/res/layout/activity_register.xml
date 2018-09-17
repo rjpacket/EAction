@@ -33,22 +33,23 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="用户名"
+                    android:text="手机号"
                     android:textSize="14dp"
                     android:textColor="@color/text_333333"
                     />
 
             <EditText
-                    android:id="@+id/et_register_username"
+                    android:id="@+id/et_register_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="14dp"
                     android:textColor="@color/text_333333"
-                    android:hint="请输入用户名"
+                    android:hint="请输入手机号"
                     android:background="@android:color/transparent"
                     android:padding="10dp"
                     android:lines="1"
+                    android:text="13552280894"
                     />
         </LinearLayout>
 
@@ -113,6 +114,7 @@
                         android:paddingRight="10dp"
                         android:textSize="14dp"
                         android:textColor="#fead04"
+                        android:minWidth="100dp"
                         />
             </LinearLayout>
         </LinearLayout>
@@ -152,6 +154,8 @@
                     android:background="@android:color/transparent"
                     android:padding="10dp"
                     android:lines="1"
+                    android:text="123456"
+                    android:inputType="textPassword"
                     />
         </LinearLayout>
 
@@ -190,6 +194,8 @@
                     android:background="@android:color/transparent"
                     android:padding="10dp"
                     android:lines="1"
+                    android:text="123456"
+                    android:inputType="textPassword"
                     />
         </LinearLayout>
 

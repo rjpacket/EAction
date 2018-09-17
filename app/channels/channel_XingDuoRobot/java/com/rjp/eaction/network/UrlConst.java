@@ -11,6 +11,12 @@ public class UrlConst {
     public static final String URL_STORE_CATEGORY = "classify/findGoods.jhtml";
 
     /**
+     * 注册
+     */
+    public static final String URL_REGISTER = "user/register.jhtml";
+    public static final String URL_REGISTER_GET_CODE = "user/getcode.jhtml";
+
+    /**
      * 分页查询   bookClassifyId  Page  Rows
      */
     public static final String URL_STORE_CATEGORY_GOODS = "details/findPage.jhtml";

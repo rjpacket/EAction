@@ -13,9 +13,11 @@ import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
 import com.rjp.eaction.bean.HomeBannerModel;
 import com.rjp.eaction.bean.HomeCategoryModel;
+import com.rjp.eaction.interfaces.OnCategoryClickListener;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.listviews.HomeReadBookListView;
+import com.rjp.eaction.ui.views.IndicatorTabLayout;
 import com.rjp.eaction.ui.views.SearchLabelView;
 import com.rjp.eaction.util.AppUtils;
 import com.rjp.eaction.util.ImageUtils;
@@ -40,16 +42,10 @@ public class HomeFragment extends BaseFragment {
     SearchLabelView homeSearchView;
     @BindView(R.id.home_banner)
     Banner banner;
-    @BindView(R.id.tv_home_hot_read)
-    TextView tvHomeHotRead;
-    @BindView(R.id.tv_home_electronic_book)
-    TextView tvHomeElectronicBook;
-    @BindView(R.id.tv_home_voice_book)
-    TextView tvHomeVoiceBook;
-    @BindView(R.id.tv_home_fm)
-    TextView tvHomeFm;
     @BindView(R.id.home_book_list_view)
     HomeReadBookListView homeReadBookListView;
+    @BindView(R.id.indicator_tab_layout)
+    IndicatorTabLayout indicatorTabLayout;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -90,6 +86,13 @@ public class HomeFragment extends BaseFragment {
         initBanner();
         getHomeBanner();
         getHomeCategory();
+
+        indicatorTabLayout.setOnCategoryClickListener(new OnCategoryClickListener() {
+            @Override
+            public void onCategoryClick(String categoryId) {
+                homeReadBookListView.requestData(categoryId);
+            }
+        });
     }
 
     private void getHomeCategory() {
@@ -100,9 +103,10 @@ public class HomeFragment extends BaseFragment {
                 .model(new ResponseCallback<List<HomeCategoryModel>>() {
                     @Override
                     public void success(List<HomeCategoryModel> models) {
-                        for (HomeCategoryModel model : models) {
-                            LogUtils.e("---------home category------>", model.getUserNew());
-                        }
+                        indicatorTabLayout.setTabData(models);
+                        indicatorTabLayout.setClickSelected(0);
+                        HomeCategoryModel model = models.get(0);
+                        homeReadBookListView.requestData(model.getId());
                     }
 
                     @Override
@@ -147,30 +151,5 @@ public class HomeFragment extends BaseFragment {
         banner.isAutoPlay(true);
         banner.setDelayTime(2000);
         banner.setIndicatorGravity(BannerConfig.CENTER);
-    }
-
-    @OnClick({R.id.tv_home_hot_read, R.id.tv_home_electronic_book, R.id.tv_home_voice_book, R.id.tv_home_fm})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.tv_home_hot_read:
-                resetTabSelectedStatus(tvHomeHotRead, tvHomeElectronicBook, tvHomeVoiceBook, tvHomeFm);
-                break;
-            case R.id.tv_home_electronic_book:
-                resetTabSelectedStatus(tvHomeElectronicBook, tvHomeHotRead, tvHomeVoiceBook, tvHomeFm);
-                break;
-            case R.id.tv_home_voice_book:
-                resetTabSelectedStatus(tvHomeVoiceBook, tvHomeElectronicBook, tvHomeHotRead, tvHomeFm);
-                break;
-            case R.id.tv_home_fm:
-                resetTabSelectedStatus(tvHomeFm, tvHomeElectronicBook, tvHomeVoiceBook, tvHomeHotRead);
-                break;
-        }
-    }
-
-    private void resetTabSelectedStatus(TextView tab1, TextView tab2, TextView tab3, TextView tab4) {
-        tab1.setSelected(true);
-        tab2.setSelected(false);
-        tab3.setSelected(false);
-        tab4.setSelected(false);
     }
 }

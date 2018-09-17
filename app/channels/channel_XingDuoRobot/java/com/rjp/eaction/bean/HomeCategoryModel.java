@@ -12,6 +12,8 @@ public class HomeCategoryModel {
      * userUpdate :
      * delFlag :
      * positionClassification : 1
+     * selectIcon :
+     * uncheckIcon :
      */
 
     private String id;
@@ -22,6 +24,8 @@ public class HomeCategoryModel {
     private String userUpdate;
     private String delFlag;
     private String positionClassification;
+    private String selectIcon;
+    private String uncheckIcon;
 
     public String getId() {
         return id;
@@ -85,5 +89,21 @@ public class HomeCategoryModel {
 
     public void setPositionClassification(String positionClassification) {
         this.positionClassification = positionClassification;
+    }
+
+    public String getSelectIcon() {
+        return selectIcon;
+    }
+
+    public void setSelectIcon(String selectIcon) {
+        this.selectIcon = selectIcon;
+    }
+
+    public String getUncheckIcon() {
+        return uncheckIcon;
+    }
+
+    public void setUncheckIcon(String uncheckIcon) {
+        this.uncheckIcon = uncheckIcon;
     }
 }

@@ -26,6 +26,8 @@ import static com.rjp.eaction.network.UrlConst.URL_HOME_CATEGORY;
  */
 
 public class HomeReadBookListView extends LoadMoreListView<HomeBookModel> {
+    private String categoryId;
+
     public HomeReadBookListView(Context context) {
         super(context);
     }
@@ -44,10 +46,14 @@ public class HomeReadBookListView extends LoadMoreListView<HomeBookModel> {
         };
     }
 
-    @Override
-    protected void resetFirstPage() {
-        mPage = 1;
-        mPageSize = 10;
+    /**
+     * 带请求参数
+     * @param categoryId
+     */
+    public void requestData(String categoryId){
+        this.categoryId = categoryId;
+        resetFirstPage();
+        requestData();
     }
 
     @Override
@@ -55,7 +61,7 @@ public class HomeReadBookListView extends LoadMoreListView<HomeBookModel> {
         new NetUtils.Builder()
                 .url(URL_HOME_BOOK_LIST)
                 .context(mContext)
-                .param("bookClassifyId", "1")
+                .param("bookClassifyId", categoryId)
                 .param("page", String.valueOf(mPage))
                 .param("rows", String.valueOf(mPageSize))
                 .build()

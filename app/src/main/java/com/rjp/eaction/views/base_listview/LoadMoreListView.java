@@ -35,7 +35,7 @@ public abstract class LoadMoreListView<T> extends SimpleListView<T> {
 
     @Override
     protected boolean isFirstPage() {
-        return mPage == 0;
+        return mPage == 1;
     }
 
     @Override
@@ -50,8 +50,8 @@ public abstract class LoadMoreListView<T> extends SimpleListView<T> {
 
     @Override
     protected void resetFirstPage() {
-        mPage = 0;
-        mPageSize = 10;
+        mPage = 1;
+        mPageSize = 1;
     }
 
     @Override

@@ -107,7 +107,7 @@ public class RegisterActivity extends BaseActivity {
                 .model(new ResponseCallback<String>() {
                     @Override
                     public void success(String model) {
-                        Toast.makeText(mContext, model, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, "短信发送成功", Toast.LENGTH_SHORT).show();
                         startTimeTick();
                     }
 
@@ -169,10 +169,10 @@ public class RegisterActivity extends BaseActivity {
         new NetUtils.Builder()
                 .context(mContext)
                 .url(URL_REGISTER)
-                .param("userName", phone)
+//                .param("userName", phone)
                 .param("userPassword", password)
                 .param("userMobile", phone)
-                .param("userCode", code)
+                .param("code", code)
                 .build()
                 .model(new ResponseCallback<String>() {
                     @Override

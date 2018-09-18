@@ -32,7 +32,6 @@ public class TestActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        mHandler.removeCallbacksAndMessages(null);
     }
 
     @Override
@@ -48,62 +47,5 @@ public class TestActivity extends BaseActivity {
     @Override
     protected void handle() {
         setTopTitle("test");
-
-        findViewById(R.id.btn_update).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String downloadUrl = "http://download.dajiang365.com/app-zywl-agent_guanwang.apk";
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        //启动服务
-                        Intent service = new Intent(TestActivity.this,UpdateService.class);
-                        service.putExtra(DOWNLOAD_URL, downloadUrl);
-                        startService(service);
-                    }
-                }).start();
-            }
-        });
-
-        seekBar = findViewById(R.id.seek_bar);
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                mPlayer.seekTo(seekBar.getProgress());
-            }
-        });
-
-        mPlayer = App.getMusicPlayer(this);
-
-        MediaSource mediaSource = App.getMusicResourceByUrl(this, testUrl);
-        mediaSource.addEventListener(mHandler, new DefaultMediaSourceEventListener() {
-            @Override
-            public void onLoadStarted(int windowIndex, @Nullable MediaSource.MediaPeriodId mediaPeriodId, LoadEventInfo loadEventInfo, MediaLoadData mediaLoadData) {
-                super.onLoadStarted(windowIndex, mediaPeriodId, loadEventInfo, mediaLoadData);
-                mHandler.sendEmptyMessage(0);
-            }
-        });
-        mPlayer.prepare(mediaSource);
-        mPlayer.setPlayWhenReady(true);
     }
-
-    private Handler mHandler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            seekBar.setMax((int) mPlayer.getDuration());
-            seekBar.setProgress((int) mPlayer.getCurrentPosition());
-            seekBar.setSecondaryProgress((int) mPlayer.getBufferedPosition());
-            mHandler.sendEmptyMessageDelayed(0, 300);
-        }
-    };
 }

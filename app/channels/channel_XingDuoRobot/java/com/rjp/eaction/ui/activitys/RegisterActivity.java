@@ -182,7 +182,7 @@ public class RegisterActivity extends BaseActivity {
 
                     @Override
                     public void failure(String code, String msg) {
-
+                        Toast.makeText(RegisterActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
     }

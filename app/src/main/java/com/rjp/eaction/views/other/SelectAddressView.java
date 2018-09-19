@@ -22,6 +22,7 @@ import com.rjp.eaction.R;
 import com.rjp.eaction.bean.CityBean;
 import com.rjp.eaction.bean.ProvinceBean;
 import com.rjp.eaction.bean.TabEntity;
+import com.rjp.eaction.interfaces.OnSelectAreaSuccessListener;
 import com.rjp.eaction.ui.fragments.*;
 import com.rjp.eaction.util.FileUtils;
 
@@ -43,6 +44,7 @@ public class SelectAddressView extends LinearLayout implements OnProvinceSelectL
     private String selectedProvince;
     private String selectedCity;
     private String selectedArea;
+    private OnSelectAreaSuccessListener onSelectAreaSuccessListener;
 
     public SelectAddressView(Context context) {
         this(context, null);
@@ -149,6 +151,13 @@ public class SelectAddressView extends LinearLayout implements OnProvinceSelectL
         tabEntitys.add(new TabEntity(selectedCity));
         tabEntitys.add(new TabEntity(selectedArea));
         tabLayout.setTabData(tabEntitys);
-        Toast.makeText(mContext, "选择了" + selectedProvince + selectedCity + selectedArea, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "选择了" + selectedProvince + selectedCity + selectedArea, Toast.LENGTH_SHORT).show();
+        if(onSelectAreaSuccessListener != null){
+            onSelectAreaSuccessListener.onSelectAreaSuccess(selectedProvince + selectedCity + selectedArea);
+        }
+    }
+
+    public void setOnSelectAreaSuccessListener(OnSelectAreaSuccessListener onSelectAreaSuccessListener) {
+        this.onSelectAreaSuccessListener = onSelectAreaSuccessListener;
     }
 }

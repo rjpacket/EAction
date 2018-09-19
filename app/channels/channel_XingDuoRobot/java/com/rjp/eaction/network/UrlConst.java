@@ -17,6 +17,11 @@ public class UrlConst {
     public static final String URL_REGISTER_GET_CODE = "user/getcode.jhtml";
 
     /**
+     * 退出
+     */
+    public static final String URL_LOGOUT = "user/exit.jhtml";
+
+    /**
      * 分页查询   bookClassifyId  Page  Rows
      */
     public static final String URL_STORE_CATEGORY_GOODS = "details/findPage.jhtml";

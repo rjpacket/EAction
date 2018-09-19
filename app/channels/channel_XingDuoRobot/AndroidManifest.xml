@@ -18,11 +18,11 @@
         </service>
 
         <activity android:name=".MainActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".ui.activitys.ModifyPasswordActivity">
         </activity>
@@ -46,11 +46,11 @@
         </activity>
         <activity android:name=".TestActivity"
                   android:windowSoftInputMode="stateHidden|adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
 
         <activity android:name=".ui.activitys.AddDevicesActivity">
@@ -70,7 +70,11 @@
 
         </activity>
         <activity android:name=".ui.activitys.AddAddressActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
 
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".ui.activitys.ShopCarActivity">
 
@@ -88,6 +92,9 @@
 
         </activity>
         <activity android:name=".ui.activitys.SettingActivity">
+
+        </activity>
+        <activity android:name=".ui.activitys.SelectAddressAreaActivity">
 
         </activity>
     </application>

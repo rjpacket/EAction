@@ -18,11 +18,13 @@ import com.rjp.commonadapter.CommonAdapter;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
+import com.rjp.eaction.bean.AddressModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.utils.SPUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.rjp.eaction.network.UrlConst.URL_USER_ALL_ADDRESS;
 import static com.rjp.eaction.util.AppUtils.dp2px;
@@ -31,8 +33,9 @@ public class AddressManageActivity extends BaseActivity {
 
     @BindView(R.id.swipe_menu_list_view)
     SwipeMenuListView swipeMenuListView;
-    private ArrayList<String> models;
+    private ArrayList<AddressModel> models;
     private SwipeMenuCreator creator;
+    private CommonAdapter<AddressModel> adapter;
 
     public static void trendTo(Context mContext) {
         mContext.startActivity(new Intent(mContext, AddressManageActivity.class));
@@ -40,6 +43,7 @@ public class AddressManageActivity extends BaseActivity {
 
     @Override
     protected void handle() {
+        initSwipeMenuList();
         getUserAddressList();
     }
 
@@ -49,10 +53,12 @@ public class AddressManageActivity extends BaseActivity {
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
                 .context(mContext)
                 .build()
-                .model(new ResponseCallback<String>() {
+                .model(new ResponseCallback<List<AddressModel>>() {
                     @Override
-                    public void success(String models) {
-
+                    public void success(List<AddressModel> datas) {
+                        models.clear();
+                        models.addAll(datas);
+                        adapter.notifyDataSetChanged();
                     }
 
                     @Override
@@ -64,9 +70,9 @@ public class AddressManageActivity extends BaseActivity {
 
     private void initSwipeMenuList() {
         models = new ArrayList<>();
-        swipeMenuListView.setAdapter(new CommonAdapter<String>(mContext, R.layout.item_devices_manage_list_view, models) {
+        swipeMenuListView.setAdapter(adapter = new CommonAdapter<AddressModel>(mContext, R.layout.item_address_manage_list_view, models) {
             @Override
-            protected void convert(ViewHolder viewHolder, String item, int position) {
+            protected void convert(ViewHolder viewHolder, AddressModel item, int position) {
 
             }
         });

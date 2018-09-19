@@ -86,7 +86,7 @@ public class LoginActivity extends BaseActivity {
         new NetUtils.Builder()
                 .context(mContext)
                 .url("user/login.jhtml")
-                .param("userName", userName)
+                .param("userMobile", userName)
                 .param("userPassword", userPassword)
                 .build()
                 .model(new ResponseCallback<UserLoginModel>() {
@@ -94,11 +94,10 @@ public class LoginActivity extends BaseActivity {
                     public void success(UserLoginModel model) {
                         SPUtils.getInstance(mContext).save(SPUtils.USER_TOKEN, model.getToken());
                         Toast.makeText(mContext, "登录成功", Toast.LENGTH_SHORT).show();
+                        SPUtils.getInstance(mContext).save(SPUtils.USER_NAME, userName);
                         if(tvSavePassword.isSelected()){
-                            SPUtils.getInstance(mContext).save(SPUtils.USER_NAME, userName);
                             SPUtils.getInstance(mContext).save(SPUtils.PASSWORD, userPassword);
                         }else{
-                            SPUtils.getInstance(mContext).remove(SPUtils.USER_NAME);
                             SPUtils.getInstance(mContext).remove(SPUtils.PASSWORD);
                         }
                         finish();

@@ -97,6 +97,14 @@
         <activity android:name=".ui.activitys.SelectAddressAreaActivity">
 
         </activity>
+        <activity android:name=".wxapi.WXEntryActivity"
+                android:exported="true">
+
+        </activity>
+        <activity android:name="com.rjp.xingduorobot.wxapi.WXEntryActivity"
+                  android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

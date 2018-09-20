@@ -23,6 +23,8 @@ import com.google.android.exoplayer2.util.Util;
 import com.rjp.eaction.permission.PermissionUtils;
 import com.rjp.eaction.util.AppUtils;
 import com.rjp.eaction.util.FileUtils;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import java.io.File;
 import java.security.Permissions;
@@ -33,16 +35,23 @@ import java.security.Permissions;
  */
 public class App extends Application {
 
+    public static final String WX_APP_ID = "wxfbaa883f7c6524c1";
+
     private static App mContext = null;
     //缓存代理
     private HttpProxyCacheServer proxy;
     //播放器
     private SimpleExoPlayer mPlayer;
+    public static IWXAPI mWxApi;
 
     @Override
     public void onCreate() {
         super.onCreate();
         mContext = this;
+
+        mWxApi = WXAPIFactory.createWXAPI(this, WX_APP_ID, false);
+        // 将该app注册到微信
+        mWxApi.registerApp(WX_APP_ID);
     }
 
     public static App getContext() {

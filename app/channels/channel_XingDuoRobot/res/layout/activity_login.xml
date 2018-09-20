@@ -87,6 +87,7 @@
                     android:padding="10dp"
                     android:lines="1"
                     android:inputType="textPassword"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyz"
                     android:text="123456"
                     />
         </LinearLayout>
@@ -204,6 +205,7 @@
         </LinearLayout>
 
         <ImageView
+                android:id="@+id/iv_wx_login"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/login_wechat"

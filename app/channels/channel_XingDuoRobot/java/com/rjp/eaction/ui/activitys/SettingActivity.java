@@ -82,9 +82,9 @@ public class SettingActivity extends BaseActivity {
                 .url(URL_LOGOUT)
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
                 .build()
-                .model(new ResponseCallback<UserLoginModel>() {
+                .model(new ResponseCallback<String>() {
                     @Override
-                    public void success(UserLoginModel model) {
+                    public void success(String model) {
                         LoginActivity.trendTo(mContext);
                         SPUtils.getInstance(mContext).remove(SPUtils.USER_TOKEN);
                         finish();

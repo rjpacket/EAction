@@ -3,6 +3,8 @@ package com.rjp.xingduorobot.wxapi;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import com.rjp.eaction.network.NetUtils;
+import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.ui.app.App;
 import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.util.ToastUtils;
@@ -46,8 +48,8 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                     case RETURN_MSG_TYPE_LOGIN:
                         //拿到了微信返回的code,立马再去请求access_token
                         String code = ((SendAuth.Resp) resp).code;
-                        LogUtils.e("code = " + code);
                         //就在这个地方，用网络库什么的或者自己封的网络api，发请求去咯，注意是get请求
+                        getWxAccessToken(code);
                         break;
                     case RETURN_MSG_TYPE_SHARE:
                         ToastUtils.showToast(App.getContext(), "微信分享成功");
@@ -56,5 +58,27 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
                 }
                 break;
         }
+    }
+
+    private void getWxAccessToken(String code) {
+        new NetUtils.Builder()
+                .context(this)
+                .url("https://api.weixin.qq.com/sns/oauth2/access_token")
+                .param("appid", App.WX_APP_ID)
+                .param("secret", App.WX_APP_ID)
+                .param("code", code)
+                .param("grant_type", "authorization_code")
+                .build()
+                .model(new ResponseCallback<String>() {
+                    @Override
+                    public void success(String model) {
+
+                    }
+
+                    @Override
+                    public void failure(String code, String msg) {
+
+                    }
+                });
     }
 }

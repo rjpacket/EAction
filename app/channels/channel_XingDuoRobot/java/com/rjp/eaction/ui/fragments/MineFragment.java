@@ -70,14 +70,17 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void handle() {
-        getUserAccount();
+
     }
 
     @Override
-    public void onHiddenChanged(boolean hidden) {
-        super.onHiddenChanged(hidden);
-        if(!hidden){
+    public void onResume() {
+        super.onResume();
+        boolean isLogin = SPUtils.getInstance(mContext).getIsLogin();
+        if(isLogin) {
             getUserAccount();
+        }else{
+            tvUserName.setText("点击登录");
         }
     }
 

@@ -3,6 +3,8 @@ package com.rjp.eaction.ui.listviews;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 
 import android.widget.Toast;
@@ -13,6 +15,7 @@ import com.rjp.eaction.bean.HomeBookModel;
 import com.rjp.eaction.bean.HomeCategoryModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.ui.activitys.BookDetailActivity;
 import com.rjp.eaction.util.LogUtils;
 import com.rjp.eaction.views.base_listview.LoadMoreListView;
 
@@ -77,5 +80,12 @@ public class HomeReadBookListView extends LoadMoreListView<HomeBookModel> {
                         Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        super.onItemClick(parent, view, position, id);
+        HomeBookModel homeBookModel = mDatas.get(position);
+
     }
 }

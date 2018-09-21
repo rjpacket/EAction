@@ -10,8 +10,12 @@ import android.widget.RelativeLayout;
 import com.rjp.eaction.R;
 import com.rjp.eaction.baseAF.BaseFragment;
 import com.rjp.eaction.bean.HomeBannerModel;
+import com.rjp.eaction.bean.HomeCategoryModel;
+import com.rjp.eaction.interfaces.OnCategoryClickListener;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.ui.listviews.StoreListView;
+import com.rjp.eaction.ui.views.IndicatorTabLayout;
 import com.rjp.eaction.ui.views.SearchLabelView;
 import com.rjp.eaction.util.AppUtils;
 import com.rjp.eaction.util.ImageUtils;
@@ -25,6 +29,9 @@ import java.util.List;
 
 import butterknife.BindView;
 
+import static com.rjp.eaction.network.UrlConst.URL_HOME_CATEGORY;
+import static com.rjp.eaction.network.UrlConst.URL_STORE_CATEGORY;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -33,6 +40,10 @@ public class StoreFragment extends BaseFragment {
     SearchLabelView storeSearchView;
     @BindView(R.id.home_banner)
     Banner banner;
+    @BindView(R.id.indicator_tab_layout)
+    IndicatorTabLayout indicatorTabLayout;
+    @BindView(R.id.store_list_view)
+    StoreListView storeListView;
     private ArrayList<HomeBannerModel> imageUrls;
 
     public StoreFragment() {
@@ -73,6 +84,35 @@ public class StoreFragment extends BaseFragment {
 
         initBanner();
         getStoreBanner();
+        getStoreCategory();
+
+        indicatorTabLayout.setOnCategoryClickListener(new OnCategoryClickListener() {
+            @Override
+            public void onCategoryClick(String categoryId) {
+                storeListView.requestData(categoryId);
+            }
+        });
+    }
+
+    private void getStoreCategory() {
+        new NetUtils.Builder()
+                .url(URL_STORE_CATEGORY)
+                .context(mContext)
+                .build()
+                .model(new ResponseCallback<List<HomeCategoryModel>>() {
+                    @Override
+                    public void success(List<HomeCategoryModel> models) {
+                        indicatorTabLayout.setTabData(models);
+                        indicatorTabLayout.setClickSelected(0);
+                        HomeCategoryModel model = models.get(0);
+                        storeListView.requestData(model.getId());
+                    }
+
+                    @Override
+                    public void failure(String code, String msg) {
+
+                    }
+                });
     }
 
     private void getStoreBanner() {

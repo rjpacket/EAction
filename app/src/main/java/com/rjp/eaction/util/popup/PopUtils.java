@@ -1,5 +1,6 @@
 package com.rjp.eaction.util.popup;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
@@ -21,7 +22,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
  * email  : jimbo922@163.com
  */
 public class PopUtils<T> {
-    private PopupWindow popupWindow;
+    private AlphaPopupWindow popupWindow;
 
     public static class Builder<T> {
         private Context context;
@@ -66,16 +67,13 @@ public class PopUtils<T> {
             if (context == null) {
                 throw new IllegalArgumentException("context must be not null");
             }
-            if (models == null) {
-                throw new IllegalArgumentException("models must be not null");
-            }
             dialogUtils.context = this.context;
             if (layoutId == 0) {
                 this.layoutId = R.layout.item_common_popup_layout;
             }
             dialogUtils.layoutId = this.layoutId;
             if (width == 0) {
-                width = (int) (context.getResources().getDisplayMetrics().widthPixels * 0.8);
+                width = context.getResources().getDisplayMetrics().widthPixels;
             }
             dialogUtils.width = this.width;
             if(anim == 0){
@@ -95,18 +93,23 @@ public class PopUtils<T> {
     private List<T> models;
     private OnPopupBindDataListener<T> onPopupBindDataListener;
 
-    public PopupWindow show() {
-        View view = LayoutInflater.from(context).inflate(R.layout.popup_common_list_view, null);
-        ListView listView = view.findViewById(R.id.popup_list_view);
-        listView.setAdapter(new CommonAdapter<T>(context, layoutId, models) {
-            @Override
-            protected void convert(ViewHolder viewHolder, T item, int position) {
-                if(onPopupBindDataListener != null){
-                    onPopupBindDataListener.convert(viewHolder, item, position);
+    public AlphaPopupWindow show() {
+        View view;
+        if(models != null && models.size() > 0){
+            view = LayoutInflater.from(context).inflate(R.layout.popup_common_list_view, null);
+            ListView listView = view.findViewById(R.id.popup_list_view);
+            listView.setAdapter(new CommonAdapter<T>(context, layoutId, models) {
+                @Override
+                protected void convert(ViewHolder viewHolder, T item, int position) {
+                    if(onPopupBindDataListener != null){
+                        onPopupBindDataListener.convert(viewHolder, item, position);
+                    }
                 }
-            }
-        });
-        popupWindow = new PopupWindow(view, width, WRAP_CONTENT);
+            });
+        }else{
+            view = LayoutInflater.from(context).inflate(layoutId, null);
+        }
+        popupWindow = new AlphaPopupWindow((Activity) context, view, width, WRAP_CONTENT);
         popupWindow.setFocusable(true);
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.setAnimationStyle(anim);

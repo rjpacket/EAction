@@ -105,6 +105,9 @@
                   android:exported="true">
 
         </activity>
+        <activity android:name=".ui.activitys.ModifyNickActivity">
+
+        </activity>
     </application>
 
 </manifest>

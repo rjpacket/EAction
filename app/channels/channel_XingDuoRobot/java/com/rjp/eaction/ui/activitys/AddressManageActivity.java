@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,6 +45,11 @@ public class AddressManageActivity extends BaseActivity {
     @Override
     protected void handle() {
         initSwipeMenuList();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         getUserAddressList();
     }
 
@@ -73,7 +79,11 @@ public class AddressManageActivity extends BaseActivity {
         swipeMenuListView.setAdapter(adapter = new CommonAdapter<AddressModel>(mContext, R.layout.item_address_manage_list_view, models) {
             @Override
             protected void convert(ViewHolder viewHolder, AddressModel item, int position) {
-
+                viewHolder.setText(R.id.tv_name, String.format("收货人：%s", item.getName()));
+                viewHolder.setText(R.id.tv_phone, item.getPhone());
+                viewHolder.setText(R.id.tv_address, String.format("收货地址：%s", item.getArea() + item.getAddress()));
+                View view = viewHolder.getView(R.id.tv_default);
+                view.setVisibility("1".equals(item.getIsdefault()) ? View.VISIBLE : View.GONE);
             }
         });
         creatSwipeMenu();
@@ -87,6 +97,13 @@ public class AddressManageActivity extends BaseActivity {
                         break;
                 }
                 return false;
+            }
+        });
+        swipeMenuListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AddressModel addressModel = models.get(position);
+                AddAddressActivity.trendTo(mContext, addressModel);
             }
         });
     }

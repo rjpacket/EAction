@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
+import com.rjp.eaction.bean.AddressModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.utils.SPUtils;
@@ -18,6 +19,8 @@ import com.rjp.eaction.utils.SPUtils;
 import butterknife.BindView;
 import butterknife.OnClick;
 import com.rjp.eaction.views.other.SelectAddressView;
+
+import java.io.Serializable;
 
 import static com.rjp.eaction.network.UrlConst.URL_USER_ADD_ADDRESS;
 import static com.rjp.eaction.ui.activitys.SelectAddressAreaActivity.RESULT_SELECT_AREA_SUCCESS;
@@ -43,9 +46,23 @@ public class AddAddressActivity extends BaseActivity {
         mContext.startActivity(new Intent(mContext, AddAddressActivity.class));
     }
 
+    public static void trendTo(Context mContext, AddressModel addressModel) {
+        Intent intent = new Intent(mContext, AddAddressActivity.class);
+        intent.putExtra("address", addressModel);
+        mContext.startActivity(intent);
+    }
+
     @Override
     protected void handle() {
-
+        Intent intent = getIntent();
+        if(intent != null && intent.hasExtra("address")){
+            AddressModel addressModel = (AddressModel) intent.getSerializableExtra("address");
+            etUsername.setText(addressModel.getName());
+            etPhone.setText(addressModel.getPhone());
+            etDetailAddress.setText(addressModel.getAddress());
+            tvSelectArea.setText(addressModel.getArea());
+            ivDefault.setSelected("1".equals(addressModel.getIsdefault()));
+        }
     }
 
     @Override
@@ -113,7 +130,7 @@ public class AddAddressActivity extends BaseActivity {
                 .param("phone", phone)
                 .param("area", selectArea)
                 .param("address", address)
-                .param("isdefault", ivDefault.isSelected() ? "0" : "1")
+                .param("isdefault", ivDefault.isSelected() ? "1" : "0")
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
                 .context(mContext)
                 .build()

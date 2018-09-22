@@ -1,6 +1,8 @@
 package com.rjp.eaction.bean;
 
-public class AddressModel {
+import java.io.Serializable;
+
+public class AddressModel implements Serializable{
 
     /**
      * id : A01153737416171589474

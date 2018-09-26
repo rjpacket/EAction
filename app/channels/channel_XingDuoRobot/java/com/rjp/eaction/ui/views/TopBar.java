@@ -21,6 +21,7 @@ public class TopBar extends LinearLayout {
     private ImageView ivBaseBack;
     private ImageView ivIcon0;
     private ImageView ivIcon1;
+    private TextView tvFunction;
 
     public TopBar(Context context) {
         this(context, null);
@@ -39,6 +40,7 @@ public class TopBar extends LinearLayout {
         tvBaseTitle = (TextView) findViewById(R.id.tv_base_title);
         ivIcon0 = (ImageView) findViewById(R.id.iv_base_icon0);
         ivIcon1 = (ImageView) findViewById(R.id.iv_base_icon1);
+        tvFunction = (TextView) findViewById(R.id.tv_function);
 
         setOrientation(VERTICAL);
     }
@@ -77,5 +79,14 @@ public class TopBar extends LinearLayout {
      */
     public void setBackHidden(boolean hide) {
         ivBaseBack.setVisibility(hide ? GONE : VISIBLE);
+    }
+
+    public void setFunction(String function) {
+        tvFunction.setText(function);
+        tvFunction.setVisibility(VISIBLE);
+    }
+
+    public void setOnFunctionClickListener(OnClickListener onClickListener) {
+        tvFunction.setOnClickListener(onClickListener);
     }
 }

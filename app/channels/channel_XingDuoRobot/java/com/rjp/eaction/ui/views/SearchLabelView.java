@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import com.rjp.eaction.util.AppUtils;
 public class SearchLabelView extends LinearLayout{
     private Context mContext;
     private boolean headIconShowable;
+    private View.OnClickListener onClickListener;
 
     public SearchLabelView(Context context) {
         this(context, null);
@@ -54,5 +56,17 @@ public class SearchLabelView extends LinearLayout{
             tvSearchHint.setTextColor(inputTextColor);
             tvSearchHint.setTextSize(TypedValue.COMPLEX_UNIT_PX, inputTextSize);
         }
+        llSearchInput.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(onClickListener  != null){
+                    onClickListener.onClick(v);
+                }
+            }
+        });
+    }
+
+    public void setCustomOnClickListener(OnClickListener onClickListener) {
+        this.onClickListener = onClickListener;
     }
 }

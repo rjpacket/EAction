@@ -171,10 +171,27 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         });
     }
 
+    protected void setFunction(String function) {
+        topBar.setFunction(function);
+        topBar.setOnFunctionClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickOnFunction();
+            }
+        });
+    }
+
     /**
      * 点击了icon1
      */
     protected void clickOnIcon1() {
+
+    }
+
+    /**
+     * 点击了右边功能区
+     */
+    protected void clickOnFunction() {
 
     }
 

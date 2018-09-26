@@ -16,6 +16,7 @@ import com.rjp.eaction.bean.HomeCategoryModel;
 import com.rjp.eaction.interfaces.OnCategoryClickListener;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
+import com.rjp.eaction.ui.activitys.SearchActivity;
 import com.rjp.eaction.ui.listviews.HomeReadBookListView;
 import com.rjp.eaction.ui.views.IndicatorTabLayout;
 import com.rjp.eaction.ui.views.SearchLabelView;
@@ -82,6 +83,17 @@ public class HomeFragment extends BaseFragment {
             RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) homeSearchView.getLayoutParams();
             params.setMargins(0, AppUtils.getStatusBarHeight(mContext), 0, 0);
         }
+
+        homeSearchView.setCustomOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()){
+                    case R.id.ll_book_search_label:
+                        SearchActivity.trendTo(mContext);
+                        break;
+                }
+            }
+        });
 
         initBanner();
         getHomeBanner();

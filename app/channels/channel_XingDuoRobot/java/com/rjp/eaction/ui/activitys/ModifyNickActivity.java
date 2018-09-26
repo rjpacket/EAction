@@ -2,6 +2,7 @@ package com.rjp.eaction.ui.activitys;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 
@@ -28,7 +29,11 @@ public class ModifyNickActivity extends BaseActivity {
 
     @Override
     protected void handle() {
-
+        setFunction("完成");
     }
 
+    @Override
+    protected void clickOnFunction() {
+        Toast.makeText(mContext, "修改了昵称", Toast.LENGTH_SHORT).show();
+    }
 }

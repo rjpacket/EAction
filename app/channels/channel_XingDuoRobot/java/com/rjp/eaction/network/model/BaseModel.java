@@ -58,7 +58,7 @@ public class BaseModel<T> {
      * @return
      */
     public boolean isRequestLogin(){
-        return false;
+        return "401".equals(code);
     }
 
     public int getResult() {

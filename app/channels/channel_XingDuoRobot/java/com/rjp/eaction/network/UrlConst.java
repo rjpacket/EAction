@@ -7,6 +7,7 @@ public class UrlConst {
     public static final String URL_HOME_BOOK_LIST = "details/findPage.jhtml";
 
     public static final String URL_BOOK_LIST = "book/findAll.jhtml";
+    public static final String URL_BOOK_DETAIL = "details/findbookId.jhtml";
 
     public static final String URL_STORE_CATEGORY = "classify/findGoods.jhtml";
 

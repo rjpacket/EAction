@@ -108,6 +108,9 @@
         <activity android:name=".ui.activitys.ModifyNickActivity">
 
         </activity>
+        <activity android:name=".ui.activitys.SearchActivity">
+
+        </activity>
     </application>
 
 </manifest>

@@ -32,6 +32,7 @@ public class LoginActivity extends BaseActivity {
     private String userPassword;
 
     public static void trendTo(Context mContext) {
+        SPUtils.getInstance(mContext).clear();
         mContext.startActivity(new Intent(mContext, LoginActivity.class));
     }
 

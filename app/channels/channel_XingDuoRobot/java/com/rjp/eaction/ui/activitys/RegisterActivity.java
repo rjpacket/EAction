@@ -3,7 +3,6 @@ package com.rjp.eaction.ui.activitys;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
@@ -12,9 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
 import com.rjp.eaction.network.NetUtils;
@@ -22,6 +19,9 @@ import com.rjp.eaction.network.callback.ResponseCallback;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 import static com.rjp.eaction.network.UrlConst.URL_REGISTER;
 import static com.rjp.eaction.network.UrlConst.URL_REGISTER_GET_CODE;
@@ -169,10 +169,10 @@ public class RegisterActivity extends BaseActivity {
         new NetUtils.Builder()
                 .context(mContext)
                 .url(URL_REGISTER)
-                .param("userName", phone)
+//                .param("userName", phone)
                 .param("userPassword", password)
                 .param("userMobile", phone)
-                .param("userCode", code)
+                .param("code", code)
                 .build()
                 .model(new ResponseCallback<String>() {
                     @Override

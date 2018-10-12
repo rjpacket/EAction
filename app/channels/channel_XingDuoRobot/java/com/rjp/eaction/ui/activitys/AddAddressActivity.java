@@ -6,18 +6,24 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
+import com.rjp.eaction.bean.AddressModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.utils.SPUtils;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import com.rjp.eaction.views.other.SelectAddressView;
+
+import java.io.Serializable;
 
 import static com.rjp.eaction.network.UrlConst.URL_USER_ADD_ADDRESS;
+import static com.rjp.eaction.ui.activitys.SelectAddressAreaActivity.RESULT_SELECT_AREA_SUCCESS;
 
 public class AddAddressActivity extends BaseActivity {
 
@@ -29,17 +35,34 @@ public class AddAddressActivity extends BaseActivity {
     EditText etDetailAddress;
     @BindView(R.id.iv_default)
     ImageView ivDefault;
+    @BindView(R.id.tv_select_area)
+    TextView tvSelectArea;
     private String username;
     private String phone;
     private String address;
+    private String selectArea;
 
     public static void trendTo(Context mContext) {
         mContext.startActivity(new Intent(mContext, AddAddressActivity.class));
     }
 
+    public static void trendTo(Context mContext, AddressModel addressModel) {
+        Intent intent = new Intent(mContext, AddAddressActivity.class);
+        intent.putExtra("address", addressModel);
+        mContext.startActivity(intent);
+    }
+
     @Override
     protected void handle() {
-
+        Intent intent = getIntent();
+        if(intent != null && intent.hasExtra("address")){
+            AddressModel addressModel = (AddressModel) intent.getSerializableExtra("address");
+            etUsername.setText(addressModel.getName());
+            etPhone.setText(addressModel.getPhone());
+            etDetailAddress.setText(addressModel.getAddress());
+            tvSelectArea.setText(addressModel.getArea());
+            ivDefault.setSelected("1".equals(addressModel.getIsdefault()));
+        }
     }
 
     @Override
@@ -64,6 +87,7 @@ public class AddAddressActivity extends BaseActivity {
                 ivDefault.setSelected(!ivDefault.isSelected());
                 break;
             case R.id.ll_select_area:
+                startActivityForResult(new Intent(mContext, SelectAddressAreaActivity.class), 100);
                 break;
             case R.id.ll_set_default_address:
                 break;
@@ -88,26 +112,38 @@ public class AddAddressActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_SELECT_AREA_SUCCESS){
+            if(data != null && data.hasExtra("area")){
+                selectArea = data.getStringExtra("area");
+                tvSelectArea.setText(selectArea);
+            }
+        }
+    }
+
     private void addAddress() {
         new NetUtils.Builder()
                 .url(URL_USER_ADD_ADDRESS)
                 .param("name", username)
                 .param("phone", phone)
-                .param("area", "abc")
+                .param("area", selectArea)
                 .param("address", address)
-                .param("isdefault", ivDefault.isSelected() ? "0" : "1")
+                .param("isdefault", ivDefault.isSelected() ? "1" : "0")
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
                 .context(mContext)
                 .build()
                 .model(new ResponseCallback<String>() {
                     @Override
                     public void success(String models) {
-
+                        Toast.makeText(mContext, models, Toast.LENGTH_SHORT).show();
+                        finish();
                     }
 
                     @Override
                     public void failure(String code, String msg) {
-
+                        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
     }

@@ -62,7 +62,7 @@ public class SystemBarTintManager {
     }  
     /** 
      * Constructor. Call this in the host activity onCreate method after its 
-     * content view has been set. You should always create new instances when 
+     * content view_select_address_view has been set. You should always create new instances when
      * the host activity is recreated. 
      * 
      * @param activity The host activity. 

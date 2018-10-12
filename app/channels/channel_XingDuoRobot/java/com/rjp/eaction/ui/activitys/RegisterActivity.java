@@ -107,7 +107,7 @@ public class RegisterActivity extends BaseActivity {
                 .model(new ResponseCallback<String>() {
                     @Override
                     public void success(String model) {
-                        Toast.makeText(mContext, model, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mContext, "短信发送成功", Toast.LENGTH_SHORT).show();
                         startTimeTick();
                     }
 
@@ -182,7 +182,7 @@ public class RegisterActivity extends BaseActivity {
 
                     @Override
                     public void failure(String code, String msg) {
-
+                        Toast.makeText(RegisterActivity.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
     }

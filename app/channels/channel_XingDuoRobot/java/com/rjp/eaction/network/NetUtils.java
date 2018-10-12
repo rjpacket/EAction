@@ -9,6 +9,7 @@ import com.rjp.eaction.network.exception.ExceptionHandle;
 import com.rjp.eaction.network.model.BaseModel;
 import com.rjp.eaction.network.observer.CustomObserver;
 import com.rjp.eaction.network.retrofit.RetrofitClient;
+import com.rjp.eaction.ui.activitys.LoginActivity;
 import com.rjp.eaction.util.LogUtils;
 
 import java.io.IOException;
@@ -190,7 +191,9 @@ public class NetUtils {
                     BaseModel<T> baseModel = gson.fromJson(response, resultType);
                     if (baseModel.isOk()) {
                         responseCallback.success(baseModel.getData());
-                    } else {
+                    } else if(baseModel.isRequestLogin()) {
+                        LoginActivity.trendTo(context);
+                    }else{
                         responseCallback.failure(baseModel.getCode(), baseModel.getMsg());
                     }
                 } catch (Exception e) {
@@ -199,7 +202,9 @@ public class NetUtils {
                         String response = SPUtils.getInstance(context).getString("response-data");
                         JSONObject jsonObject = JSONObject.parseObject(response);
                         String code = jsonObject.getString("code");
-                        if(!"200".equals(code)){
+                        if("401".equals(code)) {
+                            LoginActivity.trendTo(context);
+                        }else if(!"200".equals(code)){
                             responseCallback.failure(code, jsonObject.getString("msg"));
                         }
                         SPUtils.getInstance(context).remove("response-data");

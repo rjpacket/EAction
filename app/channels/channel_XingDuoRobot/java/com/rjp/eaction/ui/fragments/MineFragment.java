@@ -70,14 +70,17 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void handle() {
-        getUserAccount();
+
     }
 
     @Override
-    public void onHiddenChanged(boolean hidden) {
-        super.onHiddenChanged(hidden);
-        if(!hidden){
+    public void onResume() {
+        super.onResume();
+        boolean isLogin = SPUtils.getInstance(mContext).getIsLogin();
+        if(isLogin) {
             getUserAccount();
+        }else{
+            tvUserName.setText("点击登录");
         }
     }
 
@@ -100,7 +103,9 @@ public class MineFragment extends BaseFragment {
                 });
     }
 
-    @OnClick({R.id.ll_setting_label, R.id.mine_user_header_view, R.id.ll_had_read, R.id.ll_today_with, R.id.ll_read_time, R.id.ll_family_with, R.id.ll_devices_label, R.id.ll_orders_label})
+    @OnClick({R.id.ll_setting_label, R.id.mine_user_header_view, R.id.ll_had_read,
+            R.id.ll_today_with, R.id.ll_read_time, R.id.ll_family_with,
+            R.id.ll_devices_label, R.id.ll_orders_label, R.id.iv_modify_nick})
     public void onViewClicked(View view) {
         if(view.getId() == R.id.ll_setting_label){
             SettingActivity.trendTo(mContext);
@@ -113,6 +118,10 @@ public class MineFragment extends BaseFragment {
         switch (view.getId()) {
             case R.id.mine_user_header_view:
                 AccountManageActivity.trendTo(mContext);
+                break;
+            case R.id.iv_modify_nick:
+            case R.id.tv_user_name:
+                ModifyNickActivity.trendTo(mContext);
                 break;
             case R.id.ll_had_read:
                 AlreadyReadBookActivity.trendTo(mContext);

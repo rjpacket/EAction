@@ -78,6 +78,18 @@ public class ReadBookListView extends RefreshListView<ReadbookModel> {
                 llRightLabel.setVisibility(VISIBLE);
                 ImageUtils.load(mContext, leftBook.getPicPath(), ivLeftBook);
                 tvLeftName.setText(leftBook.getPicName());
+
+                llLeftLabel.setTag(leftBook);
+                llMiddleLabel.setTag(leftBook);
+                llRightLabel.setTag(leftBook);
+                llLeftLabel.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        ReadbookModel leftBook = (ReadbookModel) v.getTag();
+                        BookDetailActivity.trendTo(mContext);
+                    }
+                });
+
                 if(middleBook == null){
                     llMiddleLabel.setVisibility(INVISIBLE);
                     llRightLabel.setVisibility(INVISIBLE);

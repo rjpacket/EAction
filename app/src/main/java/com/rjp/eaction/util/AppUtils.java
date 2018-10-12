@@ -224,7 +224,7 @@ public class AppUtils {
      * 隐藏键盘
      *
      * @param context context
-     * @param view    The currently focused view
+     * @param view    The currently focused view_select_address_view
      */
     public static void hideInputMethod(Context context, View view) {
         if (context == null || view == null) {

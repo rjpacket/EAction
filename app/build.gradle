@@ -11,9 +11,26 @@ android {
         flavorDimensions "versionCode"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        rjp {
+            keyAlias 'rjp-key'
+            keyPassword '123456'
+            storeFile file('rjp.jks')
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.rjp
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.rjp
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -94,6 +111,8 @@ android {
         implementation 'com.danikula:videocache:2.6.4'
         //今日头条适配方案
         implementation 'me.jessyan:autosize:0.9.1'
+        //微信登录
+        implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
     }
 }
 

@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,11 +19,13 @@ import com.rjp.commonadapter.CommonAdapter;
 import com.rjp.commonadapter.ViewHolder;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
+import com.rjp.eaction.bean.AddressModel;
 import com.rjp.eaction.network.NetUtils;
 import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.utils.SPUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.rjp.eaction.network.UrlConst.URL_USER_ALL_ADDRESS;
 import static com.rjp.eaction.util.AppUtils.dp2px;
@@ -31,8 +34,9 @@ public class AddressManageActivity extends BaseActivity {
 
     @BindView(R.id.swipe_menu_list_view)
     SwipeMenuListView swipeMenuListView;
-    private ArrayList<String> models;
+    private ArrayList<AddressModel> models;
     private SwipeMenuCreator creator;
+    private CommonAdapter<AddressModel> adapter;
 
     public static void trendTo(Context mContext) {
         mContext.startActivity(new Intent(mContext, AddressManageActivity.class));
@@ -40,6 +44,12 @@ public class AddressManageActivity extends BaseActivity {
 
     @Override
     protected void handle() {
+        initSwipeMenuList();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         getUserAddressList();
     }
 
@@ -49,10 +59,12 @@ public class AddressManageActivity extends BaseActivity {
                 .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
                 .context(mContext)
                 .build()
-                .model(new ResponseCallback<String>() {
+                .model(new ResponseCallback<List<AddressModel>>() {
                     @Override
-                    public void success(String models) {
-
+                    public void success(List<AddressModel> datas) {
+                        models.clear();
+                        models.addAll(datas);
+                        adapter.notifyDataSetChanged();
                     }
 
                     @Override
@@ -64,10 +76,14 @@ public class AddressManageActivity extends BaseActivity {
 
     private void initSwipeMenuList() {
         models = new ArrayList<>();
-        swipeMenuListView.setAdapter(new CommonAdapter<String>(mContext, R.layout.item_devices_manage_list_view, models) {
+        swipeMenuListView.setAdapter(adapter = new CommonAdapter<AddressModel>(mContext, R.layout.item_address_manage_list_view, models) {
             @Override
-            protected void convert(ViewHolder viewHolder, String item, int position) {
-
+            protected void convert(ViewHolder viewHolder, AddressModel item, int position) {
+                viewHolder.setText(R.id.tv_name, String.format("收货人：%s", item.getName()));
+                viewHolder.setText(R.id.tv_phone, item.getPhone());
+                viewHolder.setText(R.id.tv_address, String.format("收货地址：%s", item.getArea() + item.getAddress()));
+                View view = viewHolder.getView(R.id.tv_default);
+                view.setVisibility("1".equals(item.getIsdefault()) ? View.VISIBLE : View.GONE);
             }
         });
         creatSwipeMenu();
@@ -81,6 +97,13 @@ public class AddressManageActivity extends BaseActivity {
                         break;
                 }
                 return false;
+            }
+        });
+        swipeMenuListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                AddressModel addressModel = models.get(position);
+                AddAddressActivity.trendTo(mContext, addressModel);
             }
         });
     }

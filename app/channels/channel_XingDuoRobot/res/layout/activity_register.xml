@@ -156,6 +156,7 @@
                     android:lines="1"
                     android:text="123456"
                     android:inputType="textPassword"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyz"
                     />
         </LinearLayout>
 
@@ -196,6 +197,7 @@
                     android:lines="1"
                     android:text="123456"
                     android:inputType="textPassword"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyz"
                     />
         </LinearLayout>
 

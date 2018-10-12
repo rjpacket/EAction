@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import android.text.TextUtils;
-import com.rjp.eaction.baseAF.App;
 
 import java.util.Set;
 
@@ -15,7 +14,7 @@ import java.util.Set;
 public class SPUtils {
     public static final String USER_TOKEN = "robot.usertoken";
     public static final String USER_NAME = "robot.username";
-    public static final String PASSWORD = "robot.password";
+    public static final String USER_PASSWORD = "robot.password";
 
     private final SharedPreferences.Editor editor;
     private final SharedPreferences sp;
@@ -121,7 +120,9 @@ public class SPUtils {
      * 清除所有数据
      */
     public void clear() {
-        editor.clear();
+        editor.remove(USER_TOKEN);
+        editor.remove(USER_NAME);
+        editor.remove(USER_PASSWORD);
         editor.commit();
     }
 

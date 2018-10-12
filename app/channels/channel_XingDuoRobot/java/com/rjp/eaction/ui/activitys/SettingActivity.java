@@ -6,12 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.rjp.eaction.R;
 import com.rjp.eaction.base.BaseActivity;
+import com.rjp.eaction.bean.UserLoginModel;
+import com.rjp.eaction.network.NetUtils;
+import com.rjp.eaction.network.callback.ResponseCallback;
 import com.rjp.eaction.utils.SPUtils;
+
+import static com.rjp.eaction.network.UrlConst.URL_LOGOUT;
 
 public class SettingActivity extends BaseActivity {
 
@@ -59,12 +65,35 @@ public class SettingActivity extends BaseActivity {
             case R.id.tv_check_update:
                 break;
             case R.id.tv_logout:
-                LoginActivity.trendTo(mContext);
-                SPUtils.getInstance(mContext).remove(SPUtils.USER_TOKEN);
+                logout();
                 break;
             case R.id.ll_address_manage:
                 AddressManageActivity.trendTo(mContext);
                 break;
         }
+    }
+
+    /**
+     * 退出登录接口
+     */
+    private void logout() {
+        new NetUtils.Builder()
+                .context(mContext)
+                .url(URL_LOGOUT)
+                .param("token", SPUtils.getInstance(mContext).getString(SPUtils.USER_TOKEN))
+                .build()
+                .model(new ResponseCallback<String>() {
+                    @Override
+                    public void success(String model) {
+                        LoginActivity.trendTo(mContext);
+                        SPUtils.getInstance(mContext).remove(SPUtils.USER_TOKEN);
+                        finish();
+                    }
+
+                    @Override
+                    public void failure(String code, String msg) {
+                        Toast.makeText(mContext, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

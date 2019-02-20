@@ -84,8 +84,8 @@ public class WebActivity extends BaseActivity {
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setSaveFormData(true);
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setBuiltInZoomControls(true);
-        webSettings.setSupportZoom(true);
+//        webSettings.setBuiltInZoomControls(true);
+//        webSettings.setSupportZoom(true);
         String cacheDirPath = getCacheDir().getAbsolutePath() + "EActionWeb";
         webSettings.setAppCachePath(cacheDirPath);
         webSettings.setAppCacheEnabled(true);

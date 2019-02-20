@@ -21,12 +21,13 @@
         android:theme="@style/AppTheme"
         >
         <meta-data
-                android:name="design_width_in_dp"
-                android:value="360"/>
+            android:name="design_width_in_dp"
+            android:value="360"
+            />
         <meta-data
-                android:name="design_height_in_dp"
-                android:value="640"/>
-
+            android:name="design_height_in_dp"
+            android:value="640"
+            />
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="channel_guanfang"
@@ -46,13 +47,20 @@
         </provider>
 
         <activity android:name=".MainActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN"/> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".EmptyActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity
             android:name=".permission.PermissionActivity"
@@ -66,6 +74,13 @@
         <activity android:name=".ui.login.LoginActivity">
         </activity>
         <activity android:name=".ui.mine.PersonalInfoActivity">
+        </activity>
+        <activity
+            android:name=".web.PopLayerActivity"
+            android:theme="@style/PopLayerTheme"
+            >
+        </activity>
+        <activity android:name=".SecondEmptyActivity">
         </activity>
     </application>
 

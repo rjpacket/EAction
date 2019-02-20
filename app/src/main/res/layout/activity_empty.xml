@@ -12,7 +12,7 @@
         android:id="@+id/tv_appid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="123"
+        android:text="首页"
         android:textSize="30dp"
         android:gravity="center"
         />
@@ -39,6 +39,7 @@
         android:id="@+id/pick_photo_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         >
 
     </com.rjp.eaction.views.pick_photo.PickPhotoView>

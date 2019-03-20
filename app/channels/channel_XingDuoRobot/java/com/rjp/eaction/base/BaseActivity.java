@@ -4,6 +4,8 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -116,9 +118,16 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         EventBus.getDefault().unregister(this);
     }
 
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
+
     @Subscribe
     public void onEvent(MessageEvent event) {
-
+        handler.sendEmptyMessage(0);
     }
 
     /**
